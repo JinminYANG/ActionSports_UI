@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS -->
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+
     <!-- bootstrap -->
     <!-- ver 4.6.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- bootstrap_icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
     <link href="css/index.css" rel="stylesheet">
-
-
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -81,11 +81,12 @@
         <div class="container pt-4">
             <!-- 실시간 플레이어 -->
             <article class="liveplay">
+                <h2 class="liveplay__title d-none">실시간 방송</h2>
                 <div class="liveplay__list position-relative">
 
                     <div class="liveplay__item__left liveplay__item__left__02 position-absolute border-radius">
                         <img src="images/main/images/sec1_06.png" alt="liveplay__item__left__02__img" class="liveplay__item__left__02__img">
-                        <div class="liveplay__item__left__overlay position-absolute"></div>
+                        <div class="liveplay__item__left__overlay liveplay__item__left__overlay__02 position-absolute"></div>
                     </div>
 
                     <div class="liveplay__item__left liveplay__item__left__01 position-absolute border-radius">
@@ -113,7 +114,7 @@
 
                     <div class="liveplay__item__right liveplay__item__right__02 position-absolute border-radius">
                         <img src="images/main/images/sec1_07.png" alt="liveplay__item__right__02__img" class="liveplay__item__right__02__img">
-                        <div class="liveplay__item__right__overlay position-absolute"></div>
+                        <div class="liveplay__item__right__overlay liveplay__item__right__overlay__02 position-absolute"></div>
                     </div>
 
                 </div>
@@ -121,6 +122,7 @@
 
             <!-- 메인 배너 -->
             <article id="carouselExampleControls" class="banners carousel slide" data-bs-ride="carousel">
+                <h2 class="banners__title d-none">Banners</h2>
                 <div class="banners__wrap carousel-inner border-radius shadow">
                     <div class="banners__item carousel-item active">
                         <img src="images/main/images/sec2_banner1.png" class="banners__img img-fluid d-block w-100" alt="banner_01" />
@@ -147,7 +149,7 @@
             <article class="highlight row mx-0">
 
                 <div class="highlight__header col-12">
-                    <span class="highlight__title">하이라이트</span>
+                    <h2 class="highlight__title d-inline-block">하이라이트</h2>
                     <span class="highlight__more btn btn-secondary border-radius">더보기</span>
                 </div>
 
@@ -291,7 +293,7 @@
                 <!-- 경기 일정/결과 -->
                 <div class="schedule col">
                     <div class="schedule__header">
-                        <span class="schedule__title">경기 일정/결과</span>
+                        <h2 class="schedule__title d-inline-block">경기 일정/결과</h2>
                         <span class="schedule__more btn btn-secondary border-radius">더보기</span>
                     </div>
 
@@ -474,7 +476,7 @@
                 <div class="record col">
 
                     <div class="record__header">
-                        <span class="record__title">구단 순위</span>
+                        <h2 class="record__title d-inline-block">구단 순위</h2>
                     </div>
 
                     <div class="record__contents border-radius shadow">
@@ -494,7 +496,7 @@
                             </thead>
                             <tbody class="record__kbo__tbody align-items-center justify-content-md-center">
                                 <tr class="record__kbo__tr align-items-center">
-                                    <th scope="row"><span class="record__kbo__first">1</span></th>
+                                    <th><span class="record__kbo__first">1</span></th>
                                     <td><img src="images/main/images/sec4_logo01.png" alt="record__kbo__tr__logo" class="record__kbo__tr__logo">KT</td>
                                     <td>130</td>
                                     <td>71</td>
@@ -504,7 +506,7 @@
                                     <td>0.0</td>
                                 </tr>
                                 <tr class="record__kbo__tr">
-                                    <th scope="row"><span class="record__kbo__second">2</span></th>
+                                    <th><span class="record__kbo__second">2</span></th>
                                     <td><img src="images/main/images/sec4_logo02.png" alt="record__kbo__tr__logo" class="record__kbo__tr__logo">삼성</td>
                                     <td>132</td>
                                     <td>70</td>
@@ -514,7 +516,7 @@
                                     <td>1.5</td>
                                 </tr>
                                 <tr class="record__kbo__tr">
-                                    <th scope="row"><span class="record__kbo__third">3</span></th>
+                                    <th><span class="record__kbo__third">3</span></th>
                                     <td><img src="images/main/images/sec4_logo03.png" alt="record__kbo__tr__logo" class="record__kbo__tr__logo">LG</td>
                                     <td>127</td>
                                     <td>66</td>
@@ -524,7 +526,7 @@
                                     <td>2.5</td>
                                 </tr>
                                 <tr class="record__kbo__tr">
-                                    <th scope="row ">4</th>
+                                    <th>4</th>
                                     <td><img src="images/main/images/sec4_logo04.png" alt="record__kbo__tr__logo" class="record__kbo__tr__logo">두산</td>
                                     <td>128</td>
                                     <td>64</td>
@@ -534,7 +536,7 @@
                                     <td>7.0</td>
                                 </tr>
                                 <tr class="record__kbo__tr">
-                                    <th scope="row ">5</th>
+                                    <th>5</th>
                                     <td><img src="images/main/images/sec4_logo05.png" alt="record__kbo__tr__logo" class="record__kbo__tr__logo">키움</td>
                                     <td>130</td>
                                     <td>63</td>
@@ -544,7 +546,7 @@
                                     <td>8.5</td>
                                 </tr>
                                 <tr class="record__kbo__tr">
-                                    <th scope="row ">6</th>
+                                    <th>6</th>
                                     <td><img src="images/main/images/sec4_logo06.png" alt="record__kbo__tr__logo" class="record__kbo__tr__logo">SSG</td>
                                     <td>132</td>
                                     <td>60</td>
@@ -554,7 +556,7 @@
                                     <td>9.5</td>
                                 </tr>
                                 <tr class="record__kbo__tr">
-                                    <th scope="row ">7</th>
+                                    <th>7</th>
                                     <td><img src="images/main/images/sec4_logo07.png" alt="record__kbo__tr__logo" class="record__kbo__tr__logo">NC</td>
                                     <td>127</td>
                                     <td>59</td>
@@ -564,7 +566,7 @@
                                     <td>10.5</td>
                                 </tr>
                                 <tr class="record__kbo__tr">
-                                    <th scope="row ">8</th>
+                                    <th>8</th>
                                     <td><img src="images/main/images/sec4_logo08.png" alt="record__kbo__tr__logo" class="record__kbo__tr__logo">롯데</td>
                                     <td>131</td>
                                     <td>60</td>
@@ -574,7 +576,7 @@
                                     <td>12.0</td>
                                 </tr>
                                 <tr class="record__kbo__tr">
-                                    <th scope="row ">9</th>
+                                    <th>9</th>
                                     <td><img src="images/main/images/sec4_logo09.png" alt="record__kbo__tr__logo" class="record__kbo__tr__logo">KIA</td>
                                     <td>128</td>
                                     <td>50</td>
@@ -584,7 +586,7 @@
                                     <td>19.5</td>
                                 </tr>
                                 <tr class="record__kbo__tr">
-                                    <th scope="row ">10</th>
+                                    <th>10</th>
                                     <td><img src="images/main/images/sec4_logo10.png" alt="record__kbo__tr__logo" class="record__kbo__tr__logo">한화</td>
                                     <td>133</td>
                                     <td>47</td>
@@ -626,8 +628,6 @@
 
     <!-- Script -->
     <!-- bootstrap -->
-    <!-- ver 5.1.3 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script> -->
     <!-- ver 4.6.0 -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
