@@ -317,7 +317,7 @@
 }
 
 .highlight__item__img {
-    width: -webkit-fill-available;
+    width: fit-content;
     height: 156.2px;
 }
 
