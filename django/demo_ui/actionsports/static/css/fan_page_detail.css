@@ -1,0 +1,471 @@
+:root {
+    --action_live-text-main: #333333;
+    --action_live-text-sub: #606060;
+    --action_live-text-third: #4D4D4D;
+    --action_live-text-fourth: #707070;
+    --action_live-text-fifth: #666666;
+    --action_live-text-sixth: #999999;
+    --orange: #FE7926;
+    --blue: #333FFA;
+    --purple: #8579D8;
+    --div-bg: #F2F2F2;
+    --chatting-input-bg: #B3B3B3;
+    --chatting-input-container: #E6E6E6;
+    --scroll-bar-track: #CCCCCC;
+    --chatting-user-text: #E6E2FD;
+    --item-border: #E5E5E5;
+}
+
+.player__info {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("/static/images/fan_page/detail/player__info__bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.player__info__name {
+    position: absolute;
+    top: 50px;
+}
+
+.player__info__name__eng {
+    display: block;
+    font-size: 30px;
+}
+
+.player__info__name__kor {
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 20px;
+}
+
+.player__info__team {
+    position: absolute;
+    top: 210px;
+    width: 200px;
+}
+
+.player__info__team__logo {
+    width: 80px;
+}
+
+.player__info__team__name {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.player__info__position {
+    position: absolute;
+    top: 210px;
+    left: 300px;
+    width: 120px;
+}
+
+.player__info__position__number {
+    float: left;
+}
+
+.player__info__position__right {
+    float: right;
+}
+
+.player__info__position__defence {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.player__info__position__attack {
+    display: block;
+    font-size: 20px;
+}
+
+.player__info__etc {
+    position: absolute;
+    top: 320px;
+}
+
+.player__info__etc__birth {}
+
+.player__info__etc__birth__label {}
+
+.player__info__etc__birth__text {}
+
+.player__info__etc__build {}
+
+.player__info__etc__build__label {}
+
+.player__info__etc__build__text {}
+
+.player__info__etc__native {}
+
+.player__info__etc__native__label {}
+
+.player__info__etc__native__text {}
+
+.player__info__btns {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+}
+
+.player__info__btns__bookmark {}
+
+.player__info__btns__bookmark__img {
+    width: 50px;
+}
+
+.player__info__btns__bookmark__text {}
+
+.player__info__btns__like {}
+
+.player__info__btns__like__img {
+    width: 50px;
+}
+
+.player__info__btns__like__text {}
+
+
+/* player__season_record */
+
+.player__season_record {}
+
+.player__season_record__img {
+    width: 100%;
+}
+
+
+/* player__recent */
+
+.player__recent {}
+
+.player__recent__img {
+    width: 100%;
+}
+
+
+/* highlight */
+
+.highlight {
+    margin-top: 100px;
+}
+
+.player__highlight__header {}
+
+.player__highlight__header__circle {
+    width: 9px;
+}
+
+.player__highlight__header__title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--font-color-main);
+}
+
+.highlight__contents {
+    gap: 67.3px 29.6px;
+}
+
+.highlight__item {
+    padding: 0;
+    flex: 0 0 23.14%;
+}
+
+.highlight__item__wrap {
+    width: 100%;
+}
+
+.highlight__item__thumbnail {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.highlight__item__img {
+    width: 100%;
+}
+
+.highlight__item__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--highlight-title-color);
+    word-break: keep-all;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.highlight__item__length {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    font-size: 12px;
+    color: var(--white);
+    background-color: var(--font-color-main);
+    border-radius: 26.785px;
+}
+
+.highlight__item__body {}
+
+.highlight__item__box {
+    font-size: 16px;
+    color: var(--font-color-sub);
+}
+
+.highlight__item__box__views {}
+
+.highlight__item__box__views__icon {}
+
+.highlight__item__box__gap {
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background-color: var(--hightlight-box-gap-color);
+}
+
+.highlight__item__box__date {}
+
+
+/* player__gallery */
+
+.player__gallery {}
+
+.player__gallery__header {}
+
+.player__gallery__header__circle {
+    width: 9px;
+}
+
+.player__gallery__header__title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--font-color-main);
+}
+
+.player__gallery__img {
+    width: 100%;
+}
+
+
+/* player__news_and_comment */
+
+.player__news_and_comment {}
+
+
+/* player__news */
+
+.player__news {}
+
+.player__news__header {}
+
+.player__news__header__circle {
+    width: 9px;
+}
+
+.player__news__header__title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--font-color-main);
+}
+
+.player__news__contents {}
+
+.player__news__item {
+    gap: 10px 0;
+}
+
+.player__news__item__left {}
+
+.player__news__item__left__img {
+    /* width: 200px; */
+    width: 100%;
+}
+
+.player__news__item__right {
+    vertical-align: middle;
+}
+
+.player__news__item__right__title {
+    font-size: 20px;
+}
+
+.player__news__item__right__source {}
+
+.player__news__item__right__gap {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: var(--font-color-main);
+}
+
+.player__news__item__right__date {}
+
+
+/* player__comment */
+
+.player__comment {}
+
+.player__comment__header {}
+
+.player__comment__header__circle {
+    width: 9px;
+}
+
+.player__comment__header__title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--font-color-main);
+}
+
+
+/* chatting */
+
+.chatting {
+    margin-top: 30px;
+    /* background-color: var(--div-bg); */
+}
+
+.contents__header {
+    height: 47px !important;
+    line-height: 47px !important;
+}
+
+.contents__header__circle {
+    width: 10px;
+    vertical-align: baseline;
+}
+
+.contents__header__title {
+    font-size: 16px;
+    color: var(--action_live-text-main);
+}
+
+.chatting__contents {
+    height: 650px;
+}
+
+.chatting__list {
+    width: 90%;
+    height: 530px;
+    overflow: auto;
+}
+
+.chatting__list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chatting__list::-webkit-scrollbar-track {
+    background-color: var(--scroll-bar-track);
+    width: 5px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+}
+
+.chatting__list::-webkit-scrollbar-thumb {
+    background-color: var(--action_live-text-sixth);
+    border-radius: 10px;
+}
+
+.chatting__item {}
+
+.chatting__item__header {
+    vertical-align: top;
+}
+
+.chatting__item__header__user__icon {
+    width: 40px;
+}
+
+.chatting__item__header__user__id {
+    font-size: 12px;
+    color: var(--action_live-text-sub);
+}
+
+.chatting__item__box {}
+
+.chatting__item__box__user__text {
+    font-size: 13px;
+    color: var(--action_live-text-third);
+    background-color: var(--chatting-user-text);
+    border-radius: 15px;
+}
+
+.chatting__item__box__user__text:first-child {
+    border-radius: 0 15px 15px 15px;
+}
+
+.my_chatting__item {}
+
+.my_chatting__item__box {}
+
+.my_chatting__item__box__text {
+    font-size: 14px;
+    color: var(--white);
+    background-color: var(--blue);
+    border-radius: 15px;
+}
+
+.my_chatting__item__box__text:first-child {
+    border-radius: 15px 0 15px 15px;
+}
+
+.my_chatting__item__header {
+    vertical-align: top;
+}
+
+.my_chatting__item__header__user__id {
+    font-size: 14px;
+    color: var(--action_live-text-sub);
+    vertical-align: top;
+    margin-top: 14px;
+}
+
+.chatting__input {
+    border-radius: 10px !important;
+}
+
+.chatting__input__container {
+    width: 80%;
+    background-color: var(--chatting-input-container);
+    border-radius: 18px !important;
+    vertical-align: middle;
+}
+
+.chatting__input__text {
+    font-size: 16px;
+    background-color: var(--chatting-input-container);
+    border: none !important;
+    border-radius: 18px !important;
+}
+
+.chatting__input__text.emoji-wysiwyg-editor {
+    height: 80px !important;
+    padding: 15px 50px 15px 15px;
+    overflow: hidden;
+}
+
+.emoji-picker-icon {
+    top: 30px !important;
+    right: 15px !important;
+    font-size: 30px !important;
+}
+
+.chatting__input__registration {}
+
+.chatting__input__registration__img {
+    width: 60px;
+    cursor: pointer;
+}
