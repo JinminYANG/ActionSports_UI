@@ -19,21 +19,23 @@
 .player__info {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-image: url("/static/images/fan_page/detail/player__info__bg.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
+    font-weight: bold;
 }
 
 .player__info__name {
     position: absolute;
     top: 50px;
+    color: var(--action_live-text-sub);
 }
 
 .player__info__name__eng {
     display: block;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 .player__info__name__kor {
@@ -47,6 +49,7 @@
     position: absolute;
     top: 210px;
     width: 200px;
+    color: var(--action_live-text-third);
 }
 
 .player__info__team__logo {
@@ -57,21 +60,40 @@
     display: inline-block;
     font-size: 20px;
     vertical-align: middle;
+    margin-left: 10px;
 }
 
 .player__info__position {
     position: absolute;
     top: 210px;
-    left: 300px;
-    width: 120px;
+    left: 230px;
+    width: 150px;
+    color: var(--action_live-text-third);
+}
+
+.player__info__position__left {
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .player__info__position__number {
-    float: left;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: blue;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .player__info__position__right {
-    float: right;
+    width: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 .player__info__position__defence {
@@ -89,50 +111,57 @@
     top: 320px;
 }
 
-.player__info__etc__birth {}
+.player__info__etc__item {
+    font-size: 18px;
+}
 
-.player__info__etc__birth__label {}
+.player__info__etc__item__label {
+    display: inline-block;
+    width: 100px;
+    color: var(--action_live-text-fifth);
+}
 
-.player__info__etc__birth__text {}
-
-.player__info__etc__build {}
-
-.player__info__etc__build__label {}
-
-.player__info__etc__build__text {}
-
-.player__info__etc__native {}
-
-.player__info__etc__native__label {}
-
-.player__info__etc__native__text {}
+.player__info__etc__item__text {
+    color: var(--action_live-text-third);
+}
 
 .player__info__btns {
     position: absolute;
-    top: 50px;
+    top: 110px;
     left: 50%;
 }
 
 .player__info__btns__bookmark {}
 
 .player__info__btns__bookmark__img {
-    width: 50px;
+    width: 30px;
 }
 
-.player__info__btns__bookmark__text {}
+.player__info__btns__bookmark__text {
+    margin-left: 10px;
+    color: var(--orange);
+    vertical-align: middle;
+}
 
 .player__info__btns__like {}
 
 .player__info__btns__like__img {
-    width: 50px;
+    width: 30px;
 }
 
-.player__info__btns__like__text {}
+.player__info__btns__like__text {
+    margin-left: 10px;
+    color: var(--orange);
+    vertical-align: middle;
+}
 
 
 /* player__season_record */
 
-.player__season_record {}
+.player__season_record {
+    position: relative;
+    top: -100px;
+}
 
 .player__season_record__img {
     width: 100%;
@@ -141,7 +170,10 @@
 
 /* player__recent */
 
-.player__recent {}
+.player__recent {
+    position: relative;
+    top: -100px;
+}
 
 .player__recent__img {
     width: 100%;
@@ -151,7 +183,8 @@
 /* highlight */
 
 .highlight {
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    margin-top: -50px;
 }
 
 .player__highlight__header {}
@@ -163,7 +196,7 @@
 .player__highlight__header__title {
     display: inline-block;
     vertical-align: middle;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--font-color-main);
 }
@@ -230,6 +263,22 @@
 
 .highlight__item__box__date {}
 
+.highlight__item__more {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.highlight__item__more__btn {}
+
+.highlight__item__more__btn__text {
+    font-size: 16px;
+    color: #808080;
+}
+
+.highlight__item__more__btn__img {
+    width: 30px;
+}
+
 
 /* player__gallery */
 
@@ -244,7 +293,7 @@
 .player__gallery__header__title {
     display: inline-block;
     vertical-align: middle;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--font-color-main);
 }
@@ -256,7 +305,9 @@
 
 /* player__news_and_comment */
 
-.player__news_and_comment {}
+.player__news_and_comment {
+    margin-top: 100px;
+}
 
 
 /* player__news */
@@ -267,12 +318,13 @@
 
 .player__news__header__circle {
     width: 9px;
+    /* vertical-align: middle; */
 }
 
 .player__news__header__title {
     display: inline-block;
     vertical-align: middle;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--font-color-main);
 }
@@ -280,22 +332,25 @@
 .player__news__contents {}
 
 .player__news__item {
-    gap: 10px 0;
+    /* gap: 10px 0; */
 }
 
 .player__news__item__left {}
 
 .player__news__item__left__img {
     /* width: 200px; */
-    width: 100%;
+    width: 80%;
 }
 
 .player__news__item__right {
     vertical-align: middle;
+    color: var(--action_live-text-sixth);
+    font-size: 14px;
 }
 
 .player__news__item__right__title {
-    font-size: 20px;
+    font-size: 18px;
+    color: var(--action_live-text-third);
 }
 
 .player__news__item__right__source {}
@@ -304,10 +359,21 @@
     display: inline-block;
     width: 1px;
     height: 12px;
-    background-color: var(--font-color-main);
+    background-color: var(--action_live-text-sixth);
 }
 
 .player__news__item__right__date {}
+
+.player__news__item__more__btn {}
+
+.player__news__item__more__btn__text {
+    font-size: 16px;
+    color: #808080;
+}
+
+.player__news__item__more__btn__img {
+    width: 30px;
+}
 
 
 /* player__comment */
@@ -323,7 +389,7 @@
 .player__comment__header__title {
     display: inline-block;
     vertical-align: middle;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--font-color-main);
 }
@@ -332,7 +398,7 @@
 /* chatting */
 
 .chatting {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     /* background-color: var(--div-bg); */
 }
 
@@ -363,15 +429,6 @@
 
 .chatting__list::-webkit-scrollbar {
     width: 10px;
-}
-
-.chatting__list::-webkit-scrollbar-track {
-    background-color: var(--scroll-bar-track);
-    width: 5px;
-    margin: 10px 0;
-    border-radius: 10px;
-    border-left: 2px solid var(--white);
-    border-right: 2px solid var(--white);
 }
 
 .chatting__list::-webkit-scrollbar-thumb {
@@ -434,6 +491,7 @@
 }
 
 .chatting__input {
+    width: 90%;
     border-radius: 10px !important;
 }
 
@@ -445,7 +503,8 @@
 }
 
 .chatting__input__text {
-    font-size: 16px;
+    font-size: 14px !important;
+    letter-spacing: 1px;
     background-color: var(--chatting-input-container);
     border: none !important;
     border-radius: 18px !important;
@@ -453,12 +512,14 @@
 
 .chatting__input__text.emoji-wysiwyg-editor {
     height: 80px !important;
-    padding: 15px 50px 15px 15px;
+    line-height: 1.5 !important;
+    padding: 20px 50px 20px 20px;
     overflow: hidden;
+    word-break: keep-all;
 }
 
 .emoji-picker-icon {
-    top: 30px !important;
+    top: 25px !important;
     right: 15px !important;
     font-size: 30px !important;
 }

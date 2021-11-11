@@ -11,7 +11,7 @@
         <div class="search border-radius shadow mt-4">
 
             <div class="team__list row h-100 justify-content-around border-radius shadow mx-0 px-3">
-                <div class="team__item col h-100 my-auto px-2 py-3 text-center active">
+                <div class="team__item col h-100 my-auto px-2 py-3 text-center">
                     <div class="team__item__logo__conatiner h-50">
                         <img src="{% static 'images\fan_page\logo__kbo.png' %}" alt="logo__kbo" class="team__item__logo">
                     </div>
@@ -20,7 +20,7 @@
                     </div>
                 </div>
 
-                <div class="team__item col h-100 my-auto px-2 py-3 text-center">
+                <div class="team__item col h-100 my-auto px-2 py-3 text-center active">
                     <div class="team__item__logo__conatiner h-50">
                         <img src="{% static 'images\fan_page\logo__nc.png' %}" alt="logo__nc" class="team__item__logo">
                     </div>
@@ -112,19 +112,19 @@
             </div>
 
             <div class="position row border-radius shadow mx-0 mt-4 px-3">
-                <div class="position__item position__all__container col-4 py-1 px-0 active">
+                <div class="position__item position__all__container col-4 py-1 px-0">
                     <span class="position__item__text position__all d-inline-block py-1 px-3 border-radius">전체</span>
                 </div>
                 <div class="position__item position__pitcher__container col-4 py-1 px-0">
                     <span class="position__item__text position__pitcher d-inline-block py-1 px-3 border-radius">투수</span>
                 </div>
-                <div class="position__item position__batter__container col-4 py-1 px-0">
+                <div class="position__item position__batter__container col-4 py-1 px-0 active">
                     <span class="position__item__text position__batter d-inline-block py-1 px-3 border-radius">타자</span>
                 </div>
             </div>
 
             <div class="consonants row border-radius shadow mx-0 mt-4 px-3 float-left">
-                <div class="consonants__item consonants__giyeok col px-0 py-2 active">
+                <div class="consonants__item consonants__giyeok col px-0 py-2">
                     <span class="consonants__item__text px-1 border-radius">ㄱ</span>
                 </div>
                 <div class="consonants__item consonants__nieum col px-0 py-2">
@@ -145,7 +145,7 @@
                 <div class="consonants__item consonants__siot col px-0 py-2">
                     <span class="consonants__item__text px-1 border-radius">ㅅ</span>
                 </div>
-                <div class="consonants__item consonants__ieung col px-0 py-2">
+                <div class="consonants__item consonants__ieung col px-0 py-2 active">
                     <span class="consonants__item__text px-1 border-radius">ㅇ</span>
                 </div>
                 <div class="consonants__item consonants__jieut col px-0 py-2">
@@ -177,7 +177,7 @@
 
         </div>
 
-        <div class="player__info mt-5">
+        <div class="player__info mt-5 pl-5">
             <div class="player__info__name">
                 <span class="player__info__name__eng">YANG EUI JI</span>
                 <span class="player__info__name__kor">양의지</span>
@@ -189,7 +189,9 @@
             </div>
 
             <div class="player__info__position">
-                <span class="player__info__position__number">#25</span>
+                <div class="player__info__position__left">
+                    <span class="player__info__position__number border-radius">#25</span>
+                </div>
                 <div class="player__info__position__right">
                     <span class="player__info__position__defence">포수</span>
                     <span class="player__info__position__attack">우투우타</span>
@@ -197,28 +199,29 @@
             </div>
 
             <div class="player__info__etc">
-                <div class="player__info__etc__birth">
-                    <span class="player__info__etc__birth__label">생년월일</span>
-                    <span class="player__info__etc__birth__text">1987-06-05</span>
+                <div class="player__info__etc__birth player__info__etc__item mt-2">
+                    <span class="player__info__etc__birth__label player__info__etc__item__label">생년월일</span>
+                    <span class="player__info__etc__birth__text player__info__etc__item__text">1987-06-05</span>
                 </div>
 
-                <div class="player__info__etc__build">
-                    <span class="player__info__etc__build__label">체격</span>
-                    <span class="player__info__etc__build__text">179cm / 85kg / A형</span>
+                <div class="player__info__etc__build player__info__etc__item mt-2">
+                    <span class="player__info__etc__build__label player__info__etc__item__label">체격</span>
+                    <span class="player__info__etc__build__text player__info__etc__item__text">179cm / 85kg / A형</span>
                 </div>
 
-                <div class="player__info__etc__native">
-                    <span class="player__info__etc__native__label">출신학교</span>
-                    <span class="player__info__etc__native__text">송정동초-무등중-진흥고-두산-경찰-두산</span>
+                <div class="player__info__etc__native player__info__etc__item mt-2">
+                    <span class="player__info__etc__native__label player__info__etc__item__label">출신학교</span>
+                    <span class="player__info__etc__native__text player__info__etc__item__text">송정동초-무등중-진흥고-두산-경찰-두산</span>
                 </div>
             </div>
 
             <div class="player__info__btns">
-                <div class="player__info__btns__bookmark">
+                <div class="player__info__btns__bookmark mt-3">
                     <img src="{% static 'images\fan_page\detail\bookmark.png' %}" alt="player__info__btns__bookmark__img" class="player__info__btns__bookmark__img">
                     <span class="player__info__btns__bookmark__text">즐겨찾기 추가됨</span>
                 </div>
-                <div class="player__info__btns__like">
+
+                <div class="player__info__btns__like mt-3">
                     <img src="{% static 'images\fan_page\detail\like.png' %}" alt="player__info__btns__like__img" class="player__info__btns__like__img">
                     <span class="player__info__btns__like__text">107</span>
                 </div>
@@ -230,28 +233,27 @@
             <img src="{% static 'images\fan_page\detail\player__season_record__img.png' %}" alt="player__season_record__img" class="player__season_record__img">
         </div>
 
-        <div class="player__recent mt-3">
+        <div class="player__recent">
             <img src="{% static 'images\fan_page\detail\player__recent__img.png' %}" alt="player__recent__img" class="player__recent__img">
         </div>
-
 
         <article class="highlight row mx-0">
             <div class="player__highlight__header ml-3">
                 <img src="{% static 'images\fan_page\detail\header_circle.png' %} " alt="player__highlight__header__circle " class="player__highlight__header__circle mr-2">
-                <h2 class="player__highlight__header__title">경기 장면 모음</h2>
+                <h2 class="player__highlight__header__title m-0">경기 장면 모음</h2>
             </div>
 
-            <div class="highlight__contents row row-cols-xl-4 row-cols-lg-2 row-cols-md-1 row-cols-sm-1 row-cols-1 m-0 mt-5 ">
-                <div class="highlight__item col ">
-                    <div class="highlight__item__wrap m-auto ">
-                        <div class="highlight__item__thumbnail " onclick="window.location.href='#' ">
-                            <img src="{% static 'images\main\highlight__item__img__01.png' %} " alt="highlight_01 " class="highlight__item__img " />
+            <div class="highlight__contents row row-cols-xl-4 row-cols-lg-2 row-cols-md-1 row-cols-sm-1 row-cols-1 m-0 mt-4">
+                <div class="highlight__item col">
+                    <div class="highlight__item__wrap m-auto">
+                        <div class="highlight__item__thumbnail" onclick="window.location.href='#'">
+                            <img src="{% static 'images\main\highlight__item__img__01.png' %} " alt="highlight_01" class="highlight__item__img" />
                             <span class="highlight__item__length px-2 py-1 ">00:00</span>
                         </div>
-                        <div class="highlight__item__body text-start mt-3 ">
-                            <span class="highlight__item__title " onclick="window.location.href='#' ">갈 길 바쁜 NC-KT, 1-1 무승부</span>
-                            <div class="highlight__item__box mt-1 ">
-                                <span class="highlight__item__box__views ">
+                        <div class="highlight__item__body text-start mt-3">
+                            <span class="highlight__item__title " onclick="window.location.href='#'">갈 길 바쁜 NC-KT, 1-1 무승부</span>
+                            <div class="highlight__item__box mt-1">
+                                <span class="highlight__item__box__views">
                                         <i class="highlight__item__box__views__icon bi bi-play "></i>118</span>
                                 <span class="highlight__item__box__gap mx-1 "></span>
                                 <span class="highlight__item__box__date ">2021.10.28</span>
@@ -386,27 +388,34 @@
                     </div>
                 </div>
             </div>
+
+            <div class="highlight__item__more col-12 text-center mt-4">
+                <button type="button" class="btn highlight__item__more__btn btn-outline-light">
+                    <span class="highlight__item__more__btn__text d-block">더보기</span>
+                    <img src="{% static 'images\fan_page\fan_35.png' %}" alt="highlight__item__more__btn__img" class="highlight__item__more__btn__img mt-3">
+                 </button>
+            </div>
+
         </article>
 
-        <div class="player__gallery mt-4">
+        <div class="player__gallery mt-5">
             <div class="player__gallery__header ml-3">
                 <img src="{% static 'images\fan_page\detail\header_circle.png' %} " alt="player__gallery__header__circle " class="player__gallery__header__circle mr-2">
-                <h2 class="player__gallery__header__title">포토갤러리</h2>
+                <h2 class="player__gallery__header__title m-0">포토갤러리</h2>
             </div>
             <img src="{% static 'images\fan_page\detail\player__gallery__img.png' %}" alt="player__gallery__img" class="player__gallery__img mt-4">
         </div>
 
-
-        <div class="player__news_and_comment row mx-0 mt-5">
-            <div class="player__news col-6">
-                <div class="player__news__header">
-                    <img src="{% static 'images\fan_page\detail\header_circle.png' %}" alt="player__news__header__circle" class="player__news__header__circle">
-                    <h2 class="player__news__header__title">#양의지</h2>
+        <div class="player__news_and_comment row mx-0">
+            <div class="player__news col-6 px-4">
+                <div class="player__news__header ml-3">
+                    <img src="{% static 'images\fan_page\detail\header_circle.png' %}" alt="player__news__header__circle" class="player__news__header__circle mr-2">
+                    <h2 class="player__news__header__title m-0">#양의지</h2>
                 </div>
 
-                <div class="player__news__contents mt-4">
-                    <div class="player__news__item row mt-2">
-                        <div class="player__news__item__left col-4">
+                <div class="player__news__contents">
+                    <div class="player__news__item row mt-4">
+                        <div class="player__news__item__left col-4 pr-0">
                             <img src="{% static 'images\fan_page\detail\player__news__item__img__01.png' %} " alt="player__news__item__left__img" class="player__news__item__left__img">
                         </div>
                         <div class="player__news__item__right col-8">
@@ -417,8 +426,8 @@
                         </div>
                     </div>
 
-                    <div class="player__news__item row mt-2">
-                        <div class="player__news__item__left col-4">
+                    <div class="player__news__item row mt-3">
+                        <div class="player__news__item__left col-4 pr-0">
                             <img src="{% static 'images\fan_page\detail\player__news__item__img__02.png' %} " alt="player__news__item__left__img" class="player__news__item__left__img">
                         </div>
                         <div class="player__news__item__right col-8">
@@ -429,8 +438,8 @@
                         </div>
                     </div>
 
-                    <div class="player__news__item row mt-2">
-                        <div class="player__news__item__left col-4">
+                    <div class="player__news__item row mt-3">
+                        <div class="player__news__item__left col-4 pr-0">
                             <img src="{% static 'images\fan_page\detail\player__news__item__img__03.png' %} " alt="player__news__item__left__img" class="player__news__item__left__img">
                         </div>
                         <div class="player__news__item__right col-8">
@@ -441,8 +450,8 @@
                         </div>
                     </div>
 
-                    <div class="player__news__item row mt-2">
-                        <div class="player__news__item__left col-4">
+                    <div class="player__news__item row mt-3">
+                        <div class="player__news__item__left col-4 pr-0">
                             <img src="{% static 'images\fan_page\detail\player__news__item__img__04.png' %} " alt="player__news__item__left__img" class="player__news__item__left__img">
                         </div>
                         <div class="player__news__item__right col-8">
@@ -453,8 +462,8 @@
                         </div>
                     </div>
 
-                    <div class="player__news__item row mt-2">
-                        <div class="player__news__item__left col-4">
+                    <div class="player__news__item row mt-3">
+                        <div class="player__news__item__left col-4 pr-0">
                             <img src="{% static 'images\fan_page\detail\player__news__item__img__05.png' %} " alt="player__news__item__left__img" class="player__news__item__left__img">
                         </div>
                         <div class="player__news__item__right col-8">
@@ -465,8 +474,8 @@
                         </div>
                     </div>
 
-                    <div class="player__news__item row mt-2">
-                        <div class="player__news__item__left col-4">
+                    <div class="player__news__item row mt-3">
+                        <div class="player__news__item__left col-4 pr-0">
                             <img src="{% static 'images\fan_page\detail\player__news__item__img__06.png' %} " alt="player__news__item__left__img" class="player__news__item__left__img">
                         </div>
                         <div class="player__news__item__right col-8">
@@ -477,18 +486,25 @@
                         </div>
                     </div>
 
+                    <div class="player__news__item__more mt-4 text-center">
+                        <button type="button" class="btn player__news__item__more__btn btn-outline-light">
+                            <span class="player__news__item__more__btn__text d-block">더보기</span>
+                            <img src="{% static 'images\fan_page\fan_35.png' %}" alt="player__news__item__more__btn__img" class="player__news__item__more__btn__img mt-3">
+                        </button>
+                    </div>
+
                 </div>
             </div>
 
 
-            <div class="chatting col-6">
-                <div class="player__comment__header">
-                    <img src="{% static 'images\fan_page\detail\header_circle.png' %}" alt="player__comment__header__circle" class="player__comment__header__circle">
-                    <h2 class="player__comment__header__title">응원의 한마디</h2>
+            <div class="chatting col-6 px-4">
+                <div class="player__comment__header ml-3">
+                    <img src="{% static 'images\fan_page\detail\header_circle.png' %}" alt="player__comment__header__circle" class="player__comment__header__circle mr-2">
+                    <h2 class="player__comment__header__title m-0">응원의 한마디</h2>
                 </div>
 
-                <div class="chatting__contents border-radius shadow show pb-3 collapse">
-                    <div class="chatting__list m-auto px-2 pt-3">
+                <div class="chatting__contents border-radius shadow show collapse mt-4 py-3">
+                    <div class="chatting__list m-auto px-2 pt-3 mt-2">
                         <div class="chatting__item mb-1">
                             <div class="chatting__item__header d-block">
                                 <img src="{% static 'images\action_live\chatting__item__header__user__icon__01.png' %}" alt="chatting__user__01__icon" class="chatting__item__header__user__icon">
@@ -547,7 +563,6 @@
                             </div>
                         </div>
 
-
                         <div class="chatting__item my_chatting__item text-right">
                             <div class="my_chatting__item__header d-block">
                                 <h3 class="my_chatting__item__header__user__id d-inline-block">Actionsports2021</h3>
@@ -559,12 +574,12 @@
                         </div>
                     </div>
 
-                    <div class="chatting__input px-5 mt-3">
-                        <p class="lead emoji-picker-container chatting__input__container d-inline-block mb-0 mr-3">
+                    <div class="chatting__input m-auto pt-2 ml-4">
+                        <p class="lead emoji-picker-container chatting__input__container d-inline-block mb-0">
                             <textarea type="textbox" data-emoji-input="unicode" class="form-control chatting__input__text" placeholder="타인의 권리를 침해하거나 명예를 훼손하는 댓글은 서비스 이용에 재재를 받을 수 있습니다." data-emojiable="true"></textarea>
                         </p>
                         <button class="btn chatting__input__registration d-inline-block p-0">
-                            <img src="{% static 'images\action_live\chatting__input__registration__img.png' %}" alt="chatting__input__registration__img"  class="chatting__input__registration__img" />
+                            <img src="{% static 'images\action_live\chatting__input__registration__img.png' %}" alt="chatting__input__registration__img"  class="chatting__input__registration__img ml-4" />
                         </button>
                     </div>
 

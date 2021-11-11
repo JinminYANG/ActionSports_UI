@@ -20,3 +20,6 @@ def fan_page(request):
 
 def fan_page_detail(request):
     return render(request, 'fan_page/detail.html')
+
+def introduce(request):
+    return render(request, 'introduce.html')
