@@ -44,6 +44,68 @@ function hideSettingItem() {
 }
 
 
+// all select effects setting button
+const effectsSettingAllButton = document.querySelector(".effects__setting__all__btn");
+const effectsItemButtons = document.querySelectorAll(".effects__item__btn");
+const effectsSettingAllButtonLabel = document.querySelector(".effects__setting__all__btn__label");
+
+effectsSettingAllButton.addEventListener("click", (e) => {
+    if (e.target.checked) {
+        Array.from(effectsItemButtons).forEach((button) => {
+            button.setAttribute("checked", "checked");
+            effectsSettingAllButtonLabel.classList.add("active");
+            effectsSettingAllButtonLabel.innerText = "ON";
+        });
+    } else {
+        Array.from(effectsItemButtons).forEach((button) => {
+            button.removeAttribute("checked");
+            effectsSettingAllButtonLabel.classList.remove("active");
+            effectsSettingAllButtonLabel.innerText = "OFF";
+        });
+    }
+})
+
+const predictionSettingAllButton = document.querySelector(".prediction__setting__all__btn");
+const predictionItemButtons = document.querySelectorAll(".prediction__item__btn");
+const predictionSettingAllButtonLabel = document.querySelector(".prediction__setting__all__btn__label");
+
+predictionSettingAllButton.addEventListener("click", (e) => {
+    if (e.target.checked) {
+        Array.from(predictionItemButtons).forEach((button) => {
+            button.setAttribute("checked", "checked");
+            predictionSettingAllButtonLabel.classList.add("active");
+            predictionSettingAllButtonLabel.innerText = "ON";
+        });
+    } else {
+        Array.from(predictionItemButtons).forEach((button) => {
+            button.removeAttribute("checked");
+            predictionSettingAllButtonLabel.classList.remove("active");
+            predictionSettingAllButtonLabel.innerText = "OFF";
+        });
+    }
+})
+
+const playerInfoSettingAllButton = document.querySelector(".player_info__setting__all__btn");
+const playerInfoItemButtons = document.querySelectorAll(".player_info__item__btn");
+const playerInfoSettingAllButtonLabel = document.querySelector(".player_info__setting__all__btn__label");
+
+playerInfoSettingAllButton.addEventListener("click", (e) => {
+    if (e.target.checked) {
+        Array.from(playerInfoItemButtons).forEach((button) => {
+            button.setAttribute("checked", "checked");
+            playerInfoSettingAllButtonLabel.classList.add("active");
+            playerInfoSettingAllButtonLabel.innerText = "ON";
+        });
+    } else {
+        Array.from(playerInfoItemButtons).forEach((button) => {
+            button.removeAttribute("checked");
+            playerInfoSettingAllButtonLabel.classList.remove("active");
+            playerInfoSettingAllButtonLabel.innerText = "OFF";
+        });
+    }
+})
+
+
 
 
 // LiveChatRoom control

@@ -1,3 +1,5 @@
+/* index */
+
 :root {
     --top-gnb-bg: #ededed;
     --font-color-main: #666666;
@@ -6,11 +8,29 @@
     --highlight-title-color: #333333;
     --hightlight-box-gap-color: #b3b3b3;
     --schedule-win-color: #4d4d4d;
-    --record-first: #fbb03b;
-    --record-second: #cccccc;
-    --record-third: #c69c6d;
     --white: #ffffff;
     --black: #000000;
+    --orange: #FE7926;
+    --blue: #333FFA;
+    --purple: #8579D8;
+}
+
+
+/* action_live */
+
+:root {
+    --action_live-text-main: #333333;
+    --action_live-text-sub: #606060;
+    --action_live-text-third: #4D4D4D;
+    --action_live-text-fourth: #707070;
+    --action_live-text-fifth: #666666;
+    --action_live-text-sixth: #999999;
+    --div-bg: #F2F2F2;
+    --chatting-input-bg: #B3B3B3;
+    --chatting-input-container: #E6E6E6;
+    --scroll-bar-track: #CCCCCC;
+    --chatting-user-text: #E6E2FD;
+    --item-border: #E5E5E5;
 }
 
 * {

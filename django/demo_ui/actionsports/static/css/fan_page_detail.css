@@ -19,7 +19,7 @@
 .player__info {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 700px;
     background-image: url("/static/images/fan_page/detail/player__info__bg.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 
 .player__info__name {
     position: absolute;
-    top: 50px;
+    top: 80px;
     color: var(--action_live-text-sub);
 }
 
@@ -47,8 +47,8 @@
 
 .player__info__team {
     position: absolute;
-    top: 210px;
-    width: 200px;
+    top: 250px;
+    /* width: 200px; */
     color: var(--action_live-text-third);
 }
 
@@ -65,9 +65,9 @@
 
 .player__info__position {
     position: absolute;
-    top: 210px;
-    left: 230px;
-    width: 150px;
+    top: 250px;
+    left: 250px;
+    /* width: 150px; */
     color: var(--action_live-text-third);
 }
 
@@ -108,7 +108,7 @@
 
 .player__info__etc {
     position: absolute;
-    top: 320px;
+    top: 375px;
 }
 
 .player__info__etc__item {
@@ -127,32 +127,34 @@
 
 .player__info__btns {
     position: absolute;
-    top: 110px;
-    left: 50%;
+    top: 120px;
+    left: 45%;
 }
 
 .player__info__btns__bookmark {}
 
 .player__info__btns__bookmark__img {
-    width: 30px;
+    width: 35px;
 }
 
 .player__info__btns__bookmark__text {
     margin-left: 10px;
     color: var(--orange);
     vertical-align: middle;
+    font-size: 14px;
 }
 
 .player__info__btns__like {}
 
 .player__info__btns__like__img {
-    width: 30px;
+    width: 35px;
 }
 
 .player__info__btns__like__text {
     margin-left: 10px;
     color: var(--orange);
     vertical-align: middle;
+    font-size: 14px;
 }
 
 
@@ -160,7 +162,7 @@
 
 .player__season_record {
     position: relative;
-    top: -100px;
+    top: -110px;
 }
 
 .player__season_record__img {
@@ -172,7 +174,7 @@
 
 .player__recent {
     position: relative;
-    top: -100px;
+    top: -80px;
 }
 
 .player__recent__img {
@@ -182,9 +184,8 @@
 
 /* highlight */
 
-.highlight {
-    /* margin-top: 100px; */
-    margin-top: -50px;
+.player__highlight {
+    margin-top: -0px;
 }
 
 .player__highlight__header {}
@@ -195,45 +196,37 @@
 
 .player__highlight__header__title {
     display: inline-block;
-    vertical-align: middle;
-    font-size: 20px;
+    vertical-align: top;
+    font-size: 22px;
     font-weight: bold;
-    color: var(--font-color-main);
+    color: var(--action_live-text-third);
 }
 
-.highlight__contents {
+.player__highlight__contents {
+    margin-top: 35px !important;
     gap: 67.3px 29.6px;
 }
 
-.highlight__item {
+.player__highlight__item {
     padding: 0;
     flex: 0 0 23.14%;
 }
 
-.highlight__item__wrap {
+.player__highlight__item__wrap {
     width: 100%;
 }
 
-.highlight__item__thumbnail {
+.player__highlight__item__thumbnail {
     position: relative;
     width: 100%;
     cursor: pointer;
 }
 
-.highlight__item__img {
+.player__highlight__item__img {
     width: 100%;
 }
 
-.highlight__item__title {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--highlight-title-color);
-    word-break: keep-all;
-    word-wrap: break-word;
-    cursor: pointer;
-}
-
-.highlight__item__length {
+.player__highlight__item__length {
     position: absolute;
     right: 14px;
     bottom: 12px;
@@ -243,46 +236,57 @@
     border-radius: 26.785px;
 }
 
-.highlight__item__body {}
+.player__highlight__item__body {}
 
-.highlight__item__box {
+.player__highlight__item__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--highlight-title-color);
+    word-break: keep-all;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.player__highlight__item__box {
     font-size: 16px;
     color: var(--font-color-sub);
 }
 
-.highlight__item__box__views {}
+.player__highlight__item__box__views {}
 
-.highlight__item__box__views__icon {}
+.player__highlight__item__box__views__icon {}
 
-.highlight__item__box__gap {
+.player__highlight__item__box__gap {
     display: inline-block;
     width: 2px;
     height: 12px;
     background-color: var(--hightlight-box-gap-color);
 }
 
-.highlight__item__box__date {}
+.player__highlight__item__box__date {}
 
-.highlight__item__more {
+.player__highlight__item__more {
     flex: 0 0 100%;
     max-width: 100%;
 }
 
-.highlight__item__more__btn {}
+.player__highlight__item__more__btn {}
 
-.highlight__item__more__btn__text {
+.player__highlight__item__more__btn__text {
     font-size: 16px;
     color: #808080;
 }
 
-.highlight__item__more__btn__img {
+.player__highlight__item__more__btn__img {
     width: 30px;
 }
 
 
 /* player__gallery */
 
-.player__gallery {}
+.player__gallery {
+    margin-top: 75px;
+}
 
 .player__gallery__header {}
 
@@ -292,14 +296,15 @@
 
 .player__gallery__header__title {
     display: inline-block;
-    vertical-align: middle;
-    font-size: 20px;
+    vertical-align: top;
+    font-size: 22px;
     font-weight: bold;
     color: var(--font-color-main);
 }
 
 .player__gallery__img {
     width: 100%;
+    margin-top: 65px;
 }
 
 
@@ -318,13 +323,12 @@
 
 .player__news__header__circle {
     width: 9px;
-    /* vertical-align: middle; */
 }
 
 .player__news__header__title {
     display: inline-block;
-    vertical-align: middle;
-    font-size: 20px;
+    vertical-align: top;
+    font-size: 22px;
     font-weight: bold;
     color: var(--font-color-main);
 }
@@ -332,14 +336,13 @@
 .player__news__contents {}
 
 .player__news__item {
-    /* gap: 10px 0; */
+    margin-bottom: 39px;
 }
 
 .player__news__item__left {}
 
 .player__news__item__left__img {
-    /* width: 200px; */
-    width: 80%;
+    width: 160px;
 }
 
 .player__news__item__right {
@@ -388,121 +391,96 @@
 
 .player__comment__header__title {
     display: inline-block;
-    vertical-align: middle;
-    font-size: 20px;
+    vertical-align: top;
+    font-size: 22px;
     font-weight: bold;
     color: var(--font-color-main);
 }
 
-
-/* chatting */
-
-.chatting {
-    /* margin-top: 30px; */
-    /* background-color: var(--div-bg); */
+.player__comment__contents {
+    height: 840px;
 }
 
-.contents__header {
-    height: 47px !important;
-    line-height: 47px !important;
-}
-
-.contents__header__circle {
-    width: 10px;
-    vertical-align: baseline;
-}
-
-.contents__header__title {
-    font-size: 16px;
-    color: var(--action_live-text-main);
-}
-
-.chatting__contents {
-    height: 650px;
-}
-
-.chatting__list {
+.player__comment__list {
     width: 90%;
-    height: 530px;
+    height: 700px;
     overflow: auto;
 }
 
-.chatting__list::-webkit-scrollbar {
+.player__comment__list::-webkit-scrollbar {
     width: 10px;
 }
 
-.chatting__list::-webkit-scrollbar-thumb {
+.player__comment__list::-webkit-scrollbar-thumb {
     background-color: var(--action_live-text-sixth);
     border-radius: 10px;
 }
 
-.chatting__item {}
+.player__comment__item {}
 
-.chatting__item__header {
+.player__comment__item__header {
     vertical-align: top;
 }
 
-.chatting__item__header__user__icon {
+.player__comment__item__header__user__icon {
     width: 40px;
 }
 
-.chatting__item__header__user__id {
+.player__comment__item__header__user__id {
     font-size: 12px;
     color: var(--action_live-text-sub);
 }
 
-.chatting__item__box {}
+.player__comment__item__box {}
 
-.chatting__item__box__user__text {
+.player__comment__item__box__user__text {
     font-size: 13px;
     color: var(--action_live-text-third);
     background-color: var(--chatting-user-text);
     border-radius: 15px;
 }
 
-.chatting__item__box__user__text:first-child {
+.player__comment__item__box__user__text:first-child {
     border-radius: 0 15px 15px 15px;
 }
 
-.my_chatting__item {}
+.player__my_comment__item {}
 
-.my_chatting__item__box {}
-
-.my_chatting__item__box__text {
-    font-size: 14px;
-    color: var(--white);
-    background-color: var(--blue);
-    border-radius: 15px;
-}
-
-.my_chatting__item__box__text:first-child {
-    border-radius: 15px 0 15px 15px;
-}
-
-.my_chatting__item__header {
+.player__my_comment__item__header {
     vertical-align: top;
 }
 
-.my_chatting__item__header__user__id {
+.player__my_comment__item__header__user__id {
     font-size: 14px;
     color: var(--action_live-text-sub);
     vertical-align: top;
     margin-top: 14px;
 }
 
-.chatting__input {
+.player__my_comment__item__box__text {
+    font-size: 14px;
+    color: var(--white);
+    background-color: var(--blue);
+    border-radius: 15px;
+}
+
+.player__my_comment__item__box__text:first-child {
+    border-radius: 15px 0 15px 15px;
+}
+
+.player__comment__input {
     width: 90%;
     border-radius: 10px !important;
 }
 
-.chatting__input__container {
+.player__comment__input__container {
     width: 80%;
     background-color: var(--chatting-input-container);
     border-radius: 18px !important;
     vertical-align: middle;
 }
 
-.chatting__input__text {
+.player__comment__input__text {
     font-size: 14px !important;
     letter-spacing: 1px;
     background-color: var(--chatting-input-container);
@@ -510,7 +488,7 @@
     border-radius: 18px !important;
 }
 
-.chatting__input__text.emoji-wysiwyg-editor {
+.player__comment__input__text.emoji-wysiwyg-editor {
     height: 80px !important;
     line-height: 1.5 !important;
     padding: 20px 50px 20px 20px;
@@ -524,9 +502,9 @@
     font-size: 30px !important;
 }
 
-.chatting__input__registration {}
+.player__comment__input__registration {}
 
-.chatting__input__registration__img {
+.player__comment__input__registration__img {
     width: 60px;
     cursor: pointer;
 }

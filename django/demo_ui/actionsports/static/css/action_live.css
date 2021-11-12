@@ -942,8 +942,64 @@
 
 .setting__header__title {}
 
-.effects__setting__all__btn {
-    width: 50px;
+.setting__all__btn__label {
+    position: absolute;
+    left: 141px;
+    top: 17px;
+    z-index: 1;
+    font-size: 10px;
+    line-height: initial;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.setting__all__btn__label.active {
+    left: 127px;
+}
+
+.setting__all__btn {
+    position: relative;
+    top: 5px;
+    width: 45px;
+    height: 20px;
+    appearance: none;
+    background: var(--action_live-text-sixth);
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.effects .setting__all__btn:checked {
+    background: var(--orange);
+}
+
+.prediction .setting__all__btn:checked {
+    background: var(--blue);
+}
+
+.player_info .setting__all__btn:checked {
+    background: var(--purple);
+}
+
+.setting__all__btn::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.setting__all__btn:checked::before {
+    left: 26px;
 }
 
 .setting__alert {
