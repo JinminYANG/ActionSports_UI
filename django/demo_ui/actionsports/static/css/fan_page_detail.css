@@ -1,0 +1,510 @@
+/* :root {
+    --action_live-text-main: #333333;
+    --action_live-text-sub: #606060;
+    --action_live-text-third: #4D4D4D;
+    --action_live-text-fourth: #707070;
+    --action_live-text-fifth: #666666;
+    --action_live-text-sixth: #999999;
+    --orange: #FE7926;
+    --blue: #333FFA;
+    --purple: #8579D8;
+    --div-bg: #F2F2F2;
+    --chatting-input-bg: #B3B3B3;
+    --chatting-input-container: #E6E6E6;
+    --scroll-bar-track: #CCCCCC;
+    --chatting-user-text: #E6E2FD;
+    --item-border: #E5E5E5;
+} */
+
+.player__info {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url("/static/images/fan_page/detail/player__info__bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    font-weight: bold;
+}
+
+.player__info__name {
+    position: absolute;
+    top: 80px;
+    color: var(--granite-gray);
+}
+
+.player__info__name__eng {
+    display: block;
+    font-size: 22px;
+}
+
+.player__info__name__kor {
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 20px;
+}
+
+.player__info__team {
+    position: absolute;
+    top: 250px;
+    /* width: 200px; */
+    color: var(--dark-liver);
+}
+
+.player__info__team__logo {
+    width: 80px;
+}
+
+.player__info__team__name {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.player__info__position {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    /* width: 150px; */
+    color: var(--dark-liver);
+}
+
+.player__info__position__left {
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.player__info__position__number {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--light-loyal-blue);
+    color: var(--white);
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.player__info__position__right {
+    width: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.player__info__position__defence {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.player__info__position__attack {
+    display: block;
+    font-size: 20px;
+}
+
+.player__info__etc {
+    position: absolute;
+    top: 375px;
+}
+
+.player__info__etc__item {
+    font-size: 18px;
+}
+
+.player__info__etc__item__label {
+    display: inline-block;
+    width: 100px;
+    color: var(--dove-gray);
+}
+
+.player__info__etc__item__text {
+    color: var(--dark-liver);
+}
+
+.player__info__btns {
+    position: absolute;
+    top: 120px;
+    left: 45%;
+}
+
+.player__info__btns__bookmark {}
+
+.player__info__btns__bookmark__img {
+    width: 35px;
+}
+
+.player__info__btns__bookmark__text {
+    margin-left: 10px;
+    color: var(--princeton-orange);
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.player__info__btns__like {}
+
+.player__info__btns__like__img {
+    width: 35px;
+}
+
+.player__info__btns__like__text {
+    margin-left: 10px;
+    color: var(--princeton-orange);
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+
+/* player__season_record */
+
+.player__season_record {
+    position: relative;
+    top: -110px;
+}
+
+.player__season_record__img {
+    width: 100%;
+}
+
+
+/* player__recent */
+
+.player__recent {
+    position: relative;
+    top: -80px;
+}
+
+.player__recent__img {
+    width: 100%;
+}
+
+
+/* highlight */
+
+.player__highlight {
+    margin-top: -0px;
+}
+
+.player__highlight__header {}
+
+.player__highlight__header__circle {
+    width: 9px;
+}
+
+.player__highlight__header__title {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--dark-liver);
+}
+
+.player__highlight__contents {
+    margin-top: 35px !important;
+    gap: 67.3px 29.6px;
+}
+
+.player__highlight__item {
+    padding: 0;
+    flex: 0 0 23.14%;
+}
+
+.player__highlight__item__wrap {
+    width: 100%;
+}
+
+.player__highlight__item__thumbnail {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.player__highlight__item__img {
+    width: 100%;
+}
+
+.player__highlight__item__length {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    font-size: 12px;
+    color: var(--white);
+    background-color: var(--dove-gray);
+    border-radius: 26.785px;
+}
+
+.player__highlight__item__body {}
+
+.player__highlight__item__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark-charcoal);
+    word-break: keep-all;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.player__highlight__item__box {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.player__highlight__item__box__views {}
+
+.player__highlight__item__box__views__icon {}
+
+.player__highlight__item__box__gap {
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background-color: var(--philippine-silve);
+}
+
+.player__highlight__item__box__date {}
+
+.player__highlight__item__more {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.player__highlight__item__more__btn {}
+
+.player__highlight__item__more__btn__text {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.player__highlight__item__more__btn__img {
+    width: 30px;
+}
+
+
+/* player__gallery */
+
+.player__gallery {
+    margin-top: 75px;
+}
+
+.player__gallery__header {}
+
+.player__gallery__header__circle {
+    width: 9px;
+}
+
+.player__gallery__header__title {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--dove-gray);
+}
+
+.player__gallery__img {
+    width: 100%;
+    margin-top: 65px;
+}
+
+
+/* player__news_and_comment */
+
+.player__news_and_comment {
+    margin-top: 100px;
+}
+
+
+/* player__news */
+
+.player__news {}
+
+.player__news__header {}
+
+.player__news__header__circle {
+    width: 9px;
+}
+
+.player__news__header__title {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--dove-gray);
+}
+
+.player__news__contents {}
+
+.player__news__item {
+    margin-bottom: 39px;
+}
+
+.player__news__item__left {}
+
+.player__news__item__left__img {
+    width: 160px;
+}
+
+.player__news__item__right {
+    vertical-align: middle;
+    color: var(--spanish-gray);
+    font-size: 14px;
+}
+
+.player__news__item__right__title {
+    font-size: 18px;
+    color: var(--dark-liver);
+}
+
+.player__news__item__right__source {}
+
+.player__news__item__right__gap {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: var(--spanish-gray);
+}
+
+.player__news__item__right__date {}
+
+.player__news__item__more__btn {}
+
+.player__news__item__more__btn__text {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.player__news__item__more__btn__img {
+    width: 30px;
+}
+
+
+/* player__comment */
+
+.player__comment {}
+
+.player__comment__header {}
+
+.player__comment__header__circle {
+    width: 9px;
+}
+
+.player__comment__header__title {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--dove-gray);
+}
+
+.player__comment__contents {
+    height: 840px;
+}
+
+.player__comment__list {
+    width: 90%;
+    height: 700px;
+    overflow: auto;
+}
+
+.player__comment__list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.player__comment__list::-webkit-scrollbar-thumb {
+    background-color: var(--spanish-grayh);
+    border-radius: 10px;
+}
+
+.player__comment__item {}
+
+.player__comment__item__header {
+    vertical-align: top;
+}
+
+.player__comment__item__header__user__icon {
+    width: 40px;
+}
+
+.player__comment__item__header__user__id {
+    font-size: 12px;
+    color: var(--granite-gray);
+}
+
+.player__comment__item__box {}
+
+.player__comment__item__box__user__text {
+    font-size: 13px;
+    color: var(--dark-liver);
+    background-color: var(--lavende);
+    border-radius: 15px;
+}
+
+.player__comment__item__box__user__text:first-child {
+    border-radius: 0 15px 15px 15px;
+}
+
+.player__my_comment__item {}
+
+.player__my_comment__item__header {
+    vertical-align: top;
+}
+
+.player__my_comment__item__header__user__id {
+    font-size: 14px;
+    color: var(--granite-gray);
+    vertical-align: top;
+    margin-top: 14px;
+}
+
+.player__my_comment__item__box__text {
+    font-size: 14px;
+    color: var(--white);
+    background-color: var(--light-loyal-blue);
+    border-radius: 15px;
+}
+
+.player__my_comment__item__box__text:first-child {
+    border-radius: 15px 0 15px 15px;
+}
+
+.player__comment__input {
+    width: 90%;
+    border-radius: 10px !important;
+}
+
+.player__comment__input__container {
+    width: 80%;
+    background-color: var(--platinum);
+    border-radius: 18px !important;
+    vertical-align: middle;
+}
+
+.player__comment__input__text {
+    font-size: 14px !important;
+    letter-spacing: 1px;
+    background-color: var(--platinum);
+    border: none !important;
+    border-radius: 18px !important;
+}
+
+.player__comment__input__text.emoji-wysiwyg-editor {
+    height: 80px !important;
+    line-height: 1.5 !important;
+    padding: 20px 50px 20px 20px;
+    overflow: hidden;
+    word-break: keep-all;
+}
+
+.emoji-picker-icon {
+    top: 25px !important;
+    right: 15px !important;
+    font-size: 30px !important;
+}
+
+.player__comment__input__registration {}
+
+.player__comment__input__registration__img {
+    width: 60px;
+    cursor: pointer;
+}

@@ -1,0 +1,643 @@
+{% extends "base_generic.html"%} {% load static %} {% block css %}
+<link href="{% static 'css/action_live.css' %}" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="{% static 'emoji/css/emoji.css' %}" rel="stylesheet" /> {% endblock css %} {% block content %}
+
+<div class="container container-md container-sm p-0 pt-4">
+    <div class="row contents justify-content-between m-0">
+
+        <div class="streaming_and_chatting col-8 p-0">
+
+            <article class="streaming border-radius shadow">
+                <div class="streaming__item border-radius video_player">
+
+                    <video src="{% static 'videos\Kang_Baek-Ho.mp4' %}" class="streaming__item__video video_player__video" type="video/mp4" preload="auto"></video>
+
+                    <div class="video_player__controls row justify-content-between m-0">
+                        <div class="video_player__controls__left ml-3 left-side-controls">
+                            <button class="play_button p-0 mx-2" title="play">
+                                <i class="bi bi-play-fill play_button__icon"></i>
+                            </button>
+
+                            <div class="volume-control video_player__controls__volume">
+                                <div class="volume-btn btn p-0 video_player__controls__volume__btn">
+                                    <i class="bi bi-volume-mute muted" draggable="false"></i>
+                                    <i class="bi bi-volume-down half-volume" draggable="false"></i>
+                                    <i class="bi bi-volume-up full-volume" draggable="false"></i>
+                                </div>
+
+                                <div class="volume-panel video_player__controls__volume__panel">
+                                    <div class="input-div">
+                                        <div class="volume-input-div">
+                                            <input type="range" value="100" step="5">
+                                            <div class="volume-progress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="video_player__controls__right mr-3">
+                            <button class="setting_button p-0 mx-2">
+                                <i class="bi bi-gear-fill setting_button__icon"></i>
+                            </button>
+
+                            <button class="full_content_button p-0 mx-2">
+                                <i class="bi bi-view-list full_content_button__icon"></i>
+                            </button>
+
+                            <button class="full_screen_button p-0 mx-2">
+                                <i class="bi bi-aspect-ratio full_screen_button__icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="preferences">
+                        <button type="button" class="preferences__item resolution p-2 my-1">
+                            <span class="preferences__item__title resolution__title ml-1">해상도</span>
+                            <i class="bi bi-chevron-right preferences__item__icon"></i>
+                            <span class="preferences__item__text resolution__text">자동 720p</span></i>
+                        </button>
+
+                        <button type="button" class="preferences__item playback_speed p-2 my-1">
+                            <span class="preferences__item__title playback_speed__title ml-1">재생 속도</span>
+                            <i class="bi bi-chevron-right preferences__item__icon"></i>
+                            <span class="preferences__item__text playback_speed__text">1.0x</span>
+                        </button>
+                    </div>
+
+                    <div class="resolution__setting">
+                        <div class="resolution__setting__header">
+                            <button type="button" class="resolution__setting__previous p-2 my-1">
+                                <span><i class="bi bi-chevron-left resolution__setting__previous__icon"></i> 해상도</span>
+                            </button>
+                        </div>
+                        <div class="resolution__setting__body">
+                            <button type="button" class="resolution__setting__item py-2 px-3 my-1 active">자동 (720p)</button>
+                            <button type="button" class="resolution__setting__item py-2 px-3 my-1" value="1080">1080p</button>
+                            <button type="button" class="resolution__setting__item py-2 px-3 my-1" value="720">720p</button>
+                            <button type="button" class="resolution__setting__item py-2 px-3 my-1" value="480">480p</button>
+                            <button type="button" class="resolution__setting__item py-2 px-3 my-1" value="360">360p</button>
+                        </div>
+                    </div>
+
+                    <div class="playback_speed__setting">
+                        <div class="playback_speed__setting__header">
+                            <button type="button" class="playback_speed__setting__previous p-2 my-1">
+                                <span><i class="bi bi-chevron-left playback_speed__setting__previous__icon"></i> 재생 속도</span>
+                            </button>
+                        </div>
+                        <div class="playback_speed__setting__body">
+                            <button type="button" class="playback_speed__setting__item py-2 px-3 my-1" value="0.5">0.5x</button>
+                            <button type="button" class="playback_speed__setting__item py-2 px-3 my-1" value="0.75">0.75x</button>
+                            <button type="button" class="playback_speed__setting__item py-2 px-3 my-1 active" value="1.0">1.0x (기본)</button>
+                            <button type="button" class="playback_speed__setting__item py-2 px-3 my-1" value="1.5">1.5x</button>
+                            <button type="button" class="playback_speed__setting__item py-2 px-3 my-1" value="2.0">2.0x</button>
+                        </div>
+                    </div>
+
+                    <i class="bi bi-x streaming__item__close video_player__close"></i>
+                </div>
+
+                <div class="streaming__textbox p-3">
+                    <div class="streaming__info d-inline-block">
+                        <img src="{% static 'images\action_live\streaming__info__live_icon.png' %}" alt="streaming__info__live_icon" class="streaming__info__live_icon" />
+
+                        <div class="streaming__info__header d-block mt-3">
+                            <h2 class="streaming__info__header__title d-inline-block">KT vs 한화 (KT wiz vs HanHwa eagles)</h2>
+                            <span class="streaming__info__header__gap d-inline-block mx-1"></span>
+                            <span class="streaming__info__header__league">KBO 리그
+                        </div>
+
+                        <div class="streaming__info__sub mt-1">
+                            <span class="streaming__info__sub__today">2021.09.01</span>
+                            <span class="streaming__info__sub__gap d-inline-block mx-1"></span>
+                            <span class="streaming__info__sub__stadium">한화생명이글스파크</span>
+                            <span class="streaming__info__sub__gap d-inline-block mx-1"></span>
+                            <span class="streaming__info__sub__start">시작시간 14:10</span>
+                        </div>
+                    </div>
+
+                    <div class="streaming__etc d-inline-block float-right">
+                        <div class="streaming__etc__views d-inline-block mr-4">
+                            <img src="{% static 'images\action_live\streaming__etc__views__img.png' %}" alt="streaming__etc__views__img" class="streaming__etc__views__img mr-1">
+                            <span class="streaming__etc__views__text">5,045</span>
+                        </div>
+
+                        <span class="streaming__etc__time">01:20:35</span>
+                    </div>
+
+                    <div class="streaming__bottom mt-3 ml-5">
+                        <button type="button" class="btn streaming__bottom__item streaming__bottom__like d-inline-block">
+                            <span class="streaming__bottom__item__box streaming__bottom__like__box mr-1"></span>
+                            <span class="streaming__bottom__item__text streaming__bottom__like__text">좋아요</span>
+                        </button>
+
+                        <button type="button" class="btn streaming__bottom__item streaming__bottom__share d-inline-block" data-toggle="modal" data-target="#shareModal">
+                            <span class="streaming__bottom__item__box streaming__bottom__share__box mr-1"></span>
+                            <span class="streaming__bottom__item__text streaming__bottom__share__text">공유하기</span>
+                        </button>
+
+                        <button type="button" class="btn streaming__bottom__item streaming__bottom__add_to_playlist d-inline-block">
+                            <span class="streaming__bottom__item__box streaming__bottom__add_to_playlist__box mr-1"></span>
+                            <span class="streaming__bottom__item__text streaming__bottom__add_to_playlist__text">재생목록에 추가</span>
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade share_modal" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content share_modal__content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title share_modal__title" id="shareModalLabel">공유하기</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="modal-body share_modal__body">
+                                        <div class="share_modal__list row row-cols-4 text-center">
+                                            <a href="" target="_blank" class="share_modal__item share_modal__facebook"><i class="bi bi-facebook"></i></a>
+                                            <a href="" target="_blank" class="share_modal__item share_modal__github"><i class="bi bi-github"></i></a>
+                                            <a href="" target="_blank" class="share_modal__item share_modal__google"><i class="bi bi-google"></i></a>
+                                            <a href="" target="_blank" class="share_modal__item share_modal__instagram"><i class="bi bi-instagram"></i></a>
+                                            <a href="" target="_blank" class="share_modal__item share_modal__line"><i class="bi bi-line"></i></a>
+                                            <a href="" target="_blank" class="share_modal__item share_modal__messenger"><i class="bi bi-messenger"></i></a>
+                                            <a href="" target="_blank" class="share_modal__item share_modal__slack"><i class="bi bi-slack"></i></a>
+                                            <a href="" target="_blank" class="share_modal__item share_modal__twitter"><i class="bi bi-twitter"></i></a>
+                                        </div>
+
+                                        <hr>
+
+                                        <div class="share_modal__link">
+                                            <input type="text" value="https://wwww.actionsports.co.kr/action_live/as65das4dsa6as4dsa74d6" disabled class="share_modal__link__text">
+                                            <button type="button" class="btn share_modal__link__btn p-0 ml-1"><i class="bi bi-stickies share_modal__link__btn__icon d-block"></i></button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            <div class="chatting border-radius shadow">
+                <div class="chatting__header contents__header px-4">
+                    <img src="{% static 'images\action_live\title_circle.png' %}" alt="chatting__header__circle" class="chatting__header__circle contents__header__circle">
+                    <h2 class="chatting__title contents__header__title d-inline-block m-0 ml-2">Live Chat Room</h2>
+
+                    <button class="btn float-right chatting__header__toggle down p-0" type="button" data-toggle="collapse" data-target="#collapseChattingContents" aria-expanded="false" aria-controls="collapseChattingContents">
+                        <img src="{% static 'images\action_live\chatting__header__toggle__img.png' %}"
+                            alt="chatting__header__toggle" class="chatting__header__toggle__img">
+                    </button>
+                </div>
+
+                <div class="chatting__contents border-radius show pb-3 collapse" id="collapseChattingContents">
+                    <div class="chatting__list m-auto px-2 pt-3">
+                        <div class="chatting__item mb-1">
+                            <div class="chatting__item__header d-inline-block w-25">
+                                <img src="{% static 'images\action_live\chatting__item__header__user__icon__01.png' %}" alt="chatting__user__01__icon" class="chatting__item__header__user__icon">
+                                <h3 class="chatting__item__header__user__id d-inline-block">actionsports7</h3>
+                            </div>
+
+                            <div class="chatting__item__box d-inline-block">
+                                <span class="chatting__item__box__user__text d-block p-2 px-3 m-1">더 생생하게 와닿네요 우리팀 응원합니다^^</span>
+                            </div>
+                        </div>
+
+                        <div class="chatting__item mb-1">
+                            <div class="chatting__item__header d-inline-block w-25">
+                                <img src="{% static 'images\action_live\chatting__item__header__user__icon__02.png' %}" alt="chatting__user__01__icon" class="chatting__item__header__user__icon">
+                                <h3 class="chatting__item__header__user__id d-inline-block">KTwizfan123</h3>
+                            </div>
+
+                            <div class="chatting__item__box d-inline-block">
+                                <span class="chatting__item__box__user__text d-block p-2 px-3 m-1">실시간 생중계 잘 보고 있습니다 재미있어요~!</span>
+                                <span class="chatting__item__box__user__text d-inline-block p-2 px-3 m-1">오늘 경기력이 대단하네요!</span>
+                            </div>
+                        </div>
+
+                        <div class="chatting__item mb-1">
+                            <div class="chatting__item__header d-inline-block w-25">
+                                <img src="{% static 'images\action_live\chatting__item__header__user__icon__03.png' %}" alt="chatting__user__01__icon" class="chatting__item__header__user__icon">
+                                <h3 class="chatting__item__header__user__id d-inline-block">KTwizfan123</h3>
+                            </div>
+
+                            <div class="chatting__item__box d-inline-block">
+                                <span class="chatting__item__box__user__text d-block p-2 px-3 m-1">실시간 생중계 잘 보고 있습니다 재미있어요~!</span>
+                                <span class="chatting__item__box__user__text d-inline-block p-2 px-3 m-1">오늘 경기력이 대단하네요!</span>
+                            </div>
+                        </div>
+
+                        <div class="chatting__item mb-1">
+                            <div class="chatting__item__header d-inline-block w-25">
+                                <img src="{% static 'images\action_live\chatting__item__header__user__icon__02.png' %}" alt="chatting__user__01__icon" class="chatting__item__header__user__icon">
+                                <h3 class="chatting__item__header__user__id d-inline-block">KTwizfan123</h3>
+                            </div>
+
+                            <div class="chatting__item__box d-inline-block">
+                                <span class="chatting__item__box__user__text d-block p-2 px-3 m-1">실시간 생중계 잘 보고 있습니다 재미있어요~!</span>
+                                <span class="chatting__item__box__user__text d-inline-block p-2 px-3 m-1">오늘 경기력이 대단하네요!</span>
+                            </div>
+                        </div>
+
+                        <div class="chatting__item mb-1">
+                            <div class="chatting__item__header d-inline-block w-25">
+                                <img src="{% static 'images\action_live\chatting__item__header__user__icon__01.png' %}" alt="chatting__user__01__icon" class="chatting__item__header__user__icon">
+                                <h3 class="chatting__item__header__user__id d-inline-block">actionsports7</h3>
+                            </div>
+
+                            <div class="chatting__item__box d-inline-block">
+                                <span class="chatting__item__box__user__text d-block p-2 px-3 m-1">더 생생하게 와닿네요 우리팀 응원합니다^^</span>
+                            </div>
+                        </div>
+
+                        <div class="chatting__item my_chatting__item text-right">
+                            <div class="my_chatting__item__box d-inline-block">
+                                <span class="my_chatting__item__box__text d-block p-2 px-3 m-1">실시간 생중계 잘 보고 있습니다 재미있어요~!</span>
+                            </div>
+
+                            <div class="my_chatting__item__header d-inline-block w-25">
+                                <h3 class="my_chatting__item__header__user__id d-inline-block">Actionsports2021</h3>
+                                <img src="{% static 'images\action_live\chatting__item__header__user__icon__02.png' %}" alt="chatting__user__01__icon" class="chatting__item__header__user__icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatting__input px-5 mt-3">
+                        <p class="lead emoji-picker-container chatting__input__container d-inline-block mb-0 ">
+                            <textarea type="textbox" data-emoji-input="unicode" class="form-control chatting__input__text" placeholder="타인의 권리를 침해하거나 명예를 훼손하는 댓글은 서비스 이용에 재재를 받을 수 있습니다." data-emojiable="true"></textarea>
+                        </p>
+                        <button class="btn chatting__input__registration d-inline-block ml-2 p-0" id="loginModalOpenButton">
+
+                            <img src="{% static 'images\action_live\chatting__input__registration__img.png' %}"
+                                alt="chatting__input__registration__img" class="chatting__input__registration__img" />
+                        </button>
+                    </div>
+
+                    <div class="login_modal border-radius">
+                        <div class="login_modal__box border-radius shadow">
+                            <div class="login_modal__box__header mt-2 m-1">
+                                로그인이 필요한 <br> 서비스입니다.
+                            </div>
+                            <div class="login_modal__box__body">
+                                <button type="button" class="btn login_modal__login_button border-radius p-0" id="loginModalLoginButton">로그인</button>
+                                <button type="button" class="btn login_modal__close_button border-radius p-0" id="loginModalCloseButton">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="side col-4 p-0">
+
+            <div class="side__controls controls row justify-content-between p-0 m-0">
+                <div class="controls__item controls__effects col-3 p-0 border-radius active">
+                    <img src="{% static 'images\action_live\controls__effects__img.png' %}" alt="effects__img" class="controls__item__img controls__effects__img d-block">
+                    <span class="controls__item__text controls__effects__text d-block text-center">효과</span>
+                </div>
+
+                <div class="controls__item controls__prediction col-3 p-0 border-radius">
+                    <img src="{% static 'images\action_live\controls__prediction__img.png' %}" alt="prediction__img" class="controls__item__img controls__prediction__img d-block">
+                    <span class="controls__item__text controls__prediction__text d-block text-center">예측</span>
+                </div>
+
+                <div class="controls__item controls__player_info col-3 p-0 border-radius">
+                    <img src="{% static 'images\action_live\controls__player_info__img.png' %}" alt="player__info__img" class="controls__item__img controls__player_info__img d-block">
+                    <span class="controls__item__text controls__player_info__text d-block text-center">선수정보</span>
+                </div>
+            </div>
+
+            <div class="side__item setting effects border-radius shadow p-0 active" id="effects">
+                <div class="setting__header contents__header px-4">
+                    <img src="{% static 'images\action_live\title_circle.png' %}" alt="setting__header__circle" class="setting__header__circle contents__header__circle">
+                    <h2 class="setting__header__title contents__header__title d-inline-block m-0 ml-2 mr-3">Setting</h2>
+
+                    <label for="effects__setting__all__btn" class="setting__all__btn__label effects__setting__all__btn__label">OFF</label>
+                    <input type="checkbox" name="effects__setting__all__btn" id="effects__setting__all__btn" class="setting__all__btn effects__setting__all__btn">
+
+                    <img src="{% static 'images\action_live\setting__alert.png' %}" alt="setting__alert" class="setting__alert float-right">
+                    <img src="{% static 'images\action_live\setting__description.png' %}" alt="setting__description" class="setting__description">
+                </div>
+
+                <div class="setting__contents">
+                    <div class="setting__list row justify-content-between mx-0 border-radius py-4 px-5">
+
+                        <div class="setting__list__left col-5 p-0">
+                            <div class="setting__item effects__setting__pitching mt-1 mb-3">
+                                <label for="effects__pitching__btn" class="setting__item__label effects__pitching__btn__label mr-4">투구</label>
+                                <input type="checkbox" name="effects__pitching__btn" id="effects__pitching__btn" class="setting__item__btn effects__item__btn effects__pitching__btn float-right">
+                            </div>
+                            <div class="setting__item effects__setting__batting mb-3">
+                                <label for="effects__batting__btn" class="setting__item__label effects__batting__btn__label mr-4">타구</label>
+                                <input type="checkbox" name="effects__batting__btn" id="effects__batting__btn" class="setting__item__btn effects__item__btn effects__batting__btn float-right" checked>
+                            </div>
+                            <div class="setting__item effects__setting__throw mb-3">
+                                <label for="effects__throw__btn" class="setting__item__label effects__throw__btn__label mr-4">송구</label>
+                                <input type="checkbox" name="effects__throw__btn" id="effects__throw__btn" class="setting__item__btn effects__item__btn effects__throw__btn float-right">
+                            </div>
+                            <div class="setting__item effects__setting__catch">
+                                <label for="effects__catch__btn" class="setting__item__label effects__catch__btn__label mr-4">포구</label>
+                                <input type="checkbox" name="effects__catch__btn" id="effects__catch__btn" class="setting__item__btn effects__item__btn effects__catch__btn float-right">
+                            </div>
+                        </div>
+
+                        <div class="setting__item setting__list__right col-5 p-0">
+                            <div class="setting__item effects__setting__on_base mt-1 mb-3">
+                                <label for="effects__on_base__btn" class="setting__item__label effects__on_base__btn__label mr-4">출루</label>
+                                <input type="checkbox" name="effects__on_base__btn" id="effects__on_base__btn" class="setting__item__btn effects__item__btn effects__on_base__btn float-right">
+                            </div>
+                            <div class="setting__item effects__setting__steal mb-3">
+                                <label for="effects__steal__btn" class="setting__item__label effects__steal__btn__label mr-4">도루</label>
+                                <input type="checkbox" name="effects__steal__btn" id="effects__steal__btn" class="setting__item__btn effects__item__btn effects__steal__btn float-right" checked>
+                            </div>
+                            <div class="setting__item effects__setting__judgment">
+                                <label for="effects__judgment__btn" class="setting__item__label effects__judgment__btn__label mr-2">볼 판정</label>
+                                <input type="checkbox" name="effects__judgment__btn" id="effects__judgment__btn" class="setting__item__btn effects__item__btn effects__judgment__btn float-right" checked>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="side__item setting prediction border-radius shadow p-0" id="prediction">
+                <div class="setting__header contents__header px-4">
+                    <img src="{% static 'images\action_live\prediction__header__circle.png' %}" alt="setting__header__circle" class="setting__header__circle contents__header__circle prediction__header__circle">
+                    <h2 class="setting__header__title contents__header__title d-inline-block m-0 ml-2 mr-3">Setting</h2>
+
+                    <label for="prediction__setting__all__btn" class="setting__all__btn__label prediction__setting__all__btn__label">OFF</label>
+                    <input type="checkbox" name="prediction__setting__all__btn" id="prediction__setting__all__btn" class="setting__all__btn prediction__setting__all__btn">
+
+                    <img src="{% static 'images\action_live\setting__alert.png' %}" alt="setting__alert" class="setting__alert float-right">
+                    <img src="{% static 'images\action_live\setting__description.png' %}" alt="setting__description" class="setting__description">
+                </div>
+
+                <div class="setting__contents">
+                    <div class="setting__list row justify-content-between mx-0 border-radius py-4 px-5 shadow">
+
+                        <div class="setting__custom col-12 p-0 mb-3">
+                            <div class="setting__item__header float-left">
+                                <label for="custom__btn" class="setting__item__label custom__btn__label d-block mr-4 mb-0">커스텀</label>
+                                <span class="custom__description">비활성화 시, 추천 설정값으로 자동 적용됩니다.</span>
+                            </div>
+                            <div class="setting__item__header_btn float-right">
+                                <input type="checkbox" name="custom__btn" id="custom__btn" class="setting__item__btn prediction__item__btn custom__btn " checked>
+                            </div>
+                        </div>
+
+                        <div class="setting__list__left col-6 pl-0 pr-2">
+                            <h3 class="setting__list__title batting_prediction mb-2">타구예측</h3>
+
+                            <div class="setting__item batting_prediction__left_handed_pitcher ">
+                                <label for="batting_prediction__left_handed_pitcher__btn" class="setting__item__label batting_prediction__left_handed_pitcher__btn__label">좌투수상대기록</label>
+                                <input type="checkbox" name="batting_prediction__left_handed_pitcher__btn" id="batting_prediction__left_handed_pitcher__btn" class="setting__item__btn prediction__item__btn batting_prediction__left_handed_pitcher__btn float-right">
+                            </div>
+                            <div class="setting__item batting_prediction__right_handed_pitcher ">
+                                <label for="right_handed_pitcher__btn" class="setting__item__label batting_prediction__right_handed_pitcher__btn__label">우투수상대기록</label>
+                                <input type="checkbox" name="batting_prediction__right_handed_pitcher__btn" id="batting_prediction__right_handed_pitcher__btn" class="setting__item__btn prediction__item__btn batting_prediction__right_handed_pitcher__btn float-right" checked>
+                            </div>
+                            <div class="setting__item batting_prediction__current_stadium">
+                                <label for="current_stadium__btn" class="setting__item__label batting_prediction__current_stadium__btn__label">현재구장기록</label>
+                                <input type="checkbox" name="batting_prediction__current_stadium__btn" id="batting_prediction__current_stadium__btn" class="setting__item__btn prediction__item__btn batting_prediction__current_stadium__btn float-right">
+                            </div>
+                            <div class="setting__item batting_prediction__setting__current_pitcher">
+                                <label for="batting_prediction__current_pitcher__btn" class="setting__item__label batting_prediction__current_pitcher__btn__label">현재투수상대기록</label>
+                                <input type="checkbox" name="batting_prediction__current_pitcher__btn" id="batting_prediction__current_pitcher__btn" class="setting__item__btn prediction__item__btn batting_prediction__current_pitcher__btn float-right">
+                            </div>
+                        </div>
+
+                        <div class="setting__list__right col-6 pl-2 pr-0">
+                            <h3 class="setting__list__title match_prediction mb-2">승부예측</h3>
+
+                            <div class="setting__item match_prediction__left_handed_pitcher ">
+                                <label for="match_prediction__left_handed_pitcher__btn" class="setting__item__label match_prediction__left_handed_pitcher__btn__label ">좌투수상대기록</label>
+                                <input type="checkbox" name="match_prediction__left_handed_pitcher__btn" id="match_prediction__left_handed_pitcher__btn" class="setting__item__btn prediction__item__btn match_prediction__left_handed_pitcher__btn float-right">
+                            </div>
+                            <div class="setting__item match_prediction__right_handed_pitcher">
+                                <label for="right_handed_pitcher__btn" class="setting__item__label match_prediction__right_handed_pitcher__btn__label ">우투수상대기록</label>
+                                <input type="checkbox" name="match_prediction__right_handed_pitcher__btn" id="match_prediction__right_handed_pitcher__btn" class="setting__item__btn prediction__item__btn match_prediction__right_handed_pitcher__btn float-right" checked>
+                            </div>
+                            <div class="setting__item match_prediction__current_stadium">
+                                <label for="current_stadium__btn" class="setting__item__label match_prediction__current_stadium__btn__label ">현재구장기록</label>
+                                <input type="checkbox" name="match_prediction__current_stadium__btn" id="match_prediction__current_stadium__btn" class="setting__item__btn prediction__item__btn match_prediction__current_stadium__btn float-right">
+                            </div>
+                            <div class="setting__item match_prediction__current_pitcher">
+                                <label for="match_prediction__current_pitcher__btn" class="setting__item__label  match_prediction__current_pitcher__btn__label">현재투수상대기록</label>
+                                <input type="checkbox" name="match_prediction__current_pitcher__btn" id="match_prediction__current_pitcher__btn" class="setting__item__btn prediction__item__btn match_prediction__current_pitcher__btn float-right">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="side__item setting player_info border-radius shadow p-0" id="playerInfo">
+                <div class="setting__header contents__header px-4">
+                    <img src="{% static 'images\action_live\player_info__header__circle.png' %}" alt="setting__header__circle" class="setting__header__circle contents__header__circle player_info__header__circle">
+                    <h2 class="setting__header__title contents__header__title d-inline-block m-0 ml-2 mr-3">Setting</h2>
+
+                    <label for="player_info__setting__all__btn" class="setting__all__btn__label player_info__setting__all__btn__label">OFF</label>
+                    <input type="checkbox" name="player_info__setting__all__btn" id="player_info__setting__all__btn" class="setting__all__btn player_info__setting__all__btn">
+
+                    <img src="{% static 'images\action_live\setting__alert.png' %}" alt="setting__alert" class="setting__alert float-right">
+                    <img src="{% static 'images\action_live\setting__description.png' %}" alt="setting__description" class="setting__description">
+                </div>
+
+                <div class="setting__contents">
+                    <div class="setting__list row justify-content-between mx-0 border-radius py-4 px-5 shadow">
+                        <div class="setting__item player_info__home align-self-center col-12 pt-4">
+                            <label for="player_info__home__btn" class="setting__item__label player_info__home__btn__label mr-4">홈팀</label>
+                            <input type="checkbox" name="player_info__home__btn" id="player_info__home__btn" class="setting__item__btn player_info__item__btn player_info__home__btn float-right">
+                        </div>
+                        <div class="setting__item player_info__away align-self-center col-12 pb-4">
+                            <label for="player_info__away__btn" class="setting__item__label player_info__away__btn__label mr-4">어웨이팀</label>
+                            <input type="checkbox" name="player_info__away__btn" id="player_info__away__btn" class="setting__item__btn player_info__item__btn player_info__away__btn float-right" checked>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="side__item real_time_player border-radius shadow p-0 mt-4">
+
+                <div class="real_time_player__header contents__header px-4 ">
+                    <img src="{% static 'images\action_live\title_circle.png' %}" alt="real_time_player__header__circle" class="real_time_player__header__circle contents__header__circle">
+                    <h2 class="player__title contents__header__title d-inline-block m-0 ml-2">Real-time Player</h2>
+                </div>
+
+                <div class="real_time_player__item real_time_player__home border-radius mt-3">
+                    <img src="{% static 'images\action_live\real_time_player__home__img.png' %}" alt="real_time_player__home__img" class="real_time_player__item__img real_time_player__home__img" />
+
+                    <div class="real_time_player__item__name real_time_player__home__name">
+                        <span class="real_time_player__item__name__kor real_time_player__home_kor m-0">황재균</span>
+                        <span class="real_time_player__item__name__eng real_time_player__home__eng m-0">Hwang Jae gyun</span>
+                    </div>
+
+                    <div class="real_time_player__item__team real_time_player__home__team">
+                        <span class="real_time_player__item__team__title real_time_player__home__team__title mr-2">KT WIZ</span>
+                        <img src="{% static 'images\action_live\real_time_player__home__team__img.png' %}" alt="real_time_player__home__team__img" class="real_time_player__item__team__img real_time_player__home__team__img" />
+                    </div>
+
+                </div>
+
+                <div class="real_time_player__item real_time_player__away border-radius mt-4">
+                    <img src="{% static 'images\action_live\real_time_player__away__img.png' %}" alt="real_time_player__away__img" class="real_time_player__item__img real_time_player__away__img" />
+
+                    <div class="real_time_player__item__name real_time_player__away__name">
+                        <span class="real_time_player__item__name__kor real_time_player__away__name__kor">노시환</span>
+                        <span class="real_time_player__item__name__eng real_time_player__away__name__eng">Roh Si Hwan</span>
+                    </div>
+
+                    <div class="real_time_player__item__team real_time_player__away__team">
+                        <span class="real_time_player__item__team__title real_time_player__away__team__title mr-2">한화 이글스</span>
+                        <img src="{% static 'images\action_live\real_time_player__away__team__img.png' %}" alt="real_time_player__away__team__img" class="real_time_player__item__team__img real_time_player__away__team__img" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="side__item stats border-radius shadow p-0 mt-4">
+
+                <div class="stats__header contents__header px-4">
+                    <img src="{% static 'images\action_live\title_circle.png' %}" alt="stats__header__circle" class="stats__header__circle contents__header__circle">
+                    <h2 class="stats__title contents__header__title d-inline-block m-0 ml-2">Player Stats</h2>
+                </div>
+
+                <div class="stats__contents d-block m-auto">
+                    <img src="{% static 'images\action_live\stats__player__img.png' %}" alt="stats__player__img" class="stats__player__img" />
+                    <img src="{% static 'images\action_live\stats__back_logo__img.png' %}" alt="stats__back__logo__img" class="stats__back_logo__img" />
+
+                    <div class="stats__btns float-right mr-2">
+                        <button type="button" class="btn p-0 m-0 mr-2">
+                            <img src="{% static 'images\action_live\stats__btns__share__img.png' %}"
+                                alt="stats__share__img" class="stats__btns__share__img" data-toggle="modal"
+                                data-target="#shareModal" />
+                        </button>
+
+                        <button type="button" class="btn p-0 m-0">
+                            <span class="stats__btns__item stats__btns__bookmark"></span>
+                        </button>
+                    </div>
+
+                    <div class="stats__info">
+                        <img src="{% static 'images\action_live\real_time_player__home__team__img.png' %}" alt="stats__info__logo__img" class="stats__info__logo__img">
+                        <span class="stats__info__name d-block mt-1">황재균</span>
+                        <div class="stats__info__position mt-4">
+                            <img src="{% static 'images\action_live\stats__info__position__number__img.png' %}" alt="stats__info__position__number__img" class="stats__info__position__number__img" />
+                            <div class="stats__info__position__box d-inline-block ml-1">
+                                <span class="stats__info__position__box__defence d-block">외야수</span>
+                                <span class="stats__info__position__box__attack d-block">우투우타</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats__record m-auto">
+                        <div class="stats__record__header">
+                            <span class="stats__record__header__season px-2">2021 시즌</span>
+                            <span class="stats__record__header__title">정규 리그 기록</span>
+                        </div>
+
+                        <div class="stats__record__list row justify-content-between m-auto">
+                            <div class="stats__record__item stats__record__batting_average col-4 p-0">
+                                <span class="stats__record__item__title stats__record__batting_average__title d-block mx-2 my-1">타율</span>
+                                <span class="stats__record__item__point stats__record__batting_average__point d-block mx-2 my-1">0.314</span>
+                            </div>
+
+                            <div class="stats__record__item stats__record__games_played col-4 p-0">
+                                <span class="stats__record__item__title stats__record__games_played__title d-block mx-2 my-1">경기</span>
+                                <span class="stats__record__item__point stats__record__games_played__point d-block mx-2 my-1">78</span>
+                            </div>
+
+                            <div class="stats__record__item stats__record__plate_appearances col-4 p-0">
+                                <span class="stats__record__item__title stats__record__plate_appearances__title d-block mx-2 my-1">타석</span>
+                                <span class="stats__record__item__point stats__record__plate_appearances__point d-block mx-2 my-1">339</span>
+                            </div>
+
+
+                            <div class="stats__record__item stats__record__at_bats col-4 p-0">
+                                <span class="stats__record__item__title stats__record__at_bats__title d-block mx-2 my-1">타수</span>
+                                <span class="stats__record__item__point stats__record__at_bats__point d-block mx-2 my-1">303</span>
+                            </div>
+
+                            <div class="stats__record__item stats__record__runs_scored col-4 p-0">
+                                <span class="stats__record__item__title stats__record__runs_scored__title d-block mx-2 my-1">득점</span>
+                                <span class="stats__record__item__point stats__record__runs_scored__point d-block mx-2 my-1">61</span>
+                            </div>
+
+                            <div class="stats__record__item stats__record__hits col-4 p-0">
+                                <span class="stats__record__item__title stats__record__hits__title d-block mx-2 my-1">안타</span>
+                                <span class="stats__record__item__point stats__record__hits__point d-block mx-2 my-1">95</span>
+                            </div>
+
+
+                            <div class="stats__record__item stats__record__doubles col-4 p-0">
+                                <span class="stats__record__item__title stats__record__doubles__title d-block mx-2 my-1">2루타</span>
+                                <span class="stats__record__item__point stats__record__doubles__point d-block mx-2 my-1">11</span>
+                            </div>
+
+                            <div class="stats__record__item stats__record__triples col-4 p-0">
+                                <span class="stats__record__item__title stats__record__triples__title d-block mx-2 my-1">3루타</span>
+                                <span class="stats__record__item__point stats__record__triples__point d-block mx-2 my-1">1</span>
+                            </div>
+
+                            <div class="stats__record__item stats__record__home_runs col-4 p-0">
+                                <span class="stats__record__item__title stats__record__home_runs__title d-block mx-2 my-1">홈런</span>
+                                <span class="stats__record__item__point stats__record__home_runs__point d-block mx-2 my-1">10</span>
+                            </div>
+
+
+                            <div class="stats__record__item stats__record__runs_batted_in col-4 p-0">
+                                <span class="stats__record__item__title stats__record__runs_batted_in__title d-block mx-2 my-1">타점</span>
+                                <span class="stats__record__item__point stats__record__runs_batted_in__point d-block mx-2 my-1">44</span>
+                            </div>
+
+                            <div class="stats__record__item stats__record__stolen_bases col-4 p-0">
+                                <span class="stats__record__item__title stats__record__stolen_bases__title d-block mx-2 my-1">도루</span>
+                                <span class="stats__record__item__point stats__record__stolen_bases__point d-block mx-2 my-1">10</span>
+                            </div>
+
+                            <div class="stats__record__item stats__record__caught_stealing col-4 p-0">
+                                <span class="stats__record__item__title stats__record__caught_stealing__title d-block mx-2 my-1">도실</span>
+                                <span class="stats__record__item__point stats__record__caught_stealing__point d-block mx-2 my-1">4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats__images row m-auto row justify-content-between">
+                        <img src="{% static 'images\action_live\stats__images__item__01.png' %}" alt="stats__images__01" class="stats__images__item col-5 p-0">
+                        <img src="{% static 'images\action_live\stats__images__item__02.png' %}" alt="stats__images__02" class="stats__images__item col-7 p-0">
+
+                        <img src="{% static 'images\action_live\stats__images__item__03.png' %}" alt="stats__images__03" class="stats__images__item col-4 p-0">
+                        <img src="{% static 'images\action_live\stats__images__item__04.png' %}" alt="stats__images__04" class="stats__images__item col-4 p-0">
+                        <img src="{% static 'images\action_live\stats__images__item__05.png' %}" alt="stats__images__05" class="stats__images__item col-4 p-0">
+                    </div>
+
+                    <div class="stats__more">
+                        <img src="{% static 'images\action_live\chatting__header__toggle__img.png' %}" alt="stats__more__btn" class="stats__more__btn" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %} {% block script %}
+<!-- page control -->
+<script src="{% static 'js\controlActionLivePage.js' %}"></script>
+<script src="{% static 'js\controlVideo.js' %}"></script>
+
+
+<!-- input Emoji -->
+{% comment %} 출처 : https://github.com/OneSignal/emoji-picker {% endcomment %}
+<script src="{% static 'emoji\js\config.js' %}"></script>
+<script src="{% static 'emoji\js\util.js' %}"></script>
+<script src="{% static 'emoji\js\jquery.emojiarea.js' %}"></script>
+<script src="{% static 'emoji\js\emoji-picker.js' %}"></script>
+<script src="{% static 'js\getEmoji.js' %}"></script>
+
+{% endblock script %}

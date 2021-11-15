@@ -1,0 +1,90 @@
+@import url(base_generic.css);
+.main {
+    margin-top: 0 !important;
+}
+
+.contents {}
+
+
+/* aside */
+
+.aside {
+    position: sticky;
+    width: 210px;
+    height: 75vh;
+    /* display: none; */
+}
+
+.aside__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dove-gray);
+}
+
+.aside__title::after {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    height: 3px;
+    content: "";
+    background-color: var(--chinese-silver);
+}
+
+.aside__list {}
+
+.aside__item {
+    list-style: none;
+    border-radius: 15px;
+}
+
+.aside__item a {
+    text-decoration: none;
+    color: var(--dove-gray);
+}
+
+.aside__item:hover {
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.aside__item:hover a {
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.aside__item.active,
+.aside__item.active a {
+    background-color: var(--gray);
+    color: var(--white) !important;
+}
+
+.aside__item__icon {}
+
+.aside__item__text {}
+
+
+/* main */
+
+.service {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.service__img {
+    float: right;
+    width: 990px;
+    /* width: 100%; */
+}
+
+.service::after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.service__img::after {
+    display: block;
+    content: "";
+    clear: both
+}
