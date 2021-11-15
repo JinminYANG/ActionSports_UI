@@ -1,6 +1,6 @@
 // streaming controls
-const videoPlayer = document.querySelector(".streaming__item")
-const video = videoPlayer.querySelector(".streaming__item__video")
+const videoPlayer = document.querySelector(".video_player")
+const video = videoPlayer.querySelector(".video_player__video")
 const playButton = videoPlayer.querySelector('.play_button')
 
 // new
@@ -126,7 +126,7 @@ function toggleFullScreen() {
 }
 
 
-const videoPlayerCloseButton = videoPlayer.querySelector(".streaming__item__close")
+const videoPlayerCloseButton = videoPlayer.querySelector(".video_player__close")
 
 videoPlayerCloseButton.addEventListener("click", (e) => {
     if (document.exitFullscreen) {
@@ -170,12 +170,12 @@ video.addEventListener("click", (e) => {
 
 
 // volume
-const leftSideControls = document.querySelector('.left-side-controls');
-const volumeControl = document.querySelector('.volume-control');
-const volumePanel = document.querySelector('.volume-panel');
+const leftSideControls = document.querySelector('.video_player__controls__left');
+const volumeControl = document.querySelector('.video_player__controls__volume');
+const volumePanel = document.querySelector('.video_player__controls__volume__panel');
 const volumeRange = volumePanel.querySelector('input');
 const volumeProgress = volumePanel.querySelector('.volume-progress');
-const volumeButton = document.querySelector('.volume-btn');
+const volumeButton = document.querySelector('.video_player__controls__volume__btn');
 
 const fullVolumeButton = volumeButton.querySelector('.full-volume');
 const halfVolumeButton = volumeButton.querySelector('.half-volume');

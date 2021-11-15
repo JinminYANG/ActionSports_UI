@@ -574,7 +574,7 @@ s .streaming__bottom__share__box {
     border-radius: 15px;
 }
 
-.chatting__user__text:first-child {
+.chatting__item__box__user__text:first-child {
     border-radius: 0 15px 15px 15px;
 }
 
@@ -589,7 +589,7 @@ s .streaming__bottom__share__box {
     border-radius: 15px;
 }
 
-.my_chatting__user__text:first-child {
+.my_chatting__item__box__text:first-child {
     border-radius: 15px 0 15px 15px;
 }
 
