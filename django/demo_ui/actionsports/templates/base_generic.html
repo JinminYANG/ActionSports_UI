@@ -22,12 +22,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"/>
 
     <!-- Local -->
-    {% comment %}
-    <link
-      rel="stylesheet"
-      href="{% static 'js/vanillajs-datepicker-master/dist/css/datepicker.css' %}"
-    />
-    {% endcomment %}
     <link rel="stylesheet" href="{% static 'css/base_generic.css' %}" />
     {% block css %} 
     
@@ -168,13 +162,8 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns "
       crossorigin="anonymous "
     ></script>
-    
-    {% comment %}
-    <script type="module" src="{% static 'js/getToday.js' %}"></script>
-    {% endcomment %}
 
     {% block script %}
     {% endblock script %}
-
   </body>
 </html>

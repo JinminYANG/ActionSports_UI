@@ -1,36 +1,44 @@
 /* index */
 
 :root {
-    --top-gnb-bg: #ededed;
-    --font-color-main: #666666;
-    --font-color-sub: #808080;
-    --font-color-third: #999999;
-    --highlight-title-color: #333333;
-    --hightlight-box-gap-color: #b3b3b3;
-    --schedule-win-color: #4d4d4d;
-    --white: #ffffff;
+    /* bg */
     --black: #000000;
-    --orange: #FE7926;
-    --blue: #333FFA;
-    --purple: #8579D8;
-}
-
-
-/* action_live */
-
-:root {
-    --action_live-text-main: #333333;
-    --action_live-text-sub: #606060;
-    --action_live-text-third: #4D4D4D;
-    --action_live-text-fourth: #707070;
-    --action_live-text-fifth: #666666;
-    --action_live-text-sixth: #999999;
-    --div-bg: #F2F2F2;
-    --chatting-input-bg: #B3B3B3;
-    --chatting-input-container: #E6E6E6;
-    --scroll-bar-track: #CCCCCC;
-    --chatting-user-text: #E6E2FD;
-    --item-border: #E5E5E5;
+    --light-loyal-blue: #333FFA;
+    --dove-gray: #666666;
+    --granite-gray: #606060;
+    --medium-purple: #8579D8;
+    --chinese-silver: #C9C9C9;
+    --silver: #CCCCCC;
+    --lavender: #E6E2FD;
+    --platinum: #E6E6E6;
+    --bright-gray: #EDEDED;
+    --princeton-orange: #FE7926;
+    --anti-flash-white: #F2F2F2;
+    --white: #ffffff;
+    --mercury: #E5E5E5;
+    /* text color */
+    --black: #000000;
+    --dark-charcoal: #333333;
+    --dark-liver: #4D4D4D;
+    --granite-gray: #606060;
+    --dove-gray: #666666;
+    --dark-silver: #707070;
+    --gray: #808080;
+    --spanish-gray: #999999;
+    --dark-gray: #aaaaaa;
+    --silver-chalice: #B1B1B1;
+    --philippine-silver: #B3B3B3;
+    --anti-flash-white: #F2F2F2;
+    --white: #ffffff;
+    /*  share icon */
+    --facebook: #1877F2;
+    --github: #00405d;
+    --google: #db4437;
+    --instagram: #E4405F;
+    --line: #00C300;
+    --messenger: #0099FF;
+    --slack: #3AAF85;
+    --twitter: #1DA1F2;
 }
 
 * {
@@ -42,7 +50,6 @@
 }
 
 .shadow {
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.37) !important;
 }
 
@@ -52,8 +59,8 @@
 .top__gnb {
     height: 40px;
     font-size: 14px;
-    color: var(--font-color-main);
-    background-color: var(--top-gnb-bg);
+    color: var(--dove-gray);
+    background-color: var(--bright-gray);
 }
 
 .top__gnb__wrap {}
@@ -68,7 +75,7 @@
     display: inline-block;
     width: 1px;
     height: 12px;
-    background-color: var(--font-color-main);
+    background-color: var(--dove-gray);
 }
 
 .top__gnb__item__link {
@@ -107,7 +114,7 @@
 
 .gnb__item {
     font-size: 18px;
-    color: var(--font-color-main);
+    color: var(--dove-gray);
 }
 
 .gnb__item__link {}
@@ -135,24 +142,24 @@
 .fnb__list {
     height: 90px;
     font-size: 18px;
-    color: var(--font-color-sub);
+    color: var(--gray);
 }
 
 .fnb__item__link {
-    color: var(--font-color-sub);
+    color: var(--gray);
 }
 
 .company__info {
     height: 90px;
     font-size: 14px;
-    color: var(--font-color-third);
+    color: var(--spanish-gray);
 }
 
 .company__info__gap {
     display: inline-block;
     width: 1px;
     height: 12px;
-    background-color: var(--font-color-third);
+    background-color: var(--spanish-gray);
 }
 
 

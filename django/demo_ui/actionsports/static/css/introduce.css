@@ -18,7 +18,7 @@
 .aside__title {
     font-size: 24px;
     font-weight: bold;
-    color: #666666;
+    color: var(--dove-gray);
 }
 
 .aside__title::after {
@@ -27,7 +27,7 @@
     width: 100%;
     height: 3px;
     content: "";
-    background-color: #C9C9C9;
+    background-color: var(--chinese-silver);
 }
 
 .aside__list {}
@@ -39,23 +39,23 @@
 
 .aside__item a {
     text-decoration: none;
-    color: #666666;
+    color: var(--dove-gray);
 }
 
 .aside__item:hover {
-    background-color: #808080;
-    color: white;
+    background-color: var(--gray);
+    color: var(--white);
 }
 
 .aside__item:hover a {
-    background-color: #808080;
-    color: white;
+    background-color: var(--gray);
+    color: var(--white);
 }
 
 .aside__item.active,
 .aside__item.active a {
-    background-color: #808080;
-    color: white !important;
+    background-color: var(--gray);
+    color: var(--white) !important;
 }
 
 .aside__item__icon {}

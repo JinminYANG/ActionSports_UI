@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --action_live-text-main: #333333;
     --action_live-text-sub: #606060;
     --action_live-text-third: #4D4D4D;
@@ -14,7 +14,7 @@
     --scroll-bar-track: #CCCCCC;
     --chatting-user-text: #E6E2FD;
     --item-border: #E5E5E5;
-}
+} */
 
 .player__info {
     position: relative;
@@ -30,7 +30,7 @@
 .player__info__name {
     position: absolute;
     top: 80px;
-    color: var(--action_live-text-sub);
+    color: var(--granite-gray);
 }
 
 .player__info__name__eng {
@@ -49,7 +49,7 @@
     position: absolute;
     top: 250px;
     /* width: 200px; */
-    color: var(--action_live-text-third);
+    color: var(--dark-liver);
 }
 
 .player__info__team__logo {
@@ -68,7 +68,7 @@
     top: 250px;
     left: 250px;
     /* width: 150px; */
-    color: var(--action_live-text-third);
+    color: var(--dark-liver);
 }
 
 .player__info__position__left {
@@ -82,8 +82,8 @@
     width: 50px;
     height: 50px;
     line-height: 50px;
-    background-color: blue;
-    color: #ffffff;
+    background-color: var(--light-loyal-blue);
+    color: var(--white);
     font-size: 18px;
     text-align: center;
     vertical-align: middle;
@@ -118,11 +118,11 @@
 .player__info__etc__item__label {
     display: inline-block;
     width: 100px;
-    color: var(--action_live-text-fifth);
+    color: var(--dove-gray);
 }
 
 .player__info__etc__item__text {
-    color: var(--action_live-text-third);
+    color: var(--dark-liver);
 }
 
 .player__info__btns {
@@ -139,7 +139,7 @@
 
 .player__info__btns__bookmark__text {
     margin-left: 10px;
-    color: var(--orange);
+    color: var(--princeton-orange);
     vertical-align: middle;
     font-size: 14px;
 }
@@ -152,7 +152,7 @@
 
 .player__info__btns__like__text {
     margin-left: 10px;
-    color: var(--orange);
+    color: var(--princeton-orange);
     vertical-align: middle;
     font-size: 14px;
 }
@@ -199,7 +199,7 @@
     vertical-align: top;
     font-size: 22px;
     font-weight: bold;
-    color: var(--action_live-text-third);
+    color: var(--dark-liver);
 }
 
 .player__highlight__contents {
@@ -232,7 +232,7 @@
     bottom: 12px;
     font-size: 12px;
     color: var(--white);
-    background-color: var(--font-color-main);
+    background-color: var(--dove-gray);
     border-radius: 26.785px;
 }
 
@@ -241,7 +241,7 @@
 .player__highlight__item__title {
     font-size: 18px;
     font-weight: bold;
-    color: var(--highlight-title-color);
+    color: var(--dark-charcoal);
     word-break: keep-all;
     word-wrap: break-word;
     cursor: pointer;
@@ -249,7 +249,7 @@
 
 .player__highlight__item__box {
     font-size: 16px;
-    color: var(--font-color-sub);
+    color: var(--gray);
 }
 
 .player__highlight__item__box__views {}
@@ -260,7 +260,7 @@
     display: inline-block;
     width: 2px;
     height: 12px;
-    background-color: var(--hightlight-box-gap-color);
+    background-color: var(--philippine-silve);
 }
 
 .player__highlight__item__box__date {}
@@ -274,7 +274,7 @@
 
 .player__highlight__item__more__btn__text {
     font-size: 16px;
-    color: #808080;
+    color: var(--gray);
 }
 
 .player__highlight__item__more__btn__img {
@@ -299,7 +299,7 @@
     vertical-align: top;
     font-size: 22px;
     font-weight: bold;
-    color: var(--font-color-main);
+    color: var(--dove-gray);
 }
 
 .player__gallery__img {
@@ -330,7 +330,7 @@
     vertical-align: top;
     font-size: 22px;
     font-weight: bold;
-    color: var(--font-color-main);
+    color: var(--dove-gray);
 }
 
 .player__news__contents {}
@@ -347,13 +347,13 @@
 
 .player__news__item__right {
     vertical-align: middle;
-    color: var(--action_live-text-sixth);
+    color: var(--spanish-gray);
     font-size: 14px;
 }
 
 .player__news__item__right__title {
     font-size: 18px;
-    color: var(--action_live-text-third);
+    color: var(--dark-liver);
 }
 
 .player__news__item__right__source {}
@@ -362,7 +362,7 @@
     display: inline-block;
     width: 1px;
     height: 12px;
-    background-color: var(--action_live-text-sixth);
+    background-color: var(--spanish-gray);
 }
 
 .player__news__item__right__date {}
@@ -371,7 +371,7 @@
 
 .player__news__item__more__btn__text {
     font-size: 16px;
-    color: #808080;
+    color: var(--gray);
 }
 
 .player__news__item__more__btn__img {
@@ -394,7 +394,7 @@
     vertical-align: top;
     font-size: 22px;
     font-weight: bold;
-    color: var(--font-color-main);
+    color: var(--dove-gray);
 }
 
 .player__comment__contents {
@@ -412,7 +412,7 @@
 }
 
 .player__comment__list::-webkit-scrollbar-thumb {
-    background-color: var(--action_live-text-sixth);
+    background-color: var(--spanish-grayh);
     border-radius: 10px;
 }
 
@@ -428,15 +428,15 @@
 
 .player__comment__item__header__user__id {
     font-size: 12px;
-    color: var(--action_live-text-sub);
+    color: var(--granite-gray);
 }
 
 .player__comment__item__box {}
 
 .player__comment__item__box__user__text {
     font-size: 13px;
-    color: var(--action_live-text-third);
-    background-color: var(--chatting-user-text);
+    color: var(--dark-liver);
+    background-color: var(--lavende);
     border-radius: 15px;
 }
 
@@ -452,7 +452,7 @@
 
 .player__my_comment__item__header__user__id {
     font-size: 14px;
-    color: var(--action_live-text-sub);
+    color: var(--granite-gray);
     vertical-align: top;
     margin-top: 14px;
 }
@@ -460,7 +460,7 @@
 .player__my_comment__item__box__text {
     font-size: 14px;
     color: var(--white);
-    background-color: var(--blue);
+    background-color: var(--light-loyal-blue);
     border-radius: 15px;
 }
 
@@ -475,7 +475,7 @@
 
 .player__comment__input__container {
     width: 80%;
-    background-color: var(--chatting-input-container);
+    background-color: var(--platinum);
     border-radius: 18px !important;
     vertical-align: middle;
 }
@@ -483,7 +483,7 @@
 .player__comment__input__text {
     font-size: 14px !important;
     letter-spacing: 1px;
-    background-color: var(--chatting-input-container);
+    background-color: var(--platinum);
     border: none !important;
     border-radius: 18px !important;
 }

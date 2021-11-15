@@ -7,14 +7,14 @@
 .contents__title {
     font-size: 30px;
     font-weight: bold;
-    color: #666666;
+    color: var(--dove-gray);
 }
 
 
 /* search */
 
 .search {
-    background-color: #EDEDED;
+    background-color: var(--bright-gray);
     padding: 30px 80px;
 }
 
@@ -22,7 +22,7 @@
 /* team__list */
 
 .team__list {
-    background-color: white;
+    background-color: var(--white);
 }
 
 .team__item {
@@ -37,7 +37,7 @@
     position: absolute;
     right: 0;
     top: 15%;
-    background-color: #cccccc;
+    background-color: var(--silver);
 }
 
 .team__item:last-child::after {
@@ -63,19 +63,19 @@
 .team__item__title__container {}
 
 .team__item__title {
-    color: #666666;
+    color: var(--dove-gray);
 }
 
 .team__item.active .team__item__title {
-    background-color: #666666;
-    color: white;
+    background-color: var(--dove-gray);
+    color: var(--white);
 }
 
 
 /* position */
 
 .position {
-    background-color: white;
+    background-color: var(--white);
     width: 300px;
     text-align: center;
 }
@@ -91,7 +91,7 @@
     position: absolute;
     right: 0;
     top: 20%;
-    background-color: #cccccc;
+    background-color: var(--silver);
 }
 
 .position__item:last-child::after {
@@ -103,8 +103,8 @@
 }
 
 .position__item.active .position__item__text {
-    background-color: #666666;
-    color: white;
+    background-color: var(--dove-gray);
+    color: var(--white);
 }
 
 
@@ -112,7 +112,7 @@
 
 .consonants {
     width: 700px;
-    background-color: white;
+    background-color: var(--white);
     text-align: center;
 }
 
@@ -129,8 +129,8 @@
 }
 
 .consonants__item.active .consonants__item__text {
-    background-color: #666666;
-    color: white;
+    background-color: var(--dove-gray);
+    color: var(--white);
 }
 
 .consonants__item:after {
@@ -140,7 +140,7 @@
     position: absolute;
     right: 0;
     top: 20%;
-    background-color: #cccccc;
+    background-color: var(--silver);
 }
 
 .consonants__item:last-child::after {
@@ -191,7 +191,7 @@
 
 .bookmark__header__title {
     font-size: 24px;
-    color: #4D4D4D;
+    color: var(--dark-liver);
     vertical-align: middle;
 }
 
@@ -237,7 +237,7 @@
     left: 9%;
     transform: translate(-50%, -50%);
     font-size: 13px;
-    color: white;
+    color: var(--white);
     z-index: 10;
 }
 
@@ -247,7 +247,7 @@
     right: 8px;
     font-size: 18px;
     font-weight: bold;
-    color: #4D4D4D;
+    color: var(--dark-liver);
     z-index: 10;
 }
 
@@ -256,7 +256,7 @@
     right: 10px;
     top: 35px;
     font-size: 14px;
-    color: #808080;
+    color: var(--gray);
     z-index: 10;
 }
 
@@ -323,7 +323,7 @@
 
 .players__more__btn__text {
     font-size: 20px;
-    color: #808080;
+    color: var(--gray);
 }
 
 .players__more__btn__img {
