@@ -8,43 +8,11 @@
 
 /* liveplay */
 
-.video_player {
-    line-height: inherit !important;
-    height: 100%;
-}
-
-.video_player__video {
-    height: 100%;
-    object-fit: fill;
-}
-
 .liveplay {
     height: 340px;
     position: relative;
     perspective: 1000px;
     transform-style: preserve-3d;
-}
-
-.liveplay .liveplay__item {
-    width: 50%;
-    height: 100%;
-    border-radius: 26.785px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-}
-
-.liveplay .liveplay__item__label {
-    width: 100%;
-    height: 100%;
-    border-radius: 26.785px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    cursor: pointer;
-    transition: transform 0.4s ease;
 }
 
 .liveplay__title {}
@@ -54,12 +22,31 @@
 }
 
 .liveplay__item {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    border-radius: 26.785px;
+    transition: transform 0.3s ease;
     overflow: hidden;
     box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.37);
 }
 
 .liveplay__item.active {
     z-index: 30;
+}
+
+.liveplay__item__label {
+    width: 100%;
+    height: 100%;
+    border-radius: 26.785px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .liveplay__item__img {
@@ -79,27 +66,39 @@
     border-radius: 26.785px;
 }
 
+.video_player {
+    height: 100%;
+    line-height: inherit !important;
+}
+
+.video_player__video {
+    height: 100%;
+    object-fit: fill;
+}
+
+.liveplay__item__overlay {}
+
 .liveplay__item__overlay_icon {
+    width: 70px;
     position: absolute;
     top: 1em;
     left: 1em;
-    width: 70px;
     z-index: 0;
 }
 
 .liveplay__item__overlay__bottom {
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .liveplay__item__overlay__box {
     position: absolute;
     bottom: 3em;
     left: 1.5em;
-    color: var(--white);
     z-index: 0;
+    color: var(--white);
 }
 
 .liveplay__item__overlay__title {
@@ -202,19 +201,23 @@
 
 .banners__wrap {}
 
-.banners__item__prev {
+.banners__item {}
+
+.banners__item__img {}
+
+.banners__prev {
     width: 10%;
     justify-content: start;
 }
 
-.banners__item__prev__icon,
-.banners__item__next__icon {
-    height: 30px;
-}
-
-.banners__item__next {
+.banners__next {
     width: 10%;
     justify-content: end;
+}
+
+.banners__prev__icon,
+.banners__next__icon {
+    height: 30px;
 }
 
 
@@ -226,19 +229,20 @@
 
 .highlight__header {}
 
-.highlight__title {
+.highlight__header__title {
     font-size: 28px;
     font-weight: bold;
     color: var(--dove-gray);
 }
 
-.highlight__more {
+.highlight__header__more {
     width: 60.4px;
     height: 28.1px;
     line-height: 28.1px;
     padding: 0;
     font-size: 13px;
     vertical-align: super;
+    border: none;
 }
 
 .highlight__contents {
@@ -264,15 +268,6 @@
     width: 100%;
 }
 
-.highlight__item__title {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--dark-charcoal);
-    word-break: keep-all;
-    word-wrap: break-word;
-    cursor: pointer;
-}
-
 .highlight__item__length {
     position: absolute;
     right: 14px;
@@ -284,6 +279,15 @@
 }
 
 .highlight__item__body {}
+
+.highlight__item__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark-charcoal);
+    word-break: keep-all;
+    word-wrap: break-word;
+    cursor: pointer;
+}
 
 .highlight__item__box {
     font-size: 16px;
@@ -323,18 +327,20 @@
     width: fit-content;
 }
 
-.schedule__title {
+.schedule__header__title {
     font-size: 28px;
     font-weight: bold;
     color: var(--dove-gray);
 }
 
-.schedule__more {
+.schedule__header__more {
     width: 60.4px;
     height: 28.1px;
     line-height: 28.1px;
+    padding: 0;
     font-size: 13px;
     vertical-align: super;
+    border: none;
 }
 
 .schedule__contents {
@@ -428,17 +434,17 @@
 
 .schedule__info {}
 
-.schedule__home__score,
-.schedule__away__score {
+.schedule__info__home__score,
+.schedule__info__away__score {
     font-size: 45px;
     font-weight: bold;
 }
 
-.schedule__score__win {
+.schedule__info__score__win {
     color: var(--dark-liver);
 }
 
-.schedule__score__lose {
+.schedule__info__score__lose {
     color: var(--spanish-gray);
 }
 
@@ -465,7 +471,7 @@
 
 .record__header {}
 
-.record__title {
+.record__header__title {
     font-size: 28px;
     font-weight: bold;
     color: var(--dove-gray);
@@ -485,7 +491,7 @@
     height: 90% !important;
 }
 
-.record__contents__header {
+.record__contents__table__header {
     position: relative;
     top: -31.5px;
     height: 87.2px;
@@ -496,7 +502,7 @@
     color: var(--dove-gray);
 }
 
-.record__contents__header tr th {
+.record__contents__table__header tr th {
     border: none !important;
     padding: 0;
 }
@@ -509,17 +515,17 @@
     color: var(--dove-gray);
 }
 
-.record__kbo__tr {
+.record__kbo__tbody__tr {
     height: 47.7px;
 }
 
-.record__kbo__tr th {
+.record__kbo__tbody__tr th {
     height: 47.7px;
     padding: 0;
     vertical-align: middle;
 }
 
-.record__kbo__tr td {
+.record__kbo__tbody__tr td {
     height: 47.7px;
     padding: 0.5rem;
     vertical-align: middle;
@@ -527,21 +533,21 @@
     border-bottom: 1px solid black !important;
 }
 
-.record__kbo__tr__ranking,
-.record__kbo__tr__title {
+.record__kbo__tbody__tr__ranking,
+.record__kbo__tbody__tr__title {
     font-weight: bold;
 }
 
-.record__kbo__tr__title {
+.record__kbo__tbody__tr__title {
     text-align: left;
     width: 18%;
 }
 
-.record__kbo__tr__logo {
+.record__kbo__tbody__tr__logo {
     width: 28px;
 }
 
-.record__kbo__tr:last-child td {
+.record__kbo__tbody__tr:last-child td {
     border-bottom: none !important;
 }
 
@@ -560,12 +566,6 @@
 /* 반응형 */
 
 @media screen and (max-width: 1200px) {
-    .gnb__logo__img {
-        width: 120px;
-    }
-    .gnb__list {
-        gap: 0 10px;
-    }
     .container {
         width: 900px;
     }
@@ -660,9 +660,6 @@
     .record__kbo__tr__title {
         width: 12%;
     }
-    .fnb__list {
-        width: 70% !important;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -693,22 +690,6 @@
     .schedule__home__pitcher,
     .schedule__away__pitcher {
         display: none;
-    }
-    .fnb__list {
-        width: 90% !important;
-    }
-    .company__info {
-        width: 90% !important;
-        margin-top: 30px !important;
-    }
-    .company__title {
-        text-align: center !important;
-    }
-    .company__info__gap {
-        display: none;
-    }
-    .company__ceo {
-        text-align: center !important;
     }
 }
 
@@ -767,4 +748,9 @@
         padding-right: 0px;
         padding-left: 20px;
     }
+}
+
+
+}
+
 }

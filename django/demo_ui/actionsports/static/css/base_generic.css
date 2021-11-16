@@ -175,96 +175,11 @@
     .container {
         width: 900px;
     }
-    .liveplay {
-        perspective: 450px;
-    }
-    .liveplay__item {
-        width: 67%;
-    }
-    .highlight__contents {
-        gap: 67.3px 4%;
-    }
-    .highlight__item {
-        flex: 0 0 48%;
-    }
-    .schedule__home__title,
-    .schedule__away__title,
-    .schedule__home__pitcher,
-    .schedule__away__pitcher {
-        display: none;
-    }
-    .schedule__info__box {
-        padding: 0 0.5rem !important;
-    }
-    .record__kbo__tr__title {
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    .schedule__home__wrap,
-    .schedule__away__wrap {
-        justify-content: center !important;
-    }
-    .schedule__home__score {
-        padding-right: 20px;
-        padding-left: 0px;
-    }
-    .schedule__away__score {
-        padding-right: 0px;
-        padding-left: 20px;
-    }
 }
 
 @media screen and (max-width: 976px) {
     .container {
         width: 90%;
-    }
-    .liveplay {
-        perspective: 400px;
-    }
-    .liveplay__item {
-        width: 603px;
-    }
-    .highlight__item {
-        flex: 0 0 100%;
-        width: 80% !important;
-    }
-    .highlight__item__wrap {
-        width: 100% !important;
-    }
-    .highlight__item__img {
-        width: 100% !important;
-    }
-    .schedule__and__record {
-        gap: 0;
-    }
-    .schedule__and__record .col {
-        flex: 0 0 100%;
-    }
-    .schedule__home__title,
-    .schedule__away__title,
-    .schedule__home__pitcher,
-    .schedule__away__pitcher {
-        display: block;
-    }
-    .schedule__info__box {
-        padding: 0 3rem !important;
-    }
-    .schedule__home__wrap {
-        justify-content: right !important;
-    }
-    .schedule__away__wrap {
-        justify-content: left !important;
-    }
-    .schedule__home__title,
-    .schedule__away__title {
-        font-size: 20px;
-    }
-    .schedule__home__pitcher,
-    .schedule__away__pitcher {
-        font-size: 14px;
-    }
-    .record__kbo__tr__title {
-        width: 12%;
     }
     .fnb__list {
         width: 70% !important;
@@ -274,31 +189,6 @@
 @media screen and (max-width: 768px) {
     .container {
         width: 90%;
-    }
-    .liveplay {
-        height: 280px;
-        perspective: 400px;
-    }
-    .liveplay__item {
-        width: 450px;
-        height: 250px;
-    }
-    .highlight__item {
-        flex: 0 0 100%;
-        width: 80% !important;
-    }
-    .highlight__item__wrap {
-        width: 100% !important;
-    }
-    .highlight__item__img {
-        width: 100% !important;
-    }
-    .schedule__info__box {
-        padding: 0 1.5rem !important;
-    }
-    .schedule__home__pitcher,
-    .schedule__away__pitcher {
-        display: none;
     }
     .fnb__list {
         width: 90% !important;
@@ -321,56 +211,5 @@
 @media screen and (max-width: 576px) {
     .container {
         width: 90%;
-    }
-    .liveplay {
-        height: 195px;
-        perspective: 350px;
-    }
-    .liveplay__item {
-        width: 350px;
-        height: 195px;
-    }
-    .liveplay__item__overlay__box {
-        bottom: 1.5rem;
-    }
-    .liveplay__item__overlay__title {
-        font-size: 16px;
-    }
-    .liveplay__item__overlay__sub {
-        font-size: 12px;
-    }
-    .highlight__item {
-        width: 100% !important;
-    }
-    .highlight__item__wrap {
-        width: 100% !important;
-    }
-    .highlight__item__img {
-        width: 100% !important;
-    }
-    .schedule__home__title,
-    .schedule__away__title,
-    .schedule__home__pitcher,
-    .schedule__away__pitcher {
-        display: none;
-    }
-    .schedule__info__box {
-        padding: 0 0.5rem !important;
-    }
-    .record__kbo__tr__title {
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    .schedule__home__wrap,
-    .schedule__away__wrap {
-        justify-content: center !important;
-    }
-    .schedule__home__score {
-        padding-right: 20px;
-        padding-left: 0px;
-    }
-    .schedule__away__score {
-        padding-right: 0px;
-        padding-left: 20px;
     }
 }
