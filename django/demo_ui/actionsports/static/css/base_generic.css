@@ -39,6 +39,8 @@
     --messenger: #0099FF;
     --slack: #3AAF85;
     --twitter: #1DA1F2;
+    /* etc */
+    --transparent: transparent;
 }
 
 * {

@@ -1,13 +1,13 @@
 // streaming controls
 const videoPlayer = document.querySelector(".video_player")
 const video = videoPlayer.querySelector(".video_player__video")
-const playButton = videoPlayer.querySelector('.play_button')
+const playButton = videoPlayer.querySelector('.video_player__controls__play_button')
 
 // new
 // preferences
-const settingButton = videoPlayer.querySelector(".setting_button")
-const preferences = videoPlayer.querySelector(".preferences");
-const preferencesPlaybackSpeedText = preferences.querySelector(".playback_speed__text");
+const settingButton = videoPlayer.querySelector(".video_player__controls__setting_button")
+const preferences = videoPlayer.querySelector(".video_player__preferences");
+const preferencesPlaybackSpeedText = preferences.querySelector(".video_player__playback_speed__text");
 
 settingButton.addEventListener("click", (e) => {
     if (preferences.classList.contains("active")) {
@@ -20,9 +20,9 @@ settingButton.addEventListener("click", (e) => {
 })
 
 // preferences__resolution
-const resolutionButton = videoPlayer.querySelector(".resolution");
-const resolutionSetting = videoPlayer.querySelector(".resolution__setting");
-const resolutionSettingPreviousButton = resolutionSetting.querySelector(".resolution__setting__previous");
+const resolutionButton = videoPlayer.querySelector(".video_player__resolution");
+const resolutionSetting = videoPlayer.querySelector(".video_player__resolution__setting");
+const resolutionSettingPreviousButton = resolutionSetting.querySelector(".video_player__resolution__setting__previous");
 
 resolutionButton.addEventListener('click', () => {
     if (resolutionSetting.classList.contains("active")) {
@@ -40,10 +40,10 @@ resolutionSettingPreviousButton.addEventListener('click', () => {
 })
 
 // preferences__playback_speed
-const playbackSpeedButton = videoPlayer.querySelector(".playback_speed");
-const playbackSpeedSetting = videoPlayer.querySelector(".playback_speed__setting");
-const playbackSpeedSettingPreviousButton = playbackSpeedSetting.querySelector(".playback_speed__setting__previous");
-const playbackSpeedSettingItem = playbackSpeedSetting.querySelectorAll(".playback_speed__setting__item");
+const playbackSpeedButton = videoPlayer.querySelector(".video_player__playback_speed");
+const playbackSpeedSetting = videoPlayer.querySelector(".video_player__playback_speed__setting");
+const playbackSpeedSettingPreviousButton = playbackSpeedSetting.querySelector(".video_player__playback_speed__setting__previous");
+const playbackSpeedSettingItem = playbackSpeedSetting.querySelectorAll(".video_player__playback_speed__setting__item");
 
 playbackSpeedButton.addEventListener('click', () => {
     if (resolutionSetting.classList.contains("active")) {
@@ -79,7 +79,7 @@ function removeActiveAll(items) {
 
 
 // full screen
-const fullScreenButton = videoPlayer.querySelector(".full_screen_button");
+const fullScreenButton = videoPlayer.querySelector(".video_player__controls__full_screen_button");
 
 fullScreenButton.addEventListener("click", (e) => {
     toggleFullScreen()
@@ -175,7 +175,7 @@ const volumeControl = document.querySelector('.video_player__controls__volume');
 const volumePanel = document.querySelector('.video_player__controls__volume__panel');
 const volumeRange = volumePanel.querySelector('input');
 const volumeProgress = volumePanel.querySelector('.volume-progress');
-const volumeButton = document.querySelector('.video_player__controls__volume__btn');
+const volumeButton = document.querySelector('.video_player__controls__volume_button');
 
 const fullVolumeButton = volumeButton.querySelector('.full-volume');
 const halfVolumeButton = volumeButton.querySelector('.half-volume');

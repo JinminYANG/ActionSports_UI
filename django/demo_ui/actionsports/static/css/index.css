@@ -1,11 +1,3 @@
-/* container */
-
-.container {
-    width: 1200px;
-    max-width: 1200px;
-}
-
-
 /* liveplay */
 
 .liveplay {
@@ -400,7 +392,7 @@
 
 .schedule__item {
     height: 114.8px;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid var(--platinum);
 }
 
 .schedule__home {}
@@ -530,7 +522,7 @@
     padding: 0.5rem;
     vertical-align: middle;
     border-top: none;
-    border-bottom: 1px solid black !important;
+    border-bottom: 1px solid var(--black) !important;
 }
 
 .record__kbo__tbody__tr__ranking,
@@ -748,9 +740,4 @@
         padding-right: 0px;
         padding-left: 20px;
     }
-}
-
-
-}
-
 }

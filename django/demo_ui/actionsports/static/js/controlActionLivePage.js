@@ -45,9 +45,9 @@ function hideSettingItem() {
 
 
 // all select effects setting button
-const effectsSettingAllButton = document.querySelector(".effects__setting__all__btn");
-const effectsItemButtons = document.querySelectorAll(".effects__item__btn");
-const effectsSettingAllButtonLabel = document.querySelector(".effects__setting__all__btn__label");
+const effectsSettingAllButton = document.querySelector(".effects__all__button");
+const effectsItemButtons = document.querySelectorAll(".effects__item__button");
+const effectsSettingAllButtonLabel = document.querySelector(".effects__all__button__label");
 
 effectsSettingAllButton.addEventListener("click", (e) => {
     if (e.target.checked) {
@@ -65,9 +65,9 @@ effectsSettingAllButton.addEventListener("click", (e) => {
     }
 })
 
-const predictionSettingAllButton = document.querySelector(".prediction__setting__all__btn");
-const predictionItemButtons = document.querySelectorAll(".prediction__item__btn");
-const predictionSettingAllButtonLabel = document.querySelector(".prediction__setting__all__btn__label");
+const predictionSettingAllButton = document.querySelector(".prediction__setting__all__button");
+const predictionItemButtons = document.querySelectorAll(".prediction__item__button");
+const predictionSettingAllButtonLabel = document.querySelector(".prediction__setting__all__button__label");
 
 predictionSettingAllButton.addEventListener("click", (e) => {
     if (e.target.checked) {
@@ -85,9 +85,9 @@ predictionSettingAllButton.addEventListener("click", (e) => {
     }
 })
 
-const playerInfoSettingAllButton = document.querySelector(".player_info__setting__all__btn");
-const playerInfoItemButtons = document.querySelectorAll(".player_info__item__btn");
-const playerInfoSettingAllButtonLabel = document.querySelector(".player_info__setting__all__btn__label");
+const playerInfoSettingAllButton = document.querySelector(".player_info__setting__all__button");
+const playerInfoItemButtons = document.querySelectorAll(".player_info__item__button");
+const playerInfoSettingAllButtonLabel = document.querySelector(".player_info__setting__all__button__label");
 
 playerInfoSettingAllButton.addEventListener("click", (e) => {
     if (e.target.checked) {
@@ -131,7 +131,7 @@ function toggleBtn(button) {
 
 
 // streamingBottomItem control
-const streamingBottomItem = document.querySelectorAll(".streaming__bottom__item");
+const streamingBottomItem = document.querySelectorAll(".streaming__summary__service__button");
 Array.from(streamingBottomItem).forEach((button) => {
     button.addEventListener('click', () => {
         toggleActive(button);
@@ -175,7 +175,7 @@ copyIcon.addEventListener('click', (e) => {
 
 
 // 로그인 모달
-const loginModal = document.querySelector('.login_modal');
+const loginModal = document.querySelector('.chatting__login_modal');
 const loginModalOpenButton = document.querySelector('#loginModalOpenButton');
 loginModalOpenButton.addEventListener('click', () => {
     loginModal.style.display = 'block';
