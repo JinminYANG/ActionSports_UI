@@ -1,21 +1,3 @@
-/* :root {
-    --action_live-text-main: #333333;
-    --action_live-text-sub: #606060;
-    --action_live-text-third: #4D4D4D;
-    --action_live-text-fourth: #707070;
-    --action_live-text-fifth: #666666;
-    --action_live-text-sixth: #999999;
-    --orange: #FE7926;
-    --blue: #333FFA;
-    --purple: #8579D8;
-    --div-bg: #F2F2F2;
-    --chatting-input-bg: #B3B3B3;
-    --chatting-input-container: #E6E6E6;
-    --scroll-bar-track: #CCCCCC;
-    --chatting-user-text: #E6E2FD;
-    --item-border: #E5E5E5;
-} */
-
 .player__info {
     position: relative;
     width: 100%;
@@ -412,7 +394,7 @@
 }
 
 .player__comment__list::-webkit-scrollbar-thumb {
-    background-color: var(--spanish-grayh);
+    background-color: var(--spanish-gray);
     border-radius: 10px;
 }
 

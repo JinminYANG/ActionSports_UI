@@ -25,6 +25,7 @@
 
 .video_player__video {
     width: 100%;
+    cursor: pointer;
 }
 
 .video_player__controls {
@@ -437,15 +438,14 @@
     width: 20px;
     vertical-align: baseline;
     transition: all 0.3s;
+    transform: rotate(180deg);
 }
 
-.chatting__header__toggle.down .chatting__header__toggle__image {
+.chatting__header__toggle.active .chatting__header__toggle__image {
     transform: rotate(0deg);
 }
 
-.chatting__header__toggle.up .chatting__header__toggle__image {
-    transform: rotate(180deg);
-}
+.chatting__header__toggle .chatting__header__toggle__image {}
 
 .chatting__contents {
     position: relative;
@@ -726,11 +726,11 @@
     background: var(--princeton-orange);
 }
 
-.prediction__setting__all__button:checked {
+.prediction__all__button:checked {
     background: var(--light-loyal-blue);
 }
 
-.player_info__setting__all__button:checked {
+.player_info__all__button:checked {
     background: var(--medium-purple);
 }
 

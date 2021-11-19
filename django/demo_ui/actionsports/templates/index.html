@@ -34,94 +34,110 @@
 
               <video src="{% static 'videos\Kang_Baek-Ho.mp4' %}" class="streaming__item__video video_player__video" type="video/mp4" preload="auto"></video>
               
-              <div class="video_player__controls row justify-content-between m-0">
-                <div class="video_player__controls__left ml-3 left-side-controls">
-                  <button class="play_button p-0 mx-2" title="play">
-                    <i class="bi bi-play-fill play_button__icon"></i>
-                  </button>
+                    <div class="video_player__controls row justify-content-between m-0">
+                        <div class="video_player__controls__left ml-3">
+                            <button class="video_player__controls__play_button p-0 mx-2" title="play">
+                                <i class="bi bi-play-fill video_player__controls__play_button__icon"></i>
+                            </button>
 
-                  <div class="volume-control video_player__controls__volume">
-                    <div class="volume-btn btn p-0 video_player__controls__volume__btn">
-                      <i class="bi bi-volume-mute muted" draggable="false"></i>
-                      <i class="bi bi-volume-down half-volume" draggable="false"></i>
-                      <i class="bi bi-volume-up full-volume" draggable="false"></i>
-                    </div>
+                            <div class="volume-control video_player__controls__volume">
+                                <button class="volume-btn p-0 video_player__controls__volume_button">
+                                    <i class="bi bi-volume-mute muted video_player__controls__volume_button__icon"
+                                        draggable="false"></i>
+                                    <i class="bi bi-volume-down half-volume video_player__controls__volume_button__icon"
+                                        draggable="false"></i>
+                                    <i class="bi bi-volume-up full-volume video_player__controls__volume_button__icon"
+                                        draggable="false"></i>
+                                </button>
 
-                    <div class="volume-panel video_player__controls__volume__panel">
-                      <div class="input-div">
-                        <div class="volume-input-div">
-                          <input type="range" value="100" step="5">
-                          <div class="volume-progress"></div>
+                                <div class="volume-panel video_player__controls__volume__panel">
+                                    <div class="input-div">
+                                        <div class="volume-input-div">
+                                            <input type="range" value="100" step="5">
+                                            <div class="volume-progress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
+
+                        <div class="video_player__controls__right mr-3">
+                            <button class="video_player__controls__setting_button p-0 mx-2">
+                                <i class="bi bi-gear-fill video_player__controls__setting_button__icon"></i>
+                            </button>
+
+                            <button class="video_player__controls__full_content_button p-0 mx-2">
+                                <i class="bi bi-view-list video_player__controls__full_content_button__icon"></i>
+                            </button>
+
+                            <button class="video_player__controls__full_screen_button p-0 mx-2">
+                                <i class="bi bi-aspect-ratio video_player__controls__full_screen_button__icon"></i>
+                            </button>
+                        </div>
                     </div>
-                  </div>
-                </div>
 
-                <div class="video_player__controls__right mr-3">
-                  <button class="setting_button p-0 mx-2">
-                    <i class="bi bi-gear-fill setting_button__icon"></i>
-                  </button>
+                    <div class="video_player__preferences">
+                        <button type="button" class="video_player__preferences__item video_player__resolution p-2 my-1">
+                            <span class="video_player__preferences__item__title video_player__resolution__title ml-1">해상도</span>
+                            <i class="bi bi-chevron-right video_player__preferences__item__icon"></i>
+                            <span class="video_player__preferences__item__text video_player__resolution__text">자동 720p</span></i>
+                        </button>
 
-                  <button class="full_content_button p-0 mx-2">
-                    <i class="bi bi-view-list full_content_button__icon"></i>
-                  </button>
+                        <button type="button" class="video_player__preferences__item video_player__playback_speed p-2 my-1">
+                            <span class="video_player__preferences__item__title video_player__playback_speed__title ml-1">재생 속도</span>
+                            <i class="bi bi-chevron-right video_player__preferences__item__icon"></i>
+                            <span class="video_player__preferences__item__text video_player__playback_speed__text">1.0x</span>
+                        </button>
+                    </div>
 
-                  <button class="full_screen_button p-0 mx-2">
-                    <i class="bi bi-aspect-ratio full_screen_button__icon"></i>
-                  </button>
-                </div>
-              </div>
-              
-              <div class="preferences">
-                <button type="button" class="preferences__item resolution p-2 my-1">
-                  <span class="preferences__item__title resolution__title ml-1">해상도</span>
-                  <i class="bi bi-chevron-right preferences__item__icon"></i>
-                  <span class="preferences__item__text resolution__text">자동 720p</span></i>
-                </button>
+                    <div class="video_player__resolution__setting">
+                        <div class="video_player__resolution__setting__header">
+                            <button type="button" class="video_player__resolution__setting__previous p-2 my-1">
+                                <span><i class="bi bi-chevron-left video_player__resolution__setting__previous__icon"></i> 해상도</span>
+                            </button>
+                        </div>
+                        <div class="video_player__resolution__setting__body">
+                            <button type="button"
+                                class="video_player__resolution__setting__item py-2 px-3 my-1 active">자동 (720p)</button>
+                            <button type="button" class="video_player__resolution__setting__item py-2 px-3 my-1"
+                                value="1080">1080p</button>
+                            <button type="button" class="video_player__resolution__setting__item py-2 px-3 my-1"
+                                value="720">720p</button>
+                            <button type="button" class="video_player__resolution__setting__item py-2 px-3 my-1"
+                                value="480">480p</button>
+                            <button type="button" class="video_player__resolution__setting__item py-2 px-3 my-1"
+                                value="360">360p</button>
+                        </div>
+                    </div>
 
-                <button type="button" class="preferences__item playback_speed p-2 my-1">
-                  <span class="preferences__item__title playback_speed__title ml-1">재생 속도</span>
-                  <i class="bi bi-chevron-right preferences__item__icon"></i>
-                  <span class="preferences__item__text playback_speed__text">1.0x</span>
-                </button>
-              </div>
+                    <div class="video_player__playback_speed__setting">
+                        <div class="video_player__playback_speed__setting__header">
+                            <button type="button" class="video_player__playback_speed__setting__previous p-2 my-1">
+                                <span><i
+                                        class="bi bi-chevron-left video_player__playback_speed__setting__previous__icon"></i>
+                                    재생 속도</span>
+                            </button>
+                        </div>
+                        <div class="video_player__playback_speed__setting__body">
+                            <button type="button" class="video_player__playback_speed__setting__item py-2 px-3 my-1"
+                                value="0.5">0.5x</button>
+                            <button type="button" class="video_player__playback_speed__setting__item py-2 px-3 my-1"
+                                value="0.75">0.75x</button>
+                            <button type="button"
+                                class="video_player__playback_speed__setting__item py-2 px-3 my-1 active"
+                                value="1.0">1.0x (기본)</button>
+                            <button type="button" class="video_player__playback_speed__setting__item py-2 px-3 my-1"
+                                value="1.5">1.5x</button>
+                            <button type="button" class="video_player__playback_speed__setting__item py-2 px-3 my-1"
+                                value="2.0">2.0x</button>
+                        </div>
+                    </div>
 
-              <div class="resolution__setting">
-                <div class="resolution__setting__header">
-                  <button type="button" class="resolution__setting__previous p-2 my-1">
-                    <span><i class="bi bi-chevron-left resolution__setting__previous__icon"></i> 해상도</span>
-                  </button>
-                </div>
-                <div class="resolution__setting__body">
-                  <button type="button" class="resolution__setting__item py-2 px-3 my-1 active">자동 (720p)</button>
-                  <button type="button" class="resolution__setting__item py-2 px-3 my-1" value="1080">1080p</button>
-                  <button type="button" class="resolution__setting__item py-2 px-3 my-1" value="720">720p</button>
-                  <button type="button" class="resolution__setting__item py-2 px-3 my-1" value="480">480p</button>
-                  <button type="button" class="resolution__setting__item py-2 px-3 my-1" value="360">360p</button>
-                </div>
-              </div>
-
-              <div class="playback_speed__setting">
-                <div class="playback_speed__setting__header">
-                  <button type="button" class="playback_speed__setting__previous p-2 my-1">
-                    <span><i class="bi bi-chevron-left playback_speed__setting__previous__icon"></i> 재생 속도</span>
-                  </button>
-                </div>
-                <div class="playback_speed__setting__body">
-                  <button type="button" class="playback_speed__setting__item py-2 px-3 my-1" value="0.5">0.5x</button>
-                  <button type="button" class="playback_speed__setting__item py-2 px-3 my-1" value="0.75">0.75x</button>
-                  <button type="button" class="playback_speed__setting__item py-2 px-3 my-1 active" value="1.0">1.0x(기본)</button>
-                  <button type="button" class="playback_speed__setting__item py-2 px-3 my-1" value="1.5">1.5x</button>
-                  <button type="button" class="playback_speed__setting__item py-2 px-3 my-1" value="2.0">2.0x</button>
-                </div>
-              </div>
-
-              <i class="bi bi-x streaming__item__close video_player__close"></i>
+                    <i class="bi bi-x streaming__item__close video_player__close"></i>
 
               <div class="liveplay__item__overlay">
-                <img src="{% static 'images\main\liveplay__item__overlay_icon.png' %}" alt="liveplay__item__overlay_icon"
-                  class="liveplay__item__overlay_icon" />
+                <img src="{% static 'images\main\liveplay__item__overlay_icon.png' %}" alt="liveplay__item__overlay__icon"
+                  class="liveplay__item__overlay__icon" />
                 <div class="liveplay__item__overlay__box">
                     <span class="liveplay__item__overlay__title mb-2">KIA vs 두산 (KIA tigers vs DOOSAN bears)</span>
                     <span class="liveplay__item__overlay__sub font-weight-lighter">잠실종합경기장 잠실야구장</span>

@@ -70,7 +70,7 @@
 
 .liveplay__item__overlay {}
 
-.liveplay__item__overlay_icon {
+.liveplay__item__overlay__icon {
     width: 70px;
     position: absolute;
     top: 1em;

@@ -2,174 +2,123 @@
 const sideSettingControlBtns = document.querySelectorAll('.controls__item');
 Array.from(sideSettingControlBtns).forEach((button) => {
     button.addEventListener('click', () => {
-        hideAllShadowEffect(button);
-        displayShadowEffect(button);
-
-        hideSettingItem();
-        displaySettingItem(button);
+        activeSideSettingControlBtns(button);
+        activeSettingItem(button);
     });
 });
 
-function displayShadowEffect(button) {
-    return button.classList.add('active');
-}
-
-function hideAllShadowEffect(button) {
+function activeSideSettingControlBtns(button) {
     const items = button.parentElement.children;
-    Array.from(items).forEach((btn) => {
-        btn.classList.remove('active');
+    return Array.from(items).forEach((btn) => {
+        (button == btn) ? btn.classList.add('active'): btn.classList.remove('active');
     });
-
-    return;
 }
 
-function displaySettingItem(button) {
+function activeSettingItem(button) {
+    const settings = document.querySelectorAll(".setting");
+
     if (button.classList.contains('controls__effects')) {
-        return document.querySelector('#effects').classList.add('active');
+        return Array.from(settings).forEach((item) => {
+            item.classList.contains('effects') ? item.classList.add('active') : item.classList.remove('active');
+        });
     } else if (button.classList.contains('controls__prediction')) {
-        return document.querySelector('#prediction').classList.add('active');
+        return Array.from(settings).forEach((item) => {
+            item.classList.contains('prediction') ? item.classList.add('active') : item.classList.remove('active');
+        });
     } else if (button.classList.contains('controls__player_info')) {
-        return document.querySelector('#playerInfo').classList.add('active');
-    } else {
-        return;
+        return Array.from(settings).forEach((item) => {
+            item.classList.contains('player_info') ? item.classList.add('active') : item.classList.remove('active');
+        });
     }
-}
-
-function hideSettingItem() {
-    Array.from(document.querySelectorAll('.setting')).forEach((elem) => {
-        elem.classList.remove('active');
-    });
-
-    return;
 }
 
 
 // all select effects setting button
-const effectsSettingAllButton = document.querySelector(".effects__all__button");
-const effectsItemButtons = document.querySelectorAll(".effects__item__button");
-const effectsSettingAllButtonLabel = document.querySelector(".effects__all__button__label");
+const settingAllButtons = document.querySelectorAll(".setting__all__button");
 
-effectsSettingAllButton.addEventListener("click", (e) => {
-    if (e.target.checked) {
-        Array.from(effectsItemButtons).forEach((button) => {
-            button.setAttribute("checked", "checked");
-            effectsSettingAllButtonLabel.classList.add("active");
-            effectsSettingAllButtonLabel.innerText = "ON";
-        });
-    } else {
-        Array.from(effectsItemButtons).forEach((button) => {
-            button.removeAttribute("checked");
-            effectsSettingAllButtonLabel.classList.remove("active");
-            effectsSettingAllButtonLabel.innerText = "OFF";
-        });
-    }
-})
+Array.from(settingAllButtons).forEach((button) => {
+    button.addEventListener('click', (e) => {
+        if (e.target.classList.contains('effects__all__button')) {
+            const effectsItemButtons = document.querySelectorAll(".effects__item__button");
+            return (e.target.checked) ? checkedSettingAllButtons(e.target, effectsItemButtons) : uncheckedSettingAllButtons(e.target, effectsItemButtons);
+        } else if (e.target.classList.contains('prediction__all__button')) {
+            const predictionItemButtons = document.querySelectorAll(".prediction__item__button");
+            return (e.target.checked) ? checkedSettingAllButtons(e.target, predictionItemButtons) : uncheckedSettingAllButtons(e.target, predictionItemButtons);
+        } else if (e.target.classList.contains('player_info__all__button')) {
+            const playerInfoItemButtons = document.querySelectorAll(".player_info__item__button");
+            return (e.target.checked) ? checkedSettingAllButtons(e.target, playerInfoItemButtons) : uncheckedSettingAllButtons(e.target, playerInfoItemButtons);
+        }
+    })
+});
 
-const predictionSettingAllButton = document.querySelector(".prediction__setting__all__button");
-const predictionItemButtons = document.querySelectorAll(".prediction__item__button");
-const predictionSettingAllButtonLabel = document.querySelector(".prediction__setting__all__button__label");
+function checkedSettingAllButtons(allButton, buttons) {
+    Array.from(allButton.labels).forEach((elem) => {
+        elem.classList.add("active");
+        elem.innerText = "ON";
+    });
 
-predictionSettingAllButton.addEventListener("click", (e) => {
-    if (e.target.checked) {
-        Array.from(predictionItemButtons).forEach((button) => {
-            button.setAttribute("checked", "checked");
-            predictionSettingAllButtonLabel.classList.add("active");
-            predictionSettingAllButtonLabel.innerText = "ON";
-        });
-    } else {
-        Array.from(predictionItemButtons).forEach((button) => {
-            button.removeAttribute("checked");
-            predictionSettingAllButtonLabel.classList.remove("active");
-            predictionSettingAllButtonLabel.innerText = "OFF";
-        });
-    }
-})
+    Array.from(buttons).forEach((elem) => {
+        elem.setAttribute("checked", "checked");
+    });
+}
 
-const playerInfoSettingAllButton = document.querySelector(".player_info__setting__all__button");
-const playerInfoItemButtons = document.querySelectorAll(".player_info__item__button");
-const playerInfoSettingAllButtonLabel = document.querySelector(".player_info__setting__all__button__label");
+function uncheckedSettingAllButtons(allButton, buttons) {
+    Array.from(allButton.labels).forEach((elem) => {
+        elem.classList.remove("active");
+        elem.innerText = "OFF";
+    });
 
-playerInfoSettingAllButton.addEventListener("click", (e) => {
-    if (e.target.checked) {
-        Array.from(playerInfoItemButtons).forEach((button) => {
-            button.setAttribute("checked", "checked");
-            playerInfoSettingAllButtonLabel.classList.add("active");
-            playerInfoSettingAllButtonLabel.innerText = "ON";
-        });
-    } else {
-        Array.from(playerInfoItemButtons).forEach((button) => {
-            button.removeAttribute("checked");
-            playerInfoSettingAllButtonLabel.classList.remove("active");
-            playerInfoSettingAllButtonLabel.innerText = "OFF";
-        });
-    }
-})
-
-
+    Array.from(buttons).forEach((elem) => {
+        elem.removeAttribute("checked");
+    });
+}
 
 
 // LiveChatRoom control
 const liveChatRoomControlBtn = document.querySelector(".chatting__header__toggle");
 
 liveChatRoomControlBtn.addEventListener("click", () => {
-    toggleBtn(liveChatRoomControlBtn);
+    return toggleActiveElement(liveChatRoomControlBtn);
 });
 
-function toggleBtn(button) {
-    if (button.classList.contains("down")) {
-        button.classList.remove("down");
-        button.classList.add("up");
-        return;
-    } else {
-        button.classList.remove("up");
-        button.classList.add("down");
-        return;
-    }
+function toggleActiveElement(element) {
+    return (!element.classList.contains("active")) ? element.classList.add("active") : element.classList.remove("active");
 }
 
 
-
-
-// streamingBottomItem control
+// streamingSummaryServiceButtons control
 const streamingBottomItem = document.querySelectorAll(".streaming__summary__service__button");
 Array.from(streamingBottomItem).forEach((button) => {
     button.addEventListener('click', () => {
-        toggleActive(button);
+        return toggleActiveElement(button);
     });
 });
 
-function toggleActive(button) {
-    if (button.classList.contains("active")) {
-        return button.classList.remove("active");
-    } else {
-        return button.classList.add("active");
-    }
-}
 
-const statsBtnItem = document.querySelectorAll(".stats__btns__item");
+// statsBtnItem control
+const statsBtnItem = document.querySelectorAll(".stats__buttons__item");
 Array.from(statsBtnItem).forEach((button) => {
     button.addEventListener('click', () => {
-        toggleActive(button);
+        return toggleActiveElement(button);
     });
 });
-
 
 
 
 // share link copy icon
-const copyText = document.querySelector(".share_modal__link__text")
-const copyIcon = document.querySelector(".share_modal__link__btn__icon")
+const modalCopyText = document.querySelector(".share_modal__link__text")
+const modalCopyIcon = document.querySelector(".share_modal__link__button__icon")
 
-copyIcon.addEventListener('click', (e) => {
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
+modalCopyIcon.addEventListener('click', (e) => {
+    modalCopyText.select();
+    modalCopyIcon.setSelectionRange(0, 99999);
 
-    navigator.clipboard.writeText(copyText.value);
+    navigator.clipboard.writeText(modalCopyText.value);
 
-    copyIcon.classList.replace("bi-stickies", "bi-stickies-fill")
+    modalCopyIcon.classList.replace("bi-stickies", "bi-stickies-fill")
 
     setTimeout(function() {
-        copyIcon.classList.replace("bi-stickies-fill", "bi-stickies")
+        modalCopyIcon.classList.replace("bi-stickies-fill", "bi-stickies")
     }, 5000);
 });
 
