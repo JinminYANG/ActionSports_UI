@@ -1,13 +1,38 @@
 // streaming controls
-const videoPlayer = document.querySelector(".streaming__item")
-const video = videoPlayer.querySelector(".streaming__item__video")
-const playButton = videoPlayer.querySelector('.play_button')
+const videoPlayer = document.querySelector(".video_player")
+const video = videoPlayer.querySelector(".video_player__video")
+const playButton = videoPlayer.querySelector('.video_player__controls__play_button')
 
-// new
+const liveplayItemOverlayIcon = videoPlayer.querySelector(".liveplay__item__overlay__icon")
+const liveplayItemOverlayBox = videoPlayer.querySelector(".liveplay__item__overlay__box")
+
+// Play and Pause button
+function displayPauseEffect() {
+    video.pause();
+    playButton.children[0].classList.replace("bi-pause-fill", "bi-play-fill");
+    if (liveplayItemOverlayIcon) liveplayItemOverlayIcon.style.display = "block";
+    if (liveplayItemOverlayBox) liveplayItemOverlayBox.style.display = "block";
+}
+
+function displayPlayEffect() {
+    video.play();
+    playButton.children[0].classList.replace("bi-play-fill", "bi-pause-fill");
+    if (liveplayItemOverlayIcon) liveplayItemOverlayIcon.style.display = "none";
+    if (liveplayItemOverlayBox) liveplayItemOverlayBox.style.display = "none";
+}
+
+playButton.addEventListener('click', () => {
+    (video.paused) ? displayPlayEffect(): displayPauseEffect();
+})
+
+video.addEventListener("click", () => {
+    (video.paused) ? displayPlayEffect(): displayPauseEffect();
+})
+
 // preferences
-const settingButton = videoPlayer.querySelector(".setting_button")
-const preferences = videoPlayer.querySelector(".preferences");
-const preferencesPlaybackSpeedText = preferences.querySelector(".playback_speed__text");
+const settingButton = videoPlayer.querySelector(".video_player__controls__setting_button")
+const preferences = videoPlayer.querySelector(".video_player__preferences");
+const preferencesPlaybackSpeedText = preferences.querySelector(".video_player__playback_speed__text");
 
 settingButton.addEventListener("click", (e) => {
     if (preferences.classList.contains("active")) {
@@ -20,9 +45,9 @@ settingButton.addEventListener("click", (e) => {
 })
 
 // preferences__resolution
-const resolutionButton = videoPlayer.querySelector(".resolution");
-const resolutionSetting = videoPlayer.querySelector(".resolution__setting");
-const resolutionSettingPreviousButton = resolutionSetting.querySelector(".resolution__setting__previous");
+const resolutionButton = videoPlayer.querySelector(".video_player__resolution");
+const resolutionSetting = videoPlayer.querySelector(".video_player__resolution__setting");
+const resolutionSettingPreviousButton = resolutionSetting.querySelector(".video_player__resolution__setting__previous");
 
 resolutionButton.addEventListener('click', () => {
     if (resolutionSetting.classList.contains("active")) {
@@ -40,10 +65,10 @@ resolutionSettingPreviousButton.addEventListener('click', () => {
 })
 
 // preferences__playback_speed
-const playbackSpeedButton = videoPlayer.querySelector(".playback_speed");
-const playbackSpeedSetting = videoPlayer.querySelector(".playback_speed__setting");
-const playbackSpeedSettingPreviousButton = playbackSpeedSetting.querySelector(".playback_speed__setting__previous");
-const playbackSpeedSettingItem = playbackSpeedSetting.querySelectorAll(".playback_speed__setting__item");
+const playbackSpeedButton = videoPlayer.querySelector(".video_player__playback_speed");
+const playbackSpeedSetting = videoPlayer.querySelector(".video_player__playback_speed__setting");
+const playbackSpeedSettingPreviousButton = playbackSpeedSetting.querySelector(".video_player__playback_speed__setting__previous");
+const playbackSpeedSettingItem = playbackSpeedSetting.querySelectorAll(".video_player__playback_speed__setting__item");
 
 playbackSpeedButton.addEventListener('click', () => {
     if (resolutionSetting.classList.contains("active")) {
@@ -79,10 +104,10 @@ function removeActiveAll(items) {
 
 
 // full screen
-const fullScreenButton = videoPlayer.querySelector(".full_screen_button");
+const fullScreenButton = videoPlayer.querySelector(".video_player__controls__full_screen_button");
 
-fullScreenButton.addEventListener("click", (e) => {
-    toggleFullScreen()
+fullScreenButton.addEventListener("click", () => {
+    return toggleFullScreen();
 })
 
 function isFullScreen() {
@@ -95,87 +120,56 @@ function enterFullScreen() {
     const page = videoPlayer
     if (page.requestFullscreen) {
         page.requestFullscreen();
-        toggleActive(page);
+        toggleActiveElement(page);
     } else if (page.mozRequestFullScreen) page.mozRequestFullScreen();
     else if (page.msRequestFullscreen) page.msRequestFullscreen();
     else if (page.webkitRequestFullScreen) page.webkitRequestFullScreen();
 }
 
+
+
 function exitFullScreen() {
     if (document.exitFullScreen) {
-        toggleActive(videoPlayer);
+        toggleActiveElement(videoPlayer);
         return document.exitFullScreen();
     } else if (document.webkitExitFullscreen) {
-        toggleActive(videoPlayer);
+        toggleActiveElement(videoPlayer);
         return document.webkitExitFullscreen();
     } else if (document.msExitFullscreen) {
-        toggleActive(videoPlayer);
+        toggleActiveElement(videoPlayer);
         return document.msExitFullscreen();
     } else if (document.mozCancelFullScreen) {
-        toggleActive(videoPlayer);
+        toggleActiveElement(videoPlayer);
         return document.mozCancelFullScreen();
     }
 }
 
 function toggleFullScreen() {
     if (!isFullScreen()) {
-        enterFullScreen();
+        return enterFullScreen();
     } else {
-        exitFullScreen();
+        return exitFullScreen();
     }
 }
 
 
-const videoPlayerCloseButton = videoPlayer.querySelector(".streaming__item__close")
+const videoPlayerCloseButton = videoPlayer.querySelector(".video_player__close")
 
-videoPlayerCloseButton.addEventListener("click", (e) => {
+videoPlayerCloseButton.addEventListener("click", () => {
     if (document.exitFullscreen) {
         document.exitFullscreen();
         videoPlayer.classList.remove("active");
     }
 })
 
-const liveplayItemOverlayIcon = videoPlayer.querySelector(".liveplay__item__overlay_icon")
-const liveplayItemOverlayBox = videoPlayer.querySelector(".liveplay__item__overlay__box")
-
-
-// Play and Pause button
-playButton.addEventListener('click', (e) => {
-    if (video.paused) {
-        video.play();
-        e.target.classList.replace("bi-play-fill", "bi-pause-fill")
-        liveplayItemOverlayIcon.style.display = "none";
-        liveplayItemOverlayBox.style.display = "none";
-    } else {
-        video.pause();
-        e.target.classList.replace("bi-pause-fill", "bi-play-fill")
-        liveplayItemOverlayIcon.style.display = "block";
-        liveplayItemOverlayBox.style.display = "block";
-    }
-})
-
-video.addEventListener("click", (e) => {
-    if (video.paused) {
-        video.play();
-        playButton.children[0].classList.replace("bi-play-fill", "bi-pause-fill");
-        liveplayItemOverlayIcon.style.display = "none";
-        liveplayItemOverlayBox.style.display = "none";
-    } else {
-        video.pause();
-        playButton.children[0].classList.replace("bi-pause-fill", "bi-play-fill")
-        liveplayItemOverlayIcon.style.display = "block";
-        liveplayItemOverlayBox.style.display = "block";
-    }
-})
-
 
 // volume
-const leftSideControls = document.querySelector('.left-side-controls');
-const volumeControl = document.querySelector('.volume-control');
-const volumePanel = document.querySelector('.volume-panel');
+const videoPlayerControlsLeft = document.querySelector('.video_player__controls__left');
+const volumeControl = document.querySelector('.video_player__controls__volume');
+const volumePanel = document.querySelector('.video_player__controls__volume__panel');
 const volumeRange = volumePanel.querySelector('input');
 const volumeProgress = volumePanel.querySelector('.volume-progress');
-const volumeButton = document.querySelector('.volume-btn');
+const volumeButton = document.querySelector('.video_player__controls__volume_button');
 
 const fullVolumeButton = volumeButton.querySelector('.full-volume');
 const halfVolumeButton = volumeButton.querySelector('.half-volume');
@@ -184,7 +178,7 @@ const mutedButton = volumeButton.querySelector('.muted');
 halfVolumeButton.style.display = 'none';
 mutedButton.style.display = 'none';
 
-const toggleMute = () => {
+function toggleMute() {
     video.muted = !video.muted;
     if (video.muted) {
         fullVolumeButton.style.display = 'none';
@@ -208,7 +202,7 @@ const toggleMute = () => {
 
 volumeButton.addEventListener('click', toggleMute);
 
-volumeRange.addEventListener('input', function(e) {
+volumeRange.addEventListener('input', () => {
     volumeProgress.style.width = volumeRange.value + '%';
     video.volume = volumeRange.value / 100;
 
@@ -229,24 +223,21 @@ volumeRange.addEventListener('input', function(e) {
     }
 }, false);
 
-volumeButton.addEventListener('mouseenter', function() {
+volumeButton.addEventListener('mouseenter', () => {
     volumeControl.style.margin = '0px 2px 0px 0px';
     volumePanel.style.width = '110px';
 });
 
-leftSideControls.addEventListener('mouseleave', function() {
+videoPlayerControlsLeft.addEventListener('mouseleave', () => {
     volumeControl.style.margin = '0px 0px 0px 0px';
     volumePanel.style.width = '0px';
 });
 
-setInterval(function() {
+setInterval(() => {
     volumeProgress.style.width = volumeRange.value + '%';
 }, 1);
 
-function toggleActive(button) {
-    if (button.classList.contains("active")) {
-        return button.classList.remove("active");
-    } else {
-        return button.classList.add("active");
-    }
+
+function toggleActiveElement(element) {
+    return (!element.classList.contains("active")) ? element.classList.add("active") : element.classList.remove("active");
 }

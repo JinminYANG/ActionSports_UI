@@ -1,7 +1,7 @@
 // search container
-const teamItems = document.querySelectorAll(".team__item");
+const searchTeamItems = document.querySelectorAll(".search__team__item");
 
-addActiveClassEventLists(teamItems);
+addActiveClassEventLists(searchTeamItems);
 
 function removeActiveClass(items) {
     Array.from(items).forEach((item) => {
@@ -18,43 +18,42 @@ function addActiveClassEventLists(list) {
     });
 }
 
-const positionItems = document.querySelectorAll(".position__item");
+const searchPositionItems = document.querySelectorAll(".search__position__item");
 
-addActiveClassEventLists(positionItems);
+addActiveClassEventLists(searchPositionItems);
 
-const consonantsItems = document.querySelectorAll(".consonants__item");
-addActiveClassEventLists(consonantsItems);
+const searchConsonantsItems = document.querySelectorAll(".search__consonants__item");
+addActiveClassEventLists(searchConsonantsItems);
 
 
 // bookmark button control
-const bookmarkContents = document.querySelector(".bookmark__contents");
-let bookmarkItems = bookmarkContents.querySelectorAll(".bookmark__item");
-const playersContents = document.querySelector(".players__contents");
-let playerItems = playersContents.querySelectorAll(".player__item");
+const bookmarkPlayerList = document.querySelector(".bookmark_player__list");
+let bookmarkPlayerItems = bookmarkPlayerList.querySelectorAll(".bookmark_player__item");
+const generalPlayersList = document.querySelector(".general_players__list");
+let generalplayersItems = generalPlayersList.querySelectorAll(".general_players__item");
 
-
-Array.from(playerItems).forEach((item) => {
-    const playerItemsBookmarkButtons = item.querySelector(".player__item__bookmark_btn");
+Array.from(generalplayersItems).forEach((item) => {
+    const playerItemsBookmarkButtons = item.querySelector(".general_players__item__bookmark_btn");
 
     playerItemsBookmarkButtons.addEventListener('click', (e) => {
         if (e.target.classList.contains("active")) {
-            e.target.classList.remove("active")
-            e.target.parentElement.classList.remove("active")
+            e.target.classList.remove("active");
+            e.target.parentElement.classList.remove("active");
 
-            const playerName = e.target.closest(".player__item").children[0].children[1].innerText
+            const playerName = e.target.closest(".general_players__item").children[0].children[1].innerText;
 
-            Array.from(bookmarkItems).forEach((element) => {
+            Array.from(bookmarkPlayerItems).forEach((element) => {
                 if (element.children[0].children[1].innerText == playerName) {
                     element.remove();
                 }
             })
         } else {
-            e.target.classList.add("active")
-            e.target.parentElement.classList.add("active")
-            const copyItem = item.cloneNode(true)
-            bookmarkContents.append(copyItem)
-            copyItem.classList.add("bookmark__item");
-            bookmarkItems = bookmarkContents.querySelectorAll(".bookmark__item");
+            e.target.classList.add("active");
+            e.target.parentElement.classList.add("active");
+            const copyItem = item.cloneNode(true);
+            bookmarkPlayerList.append(copyItem);
+            copyItem.classList.add("bookmark_player__item");
+            bookmarkPlayerItems = bookmarkPlayerList.querySelectorAll(".bookmark_player__item");
         }
     });
 });
