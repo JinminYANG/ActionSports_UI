@@ -499,7 +499,7 @@
     padding: 0;
 }
 
-.record__kbo__tbody {
+.record__contents__table__body {
     position: relative;
     z-index: 3;
     height: 480px;
@@ -507,17 +507,17 @@
     color: var(--dove-gray);
 }
 
-.record__kbo__tbody__tr {
+.record__contents__table__body__tr {
     height: 47.7px;
 }
 
-.record__kbo__tbody__tr th {
+.record__contents__table__body__tr th {
     height: 47.7px;
     padding: 0;
     vertical-align: middle;
 }
 
-.record__kbo__tbody__tr td {
+.record__contents__table__body__tr td {
     height: 47.7px;
     padding: 0.5rem;
     vertical-align: middle;
@@ -525,21 +525,21 @@
     border-bottom: 1px solid var(--black) !important;
 }
 
-.record__kbo__tbody__tr__ranking,
-.record__kbo__tbody__tr__title {
+.record__contents__table__body__tr__ranking,
+.record__contents__table__body__tr__title {
     font-weight: bold;
 }
 
-.record__kbo__tbody__tr__title {
+.record__contents__table__body__tr__title {
     text-align: left;
     width: 18%;
 }
 
-.record__kbo__tbody__tr__logo {
+.record__contents__table__body__tr__logo {
     width: 28px;
 }
 
-.record__kbo__tbody__tr:last-child td {
+.record__contents__table__body__tr:last-child td {
     border-bottom: none !important;
 }
 
@@ -582,7 +582,7 @@
     .schedule__info__box {
         padding: 0 0.5rem !important;
     }
-    .record__kbo__tr__title {
+    .record__contents__table__body__tr__title {
         white-space: nowrap;
         overflow: hidden;
     }
@@ -649,7 +649,7 @@
     .schedule__away__pitcher {
         font-size: 14px;
     }
-    .record__kbo__tr__title {
+    .record__contents__table__body__tr__title {
         width: 12%;
     }
 }
@@ -724,7 +724,7 @@
     .schedule__info__box {
         padding: 0 0.5rem !important;
     }
-    .record__kbo__tr__title {
+    .record__contents__table__body__tr__title {
         white-space: nowrap;
         overflow: hidden;
     }

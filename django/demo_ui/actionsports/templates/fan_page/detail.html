@@ -230,11 +230,150 @@
         </div>
 
         <div class="player__season_record">
-            <img src="{% static 'images\fan_page\detail\player__season_record__img.png' %}" alt="player__season_record__img" class="player__season_record__img">
+            <table class="player__season_record__table table table-hover text-center m-auto">
+                <caption class="player__season_record__table__caption pb-0">
+                    <span class="player__season_record__table__caption__item player__season_record__table__caption__season p-2">2021 시즌</span>
+                    <span class="player__season_record__table__caption__item player__season_record__table__caption__batting_average p-2 mx-3">타율 <span class="player__season_record__table__caption__batting_average__ranking">1</span>위</span>
+                    <span class="player__season_record__table__caption__item player__season_record__table__caption__runs_batted_in p-2">타점 <span class="player__season_record__table__caption__runs_batted_in__ranking">1</span>위</span>
+                </caption>
+                <thead class="player__season_record__table__header">
+                    <tr>
+                        <th scope="col">타율</th>
+                        <th scope="col">경기</th>
+                        <th scope="col">타수</th>
+                        <th scope="col">안타</th>
+                        <th scope="col">홈런</th>
+                        <th scope="col">타점</th>
+                        <th scope="col">득점</th>
+                        <th scope="col">도루</th>
+                        <th scope="col">장타율</th>
+                        <th scope="col">출루율</th>
+                        <th scope="col">볼넷</th>
+                        <th scope="col">사구</th>
+                        <th scope="col">삼진</th>
+                        <th scope="col">병살</th>
+                    </tr>
+                </thead>
+                <tbody class="player__season_record__table__body align-items-center justify-content-md-center">
+                    <tr class="player__season_record__table__body__tr align-items-center">
+                        <td>0.323</td>
+                        <td>139</td>
+                        <td>473</td>
+                        <td>153</td>
+                        <td>29</td>
+                        <td>109</td>
+                        <td>80</td>
+                        <td>2</td>
+                        <td>0.577</td>
+                        <td>0.412</td>
+                        <td>67</td>
+                        <td>11</td>
+                        <td>60</td>
+                        <td>12</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="player__season_record__table__bg shadow border-radius"></div>
+
         </div>
 
         <div class="player__recent">
-            <img src="{% static 'images\fan_page\detail\player__recent__img.png' %}" alt="player__recent__img" class="player__recent__img">
+            <table class="player__recent__table table table-hover text-center mx-auto my-5">
+                <caption class="player__recent__table__caption pb-0">
+                    <span class="player__recent__table__caption__item player__recent__table__caption__season p-2">최근 5경기</span>
+                </caption>
+                <thead class="player__recent__table__header">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">상대팀</th>
+                        <th scope="col">타수</th>
+                        <th scope="col">안타</th>
+                        <th scope="col">타점</th>
+                        <th scope="col">득점</th>
+                        <th scope="col">홈런</th>
+                        <th scope="col">도루</th>
+                        <th scope="col">삼진</th>
+                        <th scope="col">4구</th>
+                        <th scope="col">사구</th>
+                        <th scope="col">타율</th>
+                    </tr>
+                </thead>
+                <tbody class="player__recent__table__body align-items-center justify-content-md-center">
+                    <tr class="player__recent__table__body__tr align-items-center">
+                        <td>10월 28일</td>
+                        <td>KT</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0.323</td>
+                    </tr>
+                    <tr class="player__recent__table__body__tr align-items-center">
+                        <td>10월 28일</td>
+                        <td>KT</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0.323</td>
+                    </tr>
+                    <tr class="player__recent__table__body__tr align-items-center">
+                        <td>10월 27일</td>
+                        <td>KT</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.323</td>
+                    </tr>
+                    <tr class="player__recent__table__body__tr align-items-center">
+                        <td>10월 26일</td>
+                        <td>SSG</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.322</td>
+                    </tr>
+                    <tr class="player__recent__table__body__tr align-items-center">
+                        <td>10월 24일</td>
+                        <td>KIA</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0.325</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="player__recent__table__bg shadow border-radius"></div>
         </div>
 
         <div class="player__highlight row mx-0">
@@ -247,7 +386,7 @@
                 <div class="player__highlight__item col">
                     <div class="player__highlight__item__wrap m-auto">
                         <div class="player__highlight__item__thumbnail" onclick="window.location.href='#'">
-                            <img src="{% static 'images\main\highlight__item__img__01.png' %} " alt="player__highlight__item__img_01" class="player__highlight__item__img" />
+                            <img src="{% static 'images\fan_page\detail\highlight__item__img__01.png' %} " alt="player__highlight__item__img_01" class="player__highlight__item__img" />
                             <span class="player__highlight__item__length px-2 py-1 ">00:00</span>
                         </div>
                         <div class="player__highlight__item__body text-start mt-3">
@@ -265,7 +404,7 @@
                 <div class="player__highlight__item col">
                     <div class="player__highlight__item__wrap">
                         <div class="player__highlight__item__thumbnail " onclick="window.location.href='#'">
-                            <img src="{% static 'images\main\highlight__item__img__02.png' %} " alt="player__highlight__item__img_02 " class="player__highlight__item__img" />
+                            <img src="{% static 'images\fan_page\detail\highlight__item__img__02.png' %} " alt="player__highlight__item__img_02 " class="player__highlight__item__img" />
                             <span class="player__highlight__item__length px-2 py-1">00:00</span>
                         </div>
                         <div class="player__highlight__item__body text-start mt-3">
@@ -283,7 +422,7 @@
                 <div class="player__highlight__item col ">
                     <div class="player__highlight__item__wrap ">
                         <div class="player__highlight__item__thumbnail " onclick="window.location.href='#' ">
-                            <img src="{% static 'images\main\highlight__item__img__03.png' %} " alt="player__highlight__item__img_03" class="player__highlight__item__img " />
+                            <img src="{% static 'images\fan_page\detail\highlight__item__img__03.png' %} " alt="player__highlight__item__img_03" class="player__highlight__item__img " />
                             <span class="player__highlight__item__length px-2 py-1 ">00:00</span>
                         </div>
                         <div class="player__highlight__item__body text-start mt-3 ">
@@ -301,7 +440,7 @@
                 <div class="player__highlight__item col ">
                     <div class="player__highlight__item__wrap ">
                         <div class="player__highlight__item__thumbnail " onclick="window.location.href='#' ">
-                            <img src="{% static 'images\main\highlight__item__img__04.png' %} " alt="player__highlight__item__img_04 " class="player__highlight__item__img " />
+                            <img src="{% static 'images\fan_page\detail\highlight__item__img__04.png' %} " alt="player__highlight__item__img_04 " class="player__highlight__item__img " />
                             <span class="player__highlight__item__length px-2 py-1 ">00:00</span>
                         </div>
                         <div class="player__highlight__item__body text-start mt-3 ">
@@ -319,7 +458,7 @@
                 <div class="player__highlight__item col ">
                     <div class="player__highlight__item__wrap ">
                         <div class="player__highlight__item__thumbnail " onclick="window.location.href='#' ">
-                            <img src="{% static 'images\main\highlight__item__img__05.png' %} " alt="player__highlight__item__img_05 " class="player__highlight__item__img " />
+                            <img src="{% static 'images\fan_page\detail\highlight__item__img__05.png' %} " alt="player__highlight__item__img_05 " class="player__highlight__item__img " />
                             <span class="player__highlight__item__length px-2 py-1 ">00:00</span>
                         </div>
                         <div class="player__highlight__item__body text-start mt-3 ">
@@ -337,7 +476,7 @@
                 <div class="player__highlight__item col ">
                     <div class="player__highlight__item__wrap ">
                         <div class="player__highlight__item__thumbnail " onclick="window.location.href='#' ">
-                            <img src="{% static 'images\main\highlight__item__img__06.png' %} " alt="player__highlight__item__img_06 " class="player__highlight__item__img " />
+                            <img src="{% static 'images\fan_page\detail\highlight__item__img__06.png' %} " alt="player__highlight__item__img_06 " class="player__highlight__item__img " />
                             <span class="player__highlight__item__length px-2 py-1 ">00:00</span>
                         </div>
                         <div class="player__highlight__item__body text-start mt-3 ">
@@ -355,7 +494,7 @@
                 <div class="player__highlight__item col">
                     <div class="player__highlight__item__wrap ">
                         <div class="player__highlight__item__thumbnail " onclick="window.location.href='#' ">
-                            <img src="{% static 'images\main\highlight__item__img__07.png' %} " alt="player__highlight__item__img_07 " class="player__highlight__item__img " />
+                            <img src="{% static 'images\fan_page\detail\highlight__item__img__07.png' %} " alt="player__highlight__item__img_07 " class="player__highlight__item__img " />
                             <span class="player__highlight__item__length px-2 py-1 ">00:00</span>
                         </div>
                         <div class="player__highlight__item__body text-start mt-3 ">
@@ -373,7 +512,7 @@
                 <div class="player__highlight__item col">
                     <div class="player__highlight__item__wrap ">
                         <div class="player__highlight__item__thumbnail " onclick="window.location.href='#' ">
-                            <img src="{% static 'images\main\highlight__item__img__08.png' %} " alt="player__highlight__item__img_08 " class="player__highlight__item__img " />
+                            <img src="{% static 'images\fan_page\detail\highlight__item__img__08.png' %} " alt="player__highlight__item__img_08 " class="player__highlight__item__img " />
                             <span class="player__highlight__item__length px-2 py-1 ">00:00</span>
                         </div>
                         <div class="player__highlight__item__body text-start mt-3 ">
@@ -403,7 +542,51 @@
                 <img src="{% static 'images\fan_page\detail\header_circle.png' %} " alt="player__gallery__header__circle " class="player__gallery__header__circle mr-2">
                 <h2 class="player__gallery__header__title m-0">포토갤러리</h2>
             </div>
-            <img src="{% static 'images\fan_page\detail\player__gallery__img.png' %}" alt="player__gallery__img" class="player__gallery__img">
+
+            <article id="slider" class="player__gallery__content">
+
+                <input type="radio" name="slider" id="s1" class="player__gallery__btn" />
+                <input type="radio" name="slider" id="s2" class="player__gallery__btn" />
+                <input type="radio" name="slider" id="s3" class="player__gallery__btn" checked="checked" />
+                <input type="radio" name="slider" id="s4" class="player__gallery__btn" />
+                <input type="radio" name="slider" id="s5" class="player__gallery__btn" />
+
+                <div for="s1" id="slide1" class="player__gallery__item m-auto">
+                    <label for="s1" id="slide1" class="player__gallery__item__label m-auto">
+                        <img src="{% static 'images\fan_page\detail\player__gallery__img__01.jpg' %}" class="player__gallery__item__img" />
+                        <span class="player__gallery__item__img__filter"></span>
+                    </label>
+                </div>
+
+                <div for="s2" id="slide2" class="player__gallery__item m-auto">
+                    <label for="s2" id="slide2" class="player__gallery__item__label m-auto">
+                        <img src="{% static 'images\fan_page\detail\player__gallery__img__02.jpg' %}" class="player__gallery__item__img" />
+                        <span class="player__gallery__item__img__filter"></span>
+                    </label>
+                </div>
+
+                <div for="s3" id="slide3" class="player__gallery__item m-auto">
+                    <label for="s3" id="slide3" class="player__gallery__item__label m-auto">
+                        <img src="{% static 'images\fan_page\detail\player__gallery__img__03.jpg' %}" class="player__gallery__item__img" />
+                        <span class="player__gallery__item__img__filter"></span>
+                    </label>
+                </div>
+
+                <div for="s4" id="slide4" class="player__gallery__item m-auto">
+                    <label for="s4" id="slide4" class="player__gallery__item__label m-auto">
+                        <img src="{% static 'images\fan_page\detail\player__gallery__img__04.jpg' %}" class="player__gallery__item__img" />
+                        <span class="player__gallery__item__img__filter"></span>
+                    </label>
+                </div>
+
+                <div for="s5" id="slide5" class="player__gallery__item m-auto">
+                    <label for="s5" id="slide5" class="player__gallery__item__label m-auto">
+                        <img src="{% static 'images\fan_page\detail\player__gallery__img__05.jpg' %}" class="player__gallery__item__img" />
+                        <span class="player__gallery__item__img__filter"></span>
+                    </label>
+                </div>
+            </article>
+
         </div>
 
         <div class="player__news_and_comment row mx-0">
@@ -636,5 +819,7 @@
 <script src="{% static 'js\getEmoji.js' %}"></script>
 
 <!-- <script src="{% static 'js\controlFanPage.js' %}"></script> -->
+<script src="{% static 'js\searchInfo.js' %}"></script>
+
 
 {% endblock script %}

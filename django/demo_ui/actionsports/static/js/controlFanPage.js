@@ -1,31 +1,3 @@
-// search container
-const searchTeamItems = document.querySelectorAll(".search__team__item");
-
-addActiveClassEventLists(searchTeamItems);
-
-function removeActiveClass(items) {
-    Array.from(items).forEach((item) => {
-        item.classList.remove('active');
-    })
-}
-
-function addActiveClassEventLists(list) {
-    Array.from(list).forEach((item) => {
-        item.addEventListener('click', () => {
-            removeActiveClass(list);
-            item.classList.add("active");
-        });
-    });
-}
-
-const searchPositionItems = document.querySelectorAll(".search__position__item");
-
-addActiveClassEventLists(searchPositionItems);
-
-const searchConsonantsItems = document.querySelectorAll(".search__consonants__item");
-addActiveClassEventLists(searchConsonantsItems);
-
-
 // bookmark button control
 const bookmarkPlayerList = document.querySelector(".bookmark_player__list");
 let bookmarkPlayerItems = bookmarkPlayerList.querySelectorAll(".bookmark_player__item");

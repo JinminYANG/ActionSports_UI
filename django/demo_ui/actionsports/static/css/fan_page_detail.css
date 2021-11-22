@@ -144,11 +144,65 @@
 
 .player__season_record {
     position: relative;
-    top: -110px;
+    top: -45px;
 }
 
-.player__season_record__img {
+.player__season_record__table {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+}
+
+.player__season_record__table__caption {
+    caption-side: initial;
+    position: absolute;
+    top: -65px;
+}
+
+.player__season_record__table__caption__item {
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    background: var(--bright-gray);
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    color: var(--dark-liver);
+}
+
+.player__season_record__table__caption__season {
+    color: var(--white);
+    background: var(--dark-liver);
+}
+
+.player__season_record__table__caption__batting_average {}
+
+.player__season_record__table__caption__batting_average__ranking,
+.player__season_record__table__caption__runs_batted_in__ranking {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--princeton-orange);
+}
+
+.player__season_record__table__header {
+    border: none;
+    color: var(--gray);
+}
+
+.player__season_record__table__body {}
+
+.player__season_record__table__body__tr {}
+
+.player__season_record__table__bg {
+    position: absolute;
+    bottom: -10px;
     width: 100%;
+    height: 121px;
+    background: var(--white);
+}
+
+.player__season_record__table td,
+.player__season_record__table th {
+    border-top: none;
 }
 
 
@@ -156,18 +210,58 @@
 
 .player__recent {
     position: relative;
-    top: -80px;
+    top: 40px;
 }
 
-.player__recent__img {
+.player__recent__table {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+}
+
+.player__recent__table__caption {
+    caption-side: initial;
+    position: absolute;
+    top: -82px;
+}
+
+.player__recent__table__caption__item {
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    background: var(--dark-liver);
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.player__recent__table__header {
+    border: none;
+    color: var(--gray);
+}
+
+.player__recent__table__body {}
+
+.player__recent__table__body__tr {}
+
+.player__recent__table__bg {
+    position: absolute;
+    bottom: -35px;
     width: 100%;
+    height: 355px;
+    background: var(--seashell);
+}
+
+.player__recent__table td,
+.player__recent__table th {
+    border-top: none;
 }
 
 
 /* highlight */
 
 .player__highlight {
-    margin-top: -0px;
+    margin-top: 150px;
 }
 
 .player__highlight__header {}
@@ -284,10 +378,137 @@
     color: var(--dove-gray);
 }
 
-.player__gallery__img {
+.player__gallery__content {
+    height: 303px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.player__gallery__btn {
+    display: none;
+}
+
+.player__gallery__item {
+    width: 303px;
+    height: 303px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.player__gallery__item.active {
+    z-index: 30;
+}
+
+.player__gallery__item__label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.player__gallery__item__img {
+    width: 100%;
+    height: 100%;
+}
+
+.player__gallery__item__img__filter {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+
+/* slide effect */
+
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
+    transform: translate3d(-190%, 0, -250px);
+}
+
+#s1:checked~#slide4 .player__gallery__item__img__filter,
+#s2:checked~#slide5 .player__gallery__item__img__filter,
+#s3:checked~#slide1 .player__gallery__item__img__filter,
+#s4:checked~#slide2 .player__gallery__item__img__filter,
+#s5:checked~#slide3 .player__gallery__item__img__filter {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
+    transform: translate3d(-90%, 0, -250px);
+}
+
+#s1:checked~#slide5 .player__gallery__item__img__filter,
+#s2:checked~#slide1 .player__gallery__item__img__filter,
+#s3:checked~#slide2 .player__gallery__item__img__filter,
+#s4:checked~#slide3 .player__gallery__item__img__filter,
+#s5:checked~#slide4 .player__gallery__item__img__filter {
+    background-color: rgba(255, 255, 255, 0.28);
+}
+
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
+    transform: translate3d(0, 0, 0);
+}
+
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
+    transform: translate3d(90%, 0, -250px);
+}
+
+#s1:checked~#slide2 .player__gallery__item__img__filter,
+#s2:checked~#slide3 .player__gallery__item__img__filter,
+#s3:checked~#slide4 .player__gallery__item__img__filter,
+#s4:checked~#slide5 .player__gallery__item__img__filter,
+#s5:checked~#slide1 .player__gallery__item__img__filter {
+    background-color: rgba(255, 255, 255, 0.28);
+}
+
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
+    transform: translate3d(190%, 0, -250px);
+}
+
+#s1:checked~#slide3 .player__gallery__item__img__filter,
+#s2:checked~#slide4 .player__gallery__item__img__filter,
+#s3:checked~#slide5 .player__gallery__item__img__filter,
+#s4:checked~#slide1 .player__gallery__item__img__filter,
+#s5:checked~#slide2 .player__gallery__item__img__filter {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* .player__gallery__img {
     width: 100%;
     margin-top: 65px;
-}
+} */
 
 
 /* player__news_and_comment */
