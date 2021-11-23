@@ -1,6 +1,9 @@
 {% extends "base_generic.html"%} {% load static %} {% block css %}
 <link href="{% static 'css/fan_page.css' %}" rel="stylesheet" />
 <link href="{% static 'css/fan_page_detail.css' %}" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
 <link href="{% static 'emoji/css/emoji.css' %}" rel="stylesheet" />{% endblock css %} {% block content %}
 
@@ -543,51 +546,36 @@
                 <h2 class="player__gallery__header__title m-0">포토갤러리</h2>
             </div>
 
-            <article id="slider" class="player__gallery__content">
-
-                <input type="radio" name="slider" id="s1" class="player__gallery__btn" />
-                <input type="radio" name="slider" id="s2" class="player__gallery__btn" />
-                <input type="radio" name="slider" id="s3" class="player__gallery__btn" checked="checked" />
-                <input type="radio" name="slider" id="s4" class="player__gallery__btn" />
-                <input type="radio" name="slider" id="s5" class="player__gallery__btn" />
-
-                <div for="s1" id="slide1" class="player__gallery__item m-auto">
-                    <label for="s1" id="slide1" class="player__gallery__item__label m-auto">
-                        <img src="{% static 'images\fan_page\detail\player__gallery__img__01.jpg' %}" class="player__gallery__item__img" />
-                        <span class="player__gallery__item__img__filter"></span>
-                    </label>
+            <div class="page-wrapper" style="position:relative;">
+                <!--page slider -->
+                <div class="post-slider">
+                    <i class="bi bi-caret-left prev"></i>
+                    <i class="bi bi-caret-right next"></i>
+                    <div class="post-wrapper">
+                        <div class="post">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__01.jpg' %}" class="slider-image">
+                        </div>
+                        <div class="post">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__02.jpg' %}" class="slider-image">
+                        </div>
+                        <div class="post">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__03.jpg' %}" class="slider-image">
+                        </div>
+                        <div class="post">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__04.jpg' %}" class="slider-image">
+                        </div>
+                        <div class="post">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__05.jpg' %}" class="slider-image">
+                        </div>
+                        <div class="post">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__05.jpg' %}" class="slider-image">
+                        </div>
+                    </div>
                 </div>
-
-                <div for="s2" id="slide2" class="player__gallery__item m-auto">
-                    <label for="s2" id="slide2" class="player__gallery__item__label m-auto">
-                        <img src="{% static 'images\fan_page\detail\player__gallery__img__02.jpg' %}" class="player__gallery__item__img" />
-                        <span class="player__gallery__item__img__filter"></span>
-                    </label>
-                </div>
-
-                <div for="s3" id="slide3" class="player__gallery__item m-auto">
-                    <label for="s3" id="slide3" class="player__gallery__item__label m-auto">
-                        <img src="{% static 'images\fan_page\detail\player__gallery__img__03.jpg' %}" class="player__gallery__item__img" />
-                        <span class="player__gallery__item__img__filter"></span>
-                    </label>
-                </div>
-
-                <div for="s4" id="slide4" class="player__gallery__item m-auto">
-                    <label for="s4" id="slide4" class="player__gallery__item__label m-auto">
-                        <img src="{% static 'images\fan_page\detail\player__gallery__img__04.jpg' %}" class="player__gallery__item__img" />
-                        <span class="player__gallery__item__img__filter"></span>
-                    </label>
-                </div>
-
-                <div for="s5" id="slide5" class="player__gallery__item m-auto">
-                    <label for="s5" id="slide5" class="player__gallery__item__label m-auto">
-                        <img src="{% static 'images\fan_page\detail\player__gallery__img__05.jpg' %}" class="player__gallery__item__img" />
-                        <span class="player__gallery__item__img__filter"></span>
-                    </label>
-                </div>
-            </article>
-
+                <!--post slider-->
+            </div>
         </div>
+
 
         <div class="player__news_and_comment row mx-0">
             <div class="player__news col-6 p-0">
@@ -812,14 +800,33 @@
 {% endblock content %} {% block script %}
 
 <!-- page control -->
-<script src="{% static 'emoji\js\config.js' %}"></script>
-<script src="{% static 'emoji\js\util.js' %}"></script>
-<script src="{% static 'emoji\js\jquery.emojiarea.js' %}"></script>
-<script src="{% static 'emoji\js\emoji-picker.js' %}"></script>
-<script src="{% static 'js\getEmoji.js' %}"></script>
+<!-- <script src="{% static 'emoji\js\config.js' %}"></script>
+    <script src="{% static 'emoji\js\util.js' %}"></script>
+    <script src="{% static 'emoji\js\jquery.emojiarea.js' %}"></script>
+    <script src="{% static 'emoji\js\emoji-picker.js' %}"></script>
+    <script src="{% static 'js\getEmoji.js' %}"></script> -->
 
 <!-- <script src="{% static 'js\controlFanPage.js' %}"></script> -->
 <script src="{% static 'js\searchInfo.js' %}"></script>
+<!-- <script src="{% static 'js\controlGallery.js' %}"></script> -->
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    $(function() {
+        $('.post-wrapper').slick({
+            centerMode: true,
+            centerPadding: '50px',
+            slidesToShow: 5,
+            // slidesToScroll: 1,
+            // autoplay: true,
+            // autoplaySpeed: 2000,
+            nextArrow: $('.next'),
+            prevArrow: $('.prev'),
+        });
+    });
+</script>
 
 {% endblock script %}
