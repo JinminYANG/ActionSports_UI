@@ -107,19 +107,11 @@ Array.from(statsBtnItem).forEach((button) => {
 
 // share link copy icon
 const modalCopyText = document.querySelector(".share_modal__link__text")
-const modalCopyIcon = document.querySelector(".share_modal__link__button__icon")
+const modalCopyIcon = document.querySelector(".share_modal__link__copy_button")
 
 modalCopyIcon.addEventListener('click', (e) => {
     modalCopyText.select();
-    modalCopyIcon.setSelectionRange(0, 99999);
-
     navigator.clipboard.writeText(modalCopyText.value);
-
-    modalCopyIcon.classList.replace("bi-stickies", "bi-stickies-fill")
-
-    setTimeout(function() {
-        modalCopyIcon.classList.replace("bi-stickies-fill", "bi-stickies")
-    }, 5000);
 });
 
 

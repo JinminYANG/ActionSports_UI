@@ -1,116 +1,34 @@
-var itemClassName = "carousel__photo";
-items = document.getElementsByClassName(itemClassName),
-    totalItems = items.length,
-    slide = 0,
-    moving = true;
+// player__gallery
+const swiper = new Swiper('.player__gallery__slider', {
+    //방향 셋팅 vertical 수직, horizontal 수평 설정이 없으면 수평 
+    direction: 'horizontal',
+    //한번에 보여지는 페이지 숫자 
+    slidesPerView: 4,
+    //페이지와 페이지 사이의 간격 
+    spaceBetween: 0,
+    //드래그 기능 true 사용가능 false 사용불가
+    debugger: false,
+    //마우스 휠기능 true 사용가능 false 사용불가 
+    mousewheel: false,
+    //반복 기능 true 사용가능 false 사용불가 
+    loop: true,
+    //선택된 슬라이드를 중심으로 true 사용가능 false 사용불가
+    centeredSlides: true,
 
+    effect: "coverflow",
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        scale: 1,
+    },
 
-// Set classes
-function setInitialClasses() {
-    // Targets the previous, current, and next items
-    // This assumes there are at least three items.
-    items[totalItems - 1].classList.add("prev");
-    items[0].classList.add("active");
-    items[1].classList.add("next");
-}
-// Set event listeners
-function setEventListeners() {
-    var next = document.getElementsByClassName('carousel__button--next')[0],
-        prev = document.getElementsByClassName('carousel__button--prev')[0];
-    next.addEventListener('click', moveNext);
-    prev.addEventListener('click', movePrev);
-}
-
-
-// Next navigation handler
-function moveNext() {
-    // Check if moving
-    if (!moving) {
-        // If it's the last slide, reset to 0, else +1
-        if (slide === (totalItems - 1)) {
-            slide = 0;
-        } else {
-            slide++;
-        }
-        // Move carousel to updated slide
-        moveCarouselTo(slide);
-    }
-}
-
-// Previous navigation handler
-function movePrev() {
-    // Check if moving
-    if (!moving) {
-        // If it's the first slide, set as the last slide, else -1
-        if (slide === 0) {
-            slide = (totalItems - 1);
-        } else {
-            slide--;
-        }
-
-        // Move carousel to updated slide
-        moveCarouselTo(slide);
-    }
-}
-
-function disableInteraction() {
-    // Set 'moving' to true for the same duration as our transition.
-    // (0.5s = 500ms)
-
-    moving = true;
-    // setTimeout runs its function once after the given time
-    setTimeout(function() {
-        moving = false
-    }, 500);
-}
-
-function moveCarouselTo(slide) {
-    // Check if carousel is moving, if not, allow interaction
-    if (!moving) {
-        // temporarily disable interactivity
-        disableInteraction();
-        // Update the "old" adjacent slides with "new" ones
-        var newPrevious = slide - 1,
-            newNext = slide + 1,
-            oldPrevious = slide - 2,
-            oldNext = slide + 2;
-        // Test if carousel has more than three items
-        if ((totalItems - 1) > 3) {
-            // Checks and updates if the new slides are out of bounds
-            if (newPrevious <= 0) {
-                oldPrevious = (totalItems - 1);
-            } else if (newNext >= (totalItems - 1)) {
-                oldNext = 0;
-            }
-            // Checks and updates if slide is at the beginning/end
-            if (slide === 0) {
-                newPrevious = (totalItems - 1);
-                oldPrevious = (totalItems - 2);
-                oldNext = (slide + 1);
-            } else if (slide === (totalItems - 1)) {
-                newPrevious = (slide - 1);
-                newNext = 0;
-                oldNext = 1;
-            }
-            // Now we've worked out where we are and where we're going, 
-            // by adding/removing classes we'll trigger the transitions.
-            // Reset old next/prev elements to default classes
-            items[oldPrevious].className = itemClassName;
-            items[oldNext].className = itemClassName;
-            // Add new classes
-            items[newPrevious].className = itemClassName + " prev";
-            items[slide].className = itemClassName + " active";
-            items[newNext].className = itemClassName + " next";
-        }
-    }
-}
-
-function initCarousel() {
-    setInitialClasses();
-    setEventListeners();
-    // Set moving to false so that the carousel becomes interactive
-    moving = false;
-}
-
-// make it rain
-initCarousel();
+    //방향표 
+    navigation: {
+        //다음페이지 설정 
+        nextEl: '.swiper-button-next',
+        //이전페이지 설정 
+        prevEl: '.swiper-button-prev',
+    },
+});

@@ -2,7 +2,9 @@
 <link href="{% static 'css/fan_page.css' %}" rel="stylesheet" />
 <link href="{% static 'css/fan_page_detail.css' %}" rel="stylesheet" />
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
 <link href="{% static 'emoji/css/emoji.css' %}" rel="stylesheet" />{% endblock css %} {% block content %}
@@ -546,34 +548,49 @@
                 <h2 class="player__gallery__header__title m-0">포토갤러리</h2>
             </div>
 
-            <div class="page-wrapper" style="position:relative;">
-                <!--page slider -->
-                <div class="post-slider">
-                    <i class="bi bi-caret-left prev"></i>
-                    <i class="bi bi-caret-right next"></i>
-                    <div class="post-wrapper">
-                        <div class="post">
-                            <img src="{% static 'images\fan_page\detail\player__gallery__img__01.jpg' %}" class="slider-image">
+            <div class="swiper-container mt-5 player__gallery__slider">
+                <div class="swiper-wrapper player__gallery__slider__wrapper">
+                    <div class="swiper-slide player__gallery__slider__item">
+                        <div class="swiper-slide-content player__gallery__slider__item__content">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__01.jpg' %}" class="swiper-slide-image player__gallery__slider__item__content">
                         </div>
-                        <div class="post">
-                            <img src="{% static 'images\fan_page\detail\player__gallery__img__02.jpg' %}" class="slider-image">
+                        <div class="swiper-slide-filter player__gallery__slider__item__filter"></div>
+                    </div>
+                    <div class="swiper-slide player__gallery__slider__item">
+                        <div class="swiper-slide-content player__gallery__slider__item__content">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__02.jpg' %}" class="swiper-slide-image player__gallery__slider__item__content__image">
                         </div>
-                        <div class="post">
-                            <img src="{% static 'images\fan_page\detail\player__gallery__img__03.jpg' %}" class="slider-image">
+                        <div class="swiper-slide-filter player__gallery__slider__item__filter"></div>
+                    </div>
+                    <div class="swiper-slide player__gallery__slider__item">
+                        <div class="swiper-slide-content player__gallery__slider__item__content">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__03.jpg' %}" class="swiper-slide-image player__gallery__slider__item__content__image">
                         </div>
-                        <div class="post">
-                            <img src="{% static 'images\fan_page\detail\player__gallery__img__04.jpg' %}" class="slider-image">
+                        <div class="swiper-slide-filter player__gallery__slider__item__filter"></div>
+                    </div>
+                    <div class="swiper-slide player__gallery__slider__item">
+                        <div class="swiper-slide-content player__gallery__slider__item__content">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__04.jpg' %}" class="swiper-slide-image player__gallery__slider__item__content__image">
                         </div>
-                        <div class="post">
-                            <img src="{% static 'images\fan_page\detail\player__gallery__img__05.jpg' %}" class="slider-image">
+                        <div class="swiper-slide-filter player__gallery__slider__item__filter"></div>
+                    </div>
+                    <div class="swiper-slide player__gallery__slider__item">
+                        <div class="swiper-slide-content player__gallery__slider__item__content">
+                            <img src="{% static 'images\fan_page\detail\player__gallery__img__05.jpg' %}" class="swiper-slide-image player__gallery__slider__item__content__image">
                         </div>
-                        <div class="post">
-                            <img src="{% static 'images\fan_page\detail\player__gallery__img__05.jpg' %}" class="slider-image">
-                        </div>
+                        <div class="swiper-slide-filter player__gallery__slider__item__filter"></div>
                     </div>
                 </div>
-                <!--post slider-->
+
+                <div class="swiper-button swiper-button-prev">
+                    <img src="{% static 'images\fan_page\detail\arrow.png' %}" class="swiper-button-image">
+                </div>
+
+                <div class="swiper-button swiper-button-next">
+                    <img src="{% static 'images\fan_page\detail\arrow.png' %}" class="swiper-button-image">
+                </div>
             </div>
+
         </div>
 
 
@@ -800,33 +817,16 @@
 {% endblock content %} {% block script %}
 
 <!-- page control -->
-<!-- <script src="{% static 'emoji\js\config.js' %}"></script>
-    <script src="{% static 'emoji\js\util.js' %}"></script>
-    <script src="{% static 'emoji\js\jquery.emojiarea.js' %}"></script>
-    <script src="{% static 'emoji\js\emoji-picker.js' %}"></script>
-    <script src="{% static 'js\getEmoji.js' %}"></script> -->
+<script src="{% static 'emoji\js\config.js' %}"></script>
+<script src="{% static 'emoji\js\util.js' %}"></script>
+<script src="{% static 'emoji\js\jquery.emojiarea.js' %}"></script>
+<script src="{% static 'emoji\js\emoji-picker.js' %}"></script>
+<script src="{% static 'js\getEmoji.js' %}"></script>
 
 <!-- <script src="{% static 'js\controlFanPage.js' %}"></script> -->
 <script src="{% static 'js\searchInfo.js' %}"></script>
-<!-- <script src="{% static 'js\controlGallery.js' %}"></script> -->
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-<script>
-    $(function() {
-        $('.post-wrapper').slick({
-            centerMode: true,
-            centerPadding: '50px',
-            slidesToShow: 5,
-            // slidesToScroll: 1,
-            // autoplay: true,
-            // autoplaySpeed: 2000,
-            nextArrow: $('.next'),
-            prevArrow: $('.prev'),
-        });
-    });
-</script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="{% static 'js\controlGallery.js' %}"></script>
 
 {% endblock script %}

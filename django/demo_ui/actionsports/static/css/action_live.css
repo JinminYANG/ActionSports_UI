@@ -1177,8 +1177,46 @@
     margin: 5rem auto !important;
 }
 
+.share_modal__content {
+    background: var(--platinum);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.share_modal__close {
+    padding: 1rem 1rem 0 0 !important;
+    font-size: 35px;
+}
+
+.share_modal__link {
+    width: 90%;
+    height: auto;
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--white);
+}
+
+.share_modal__link__text {
+    width: 85%;
+    font-size: 18px;
+    color: var(--dove-gray);
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    background: none;
+    border: none;
+}
+
+.share_modal__link__copy_button {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--princeton-orange);
+}
+
 .share_modal__list {
-    row-gap: 30px;
+    width: 70%;
 }
 
 .share_modal__item {
@@ -1188,50 +1226,8 @@
     color: var(--dove-gray);
 }
 
-.share_modal__facebook:hover {
-    color: var(--facebook);
-}
-
-.share_modal__github:hover {
-    color: var(--github);
-}
-
-.share_modal__google:hover {
-    color: var(--google);
-}
-
-.share_modal__instagram:hover {
-    color: var(--instagram);
-}
-
-.share_modal__line:hover {
-    color: var(--line);
-}
-
-.share_modal__messenger:hover {
-    color: var(--messenger);
-}
-
-.share_modal__slack:hover {
-    color: var(--slack);
-}
-
-.share_modal__twitter:hover {
-    color: var(--twitter);
-}
-
-.share_modal__link__text {
-    width: 90%;
-    font-size: 14px;
-    vertical-align: middle;
-}
-
-.share_modal__link__button {}
-
-.share_modal__link__button__icon {
-    font-size: 22px;
-    cursor: pointer;
-    line-height: 1;
+.share_modal__item__icon {
+    width: 50px;
 }
 
 
