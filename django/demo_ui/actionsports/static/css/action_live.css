@@ -379,7 +379,8 @@
     background-image: url("/static/images/action_live/streaming__bottom__like__box__active.png");
 }
 
-.streaming__summary__service__button.active .streaming__summary__service__button__text {
+.streaming__summary__service__button.active .streaming__summary__service__like__text,
+.streaming__summary__service__button.active .streaming__summary__service__add_to_playlist__text {
     color: var(--princeton-orange);
 }
 
@@ -1186,7 +1187,7 @@
 }
 
 .share_modal__close {
-    padding: 1rem 1rem 0 0 !important;
+    padding: 1rem 2rem 0 0 !important;
     font-size: 35px;
 }
 

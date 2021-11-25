@@ -3,7 +3,20 @@
 
 <!-- Emoji css -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
-<link href="{% static 'emoji/css/emoji.css' %}" rel="stylesheet" /> {% endblock css %} {% block content %}
+<link href="{% static 'emoji/css/emoji.css' %}" rel="stylesheet" />
+
+<!-- <meta property="og:type" content="website"> -->
+<!-- <meta property="og:title" content="test"> -->
+<!-- <meta property="og:description" content="test"> -->
+<!-- <meta property="og:image" content="https://www.google.co.kr/images/share.gif"> -->
+<!-- <meta property="og:url" content="https://www.google.co.kr/test.html">  -->
+
+<!-- Facebook (Common) Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://sports.news.naver.com/news?oid=076&aid=0003805817" />
+<meta property="og:title" content="테스트 뉴스" />
+<meta property="og:description" content="테스트 뉴스 입니다." />
+<meta property="og:image" content="https://imgnews.pstatic.net/image/076/2021/11/25/2021112601001907400124801_20211125120901917.jpg?type=w647" /> {% endblock css %} {% block content %}
 
 <div class="container container-md container-sm p-0 pt-4">
     <div class="row contents justify-content-between m-0">
@@ -160,23 +173,26 @@
 
                                     <div class="modal-body share_modal__body">
                                         <div class="share_modal__link m-auto">
-                                            <input type="text" value="https://www.actionsports.co.kr/action_live/as65das4dsa6as4dsa74d6" disabled class="share_modal__link__text">
+                                            <input type="text" value="https://www.actionsports.co.kr/action_live" disabled class="share_modal__link__text">
                                             <button type="button" class="btn share_modal__link__copy_button p-0 ml-1">복사</button>
                                         </div>
 
                                         <div class="share_modal__list row text-center justify-content-around mt-3 mb-2 mx-auto">
-                                            <a href="" target="_blank" class="share_modal__item share_modal__kakaotalk">
+                                            <button type="button" class="btn share_modal__item share_modal__kakaotalk">
                                                 <img src="{% static 'images\action_live\share__modal__icon__kakaotalk.png' %}" alt="share__modal__icon__kakaotalk" class="share_modal__item__icon">
-                                            </a>
-                                            <a href="" target="_blank" class="share_modal__item share_modal__kakaostory">
+                                            </button>
+
+                                            <button type="button" class="btn share_modal__item share_modal__kakaostory">
                                                 <img src="{% static 'images\action_live\share__modal__icon__kakaostory.png' %}" alt="share__modal__icon__kakaostory" class="share_modal__item__icon">
-                                            </a>
-                                            <a href="" target="_blank" class="share_modal__item share_modal__facebook">
+                                            </button>
+
+                                            <button type="button" class="btn share_modal__item share_modal__facebook">
                                                 <img src="{% static 'images\action_live\share__modal__icon__facebook.png' %}" alt="share__modal__icon__facebook" class="share_modal__item__icon">
-                                            </a>
-                                            <a href="" target="_blank" class="share_modal__item share_modal__twitter">
+                                            </button>
+
+                                            <button type="button" class="btn share_modal__item share_modal__twitter">
                                                 <img src="{% static 'images\action_live\share__modal__icon__twitter.png' %}" alt="share__modal__icon__twitter" class="share_modal__item__icon">
-                                            </a>
+                                            </button>
                                         </div>
                                     </div>
 
@@ -627,7 +643,6 @@
 <script src="{% static 'js\controlActionLivePage.js' %} "></script>
 <script src="{% static 'js\controlVideo.js' %} "></script>
 
-
 <!-- Emoji script -->
 {% comment %} 출처 : https://github.com/OneSignal/emoji-picker {% endcomment %}
 <script src="{% static 'emoji\js\config.js' %} "></script>
@@ -635,5 +650,9 @@
 <script src="{% static 'emoji\js\jquery.emojiarea.js' %} "></script>
 <script src="{% static 'emoji\js\emoji-picker.js' %} "></script>
 <script src="{% static 'js\getEmoji.js' %} "></script>
+
+<!-- 카카오톡 공유하기 -->
+<script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script src="{% static 'js\sharePage.js' %} "></script>
 
 {% endblock script %}
